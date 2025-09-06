@@ -1,0 +1,223 @@
+/* ===== Dark Mode ===== */
+body.dark .hero-section {
+  color: #e4e4e4; /* softer white text */
+}
+
+body.dark .hero-section .overlay {
+  background: rgba(0, 0, 0, 0.75); /* slightly darker for better contrast */
+}
+
+body.dark .hero-section .btn-primary {
+  background: linear-gradient(135deg, #6c5ce7, #00cec9); /* accent gradient */
+  border: none;
+}
+
+body.dark .hero-section .btn-outline-light {
+  border-color: #e4e4e4;
+  color: #e4e4e4;
+}
+
+body.dark .hero-section .btn-outline-light:hover {
+  background: rgba(228, 228, 228, 0.1);
+}
+/* glassy boxes */
+.glass-box{
+background: var(--glass-bg);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 1px solid var(--glass-border);
+}
+
+
+/* Flip card
+- aspect-ratio ensures the card gets a predictable height
+- fallback min-height used for older browsers
+*/
+.flip-card{ perspective:1000px; cursor:pointer; height:100%; aspect-ratio:16/10; min-height:260px; }
+.flip-card-inner{ position:relative; width:100%; height:100%; transition: transform 0.75s cubic-bezier(.2,.9,.2,1); transform-style: preserve-3d; }
+.flip-card-front, .flip-card-back{ position:absolute; inset:0; backface-visibility:hidden; border-radius:1rem; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+.flip-card-front img{ width:100%; height:100%; object-fit:cover; display:block; }
+.flip-card-back{ transform:rotateY(180deg); background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.7)); color:#fff; padding:1.25rem; text-align:center; }
+
+
+/* trigger flip on hover (desktop) or when .is-flipped is added (mobile/tap) */
+.flip-card:hover .flip-card-inner,
+.flip-card.is-flipped .flip-card-inner{ transform: rotateY(180deg); }
+
+
+/* Fade-in animation */
+.fade-in{ opacity:0; transform: translateY(28px); transition: opacity 600ms ease, transform 600ms ease; }
+.fade-in.show{ opacity:1; transform: translateY(0); }
+
+
+/* Small tweaks */
+.hero-section .display-4{ font-weight:700; }
+.flip-card-back h4{ margin-bottom:0.5rem; }
+
+
+/* Accessibility / Reduced motion */
+@media (prefers-reduced-motion: reduce){
+.flip-card-inner, .fade-in{ transition: none !important; }
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 991px){
+.hero-section{ min-height:50vh; }
+.flip-card{ aspect-ratio: 4/3; }
+}
+
+/* === Service Flip Section === */
+.flip-section-wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  perspective: 2000px;
+  overflow: hidden;
+}
+
+.flip-section-card {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform-origin: top;
+  transform: rotateX(90deg);
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+}
+
+.flip-section-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.flip-section-card .text-overlay {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  max-width: 60%;
+}
+
+.flip-section-card.active {
+  transform: rotateX(0deg);
+  opacity: 1;
+  z-index: 2;
+}
+
+.flip-section-card.out {
+  transform: rotateX(-90deg);
+  opacity: 0;
+  z-index: 1;
+}
+#strategy-highlights { min-height: 420px; }
+
+/* Circle appearance */
+.emoji-circle {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-180px);
+  opacity: 0;
+}
+.emoji-circle .emoji { font-size: 2rem; line-height: 1; }
+.emoji-circle p { margin: 0; font-size: 0.9rem; }
+
+/* drop & settle */
+@keyframes fall {
+  0%   { transform: translateY(-180px); opacity: 0; }
+  70%  { transform: translateY(220px); opacity: 1; }
+  100% { transform: translateY(200px); opacity: 1; }
+}
+.emoji-circle.falling { animation: fall 1.2s ease-out forwards; }
+
+/* ===== Dark Mode Overrides ===== */
+body.dark {
+  background-color: #121212;          /* site background */
+  color: #e4e4e4;
+}
+
+/* Headings / paragraph inside dark */
+body.dark #strategy-highlights h2 {
+  color: #f9f9f9;
+}
+body.dark #strategy-highlights p {
+  color: #bdbdbd;
+}
+
+/* Circles in dark mode */
+body.dark #strategy-highlights .emoji-circle {
+  background: #1e1e1e;                 /* darker bubble */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+body.dark #strategy-highlights .emoji-circle p {
+  color: #f0f0f0;
+}
+
+/* optional tweak for emoji if you want it slightly brighter */
+body.dark #strategy-highlights .emoji-circle .emoji {
+  filter: drop-shadow(0 0 2px rgba(255,255,255,0.2));
+}
+/* testimonial look */
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* dark mode overrides (ties into your body.dark JS) */
+body.dark #client-testimonials {
+  background: #121212!important;
+}
+body.dark #client-testimonials h2 {
+  color: #f9f9f9;
+}
+body.dark #client-testimonials p,
+body.dark #client-testimonials small {
+  color: #cfcfcf;
+}
+body.dark .testimonial-card {
+  background: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Base style */
+#final-cta h2 {
+  font-size: 2rem;
+}
+#final-cta .btn {
+  border-radius: 0.5rem;
+}
+
+/* Dark mode */
+body.dark #final-cta {
+  background: #121212!important;
+}
+body.dark #final-cta h2 {
+  color: #f9f9f9;
+}
+body.dark #final-cta p {
+  color: #cfcfcf;
+}

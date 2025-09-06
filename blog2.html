@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="site_title">Stackly Business</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+ <link rel="stylesheet" href="css/h_f.css" />
+ <link rel="stylesheet" href="css/blog1.css" />
+
+  <script src="js/header.js" defer></script>
+  <script src="js/dark_toogle.js" defer></script>
+
+</head>
+<body data-bs-theme="light">
+
+<!-- ===== Header ===== -->
+<header class="navbar navbar-expand-lg bg-light shadow-sm px-3 sticky-top">
+  <!-- Left: Logo -->
+  <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" alt="Logo" height="40"
+         data-i18n-attr="alt" data-i18n="header_logo_alt">
+  </a>
+
+  <!-- Center: nav links -->
+  <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+    <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_home_dropdown">
+          Home
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="index.html" data-i18n="nav_home1">Home 1</a></li>
+          <li><a class="dropdown-item" href="home2.html" data-i18n="nav_home2">Home 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="blog.html" data-i18n="nav_blog">Blog</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_services_dropdown">
+          Services
+        </a>
+        <ul class="dropdown-menu">
+          <li class="d-lg-none"><a class="dropdown-item" href="services.html" data-i18n="nav_all_services">All Services</a></li>
+                    <li><a class="dropdown-item" href="services.html" data-i18n="nav_service">All Services</a></li>
+
+          <li><a class="dropdown-item" href="service1.html" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a class="dropdown-item" href="service2.html" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a class="dropdown-item" href="service3.html" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a class="dropdown-item" href="service4.html" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a class="dropdown-item" href="service5.html" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a class="dropdown-item" href="service6.html" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Right: lang/profile/dark + hamburger -->
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <select id="language-selector" class="form-select form-select-sm w-auto">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="dropdown">
+      <button class="btn btn-outline-secondary rounded-circle" id="profile-dropdown-toggle" data-bs-toggle="dropdown">
+        <span id="profile-initials"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" id="profile-dropdown">
+        <li><a class="dropdown-item" href="#" id="logout-btn" data-i18n="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark" class="btn btn-outline-secondary btn-sm">🌙</button>
+
+    <!-- Hamburger LAST -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>
+
+
+<!-- ===== BLOG HERO SECTION (BLOG 2) ===== -->
+<section id="blog2-hero" class="container py-5">
+  <!-- Title -->
+  <h1 class="fw-bold mb-3" data-i18n="title_strategy_blog">
+    Strategy Blog 
+  </h1>
+
+  <!-- Feature Image -->
+  <div class="mb-3">
+    <img src="images/Strategy1.jpeg" 
+         class="img-fluid rounded" 
+         alt="Strategy Blog" 
+         data-i18n-attr="alt:alt_strategy_blog">
+  </div>
+
+  <!-- Meta -->
+  <div class="d-flex align-items-center text-muted small mb-3">
+    <span data-i18n="author_blog2">Alex Johnson</span>
+    <span class="mx-2">•</span>
+    <span data-i18n="date_blog2">September 10, 2025</span>
+    <span class="mx-2">•</span>
+    <span data-i18n="readtime_blog2">7 min read</span>
+  </div>
+
+  <!-- Tags -->
+  <div class="mb-4">
+    <span class="badge bg-danger me-2" data-i18n="tag_strategy">Strategy</span>
+    <span class="badge bg-success" data-i18n="tag_growth2">Business Growth</span>
+  </div>
+
+  <!-- Intro -->
+  <p class="lead" data-i18n="text_strategy_blog">
+    Effective strategies to grow your business...
+  </p>
+</section>
+
+<!-- ===== BLOG BODY SECTION (BLOG 2) ===== -->
+<section id="blog2-body" class="container pb-5">
+  <!-- Intro paragraph -->
+  <p class="mb-4" data-i18n="intro_blog2">
+    Crafting a growth roadmap is essential for entrepreneurs aiming to scale
+    efficiently. This post covers actionable strategies to set realistic goals,
+    measure progress, and adapt to market changes.
+  </p>
+
+  <!-- Define Clear Objectives -->
+  <h2 class="fw-bold text-primary mb-3" data-i18n="heading_objectives">Define Clear Objectives</h2>
+  <p><strong data-i18n="label_goal_setting">Goal Setting:</strong> <span data-i18n="text_goal_setting">
+    Outline measurable and time-bound goals for your business.
+  </span></p>
+  <p><strong data-i18n="label_kpis">Key Metrics:</strong> <span data-i18n="text_kpis">
+    Track KPIs such as revenue growth, customer retention, and ROI.
+  </span></p>
+
+  <!-- Competitive Research -->
+  <h2 class="fw-bold text-warning mb-3" data-i18n="heading_competitive_research">Conduct Competitive Research</h2>
+  <p data-i18n="text_competitive_research">
+    Study market leaders, understand their strengths, and identify gaps your business can fill.
+  </p>
+
+  <!-- Strengthen Operations -->
+  <h2 class="fw-bold text-success mb-3" data-i18n="heading_operations">Strengthen Operations</h2>
+  <p><strong data-i18n="label_processes">Streamline Processes:</strong> <span data-i18n="text_processes">
+    Automate repetitive tasks to focus on strategy and innovation.
+  </span></p>
+  <p><strong data-i18n="label_team_alignment">Team Alignment:</strong> <span data-i18n="text_team_alignment">
+    Foster collaboration and ensure everyone understands company goals.
+  </span></p>
+
+  <!-- Innovation & Adaptation -->
+  <h2 class="fw-bold text-info mb-3" data-i18n="heading_innovation">Prioritize Innovation</h2>
+  <p data-i18n="text_innovation">
+    Regularly review trends, adopt new technologies, and encourage creative problem-solving
+    to stay ahead of competitors.
+  </p>
+</section>
+
+<!-- ===== INTERACTIVE TAKEAWAYS (BLOG 2) ===== -->
+<section id="blog2-interactive" class="container py-5">
+  <h2 class="fw-bold text-danger mb-4" data-i18n="heading_takeaways2">
+    Key Strategy Steps
+  </h2>
+  <p class="mb-3" data-i18n="text_takeaways_intro2">
+    Tap each panel for a quick action plan you can start today:
+  </p>
+
+  <!-- Bootstrap Accordion -->
+  <div class="accordion" id="strategyAccordion">
+    <!-- Item 1 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="strategyOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseStrategyOne" aria-expanded="true" aria-controls="collapseStrategyOne"
+          data-i18n="accordion1_title2">
+          Set SMART Goals
+        </button>
+      </h2>
+      <div id="collapseStrategyOne" class="accordion-collapse collapse show" aria-labelledby="strategyOne"
+        data-bs-parent="#strategyAccordion">
+        <div class="accordion-body" data-i18n="accordion1_body2">
+          Define goals that are Specific, Measurable, Achievable, Relevant, and Time-bound.
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="strategyTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseStrategyTwo" aria-expanded="false" aria-controls="collapseStrategyTwo"
+          data-i18n="accordion2_title2">
+          Analyze Competitors
+        </button>
+      </h2>
+      <div id="collapseStrategyTwo" class="accordion-collapse collapse" aria-labelledby="strategyTwo"
+        data-bs-parent="#strategyAccordion">
+        <div class="accordion-body" data-i18n="accordion2_body2">
+          List 3 competitors, compare offerings, and identify your unique value proposition.
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="strategyThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseStrategyThree" aria-expanded="false" aria-controls="collapseStrategyThree"
+          data-i18n="accordion3_title2">
+          Map Quarterly Action Items
+        </button>
+      </h2>
+      <div id="collapseStrategyThree" class="accordion-collapse collapse" aria-labelledby="strategyThree"
+        data-bs-parent="#strategyAccordion">
+        <div class="accordion-body" data-i18n="accordion3_body2">
+          Break down yearly targets into quarterly milestones and assign responsibilities.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call To Action -->
+  <div class="text-center mt-4">
+    <button class="btn btn-primary btn-lg" data-i18n="cta_subscribe2">
+      📩 Subscribe for Strategy Insights
+    </button>
+  </div>
+</section>
+
+
+<footer class="shadow-sm mt-5 pt-4">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-md-3">
+        <a href="index.html" class="d-inline-block mb-3">
+          <img src="images/logo.png" alt="Stackly Logo" height="40"
+               data-i18n-attr="alt" data-i18n="footer_logo_alt">
+        </a>
+        <p class="small" data-i18n="footer_desc">
+          Empowering businesses with innovative consulting, strategy, and technology solutions.<br>
+  Partner with us to accelerate growth and transform your organization.
+        </p>
+        <div class="d-flex gap-3 fs-5">
+          <a href="https://www.facebook.com" class="text-dark"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.twitter.com" class="text-dark"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_quick_links">Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html" class="link-dark text-decoration-none" data-i18n="footer_home1">Home 1</a></li>
+          <li><a href="home2.html" class="link-dark text-decoration-none" data-i18n="footer_home2">Home 2</a></li>
+          <li><a href="about.html" class="link-dark text-decoration-none" data-i18n="footer_about_us">About Us</a></li>
+          <li><a href="services.html" class="link-dark text-decoration-none" data-i18n="footer_services_link">Services</a></li>
+          <li><a href="blog.html" class="link-dark text-decoration-none" data-i18n="footer_blog">Blog</a></li>
+          <li><a href="contact.html" class="link-dark text-decoration-none" data-i18n="footer_contact_us_link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_services">Services</h6>
+        <ul class="list-unstyled small">
+          <li><a href="service1.html" class="link-dark text-decoration-none" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a href="service2.html" class="link-dark text-decoration-none" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a href="service3.html" class="link-dark text-decoration-none" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a href="service4.html" class="link-dark text-decoration-none" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a href="service5.html" class="link-dark text-decoration-none" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a href="service6.html" class="link-dark text-decoration-none" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_contact_us">Contact Us</h6>
+        <p class="small mb-1" data-i18n="footer_address"><i class="fas fa-map-marker-alt me-2"></i>123 Main St, Abc City</p>
+        <p class="small mb-1" data-i18n="footer_phone"><i class="fas fa-phone me-2"></i>+1 234 567 890</p>
+        <p class="small mb-0" data-i18n="footer_email"><i class="fas fa-envelope me-2"></i>info@Business.com</p>
+        <div>
+            <h6 data-i18n="follow">Follow us</h6>
+            <a href="https://www.facebook.com" class="text-dark me-2"><i class="fab fa-facebook fa-lg" data-i18n="follow1">facebook</i></a>
+            <a href="https://www.twitter.com" class="text-dark me-2"><i class="fab fa-twitter fa-lg" data-i18n="follow2">twitter</i></a>
+            <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram fa-lg" data-i18n="follow3">instagram</i></a>
+        </div>
+      </div>
+      
+
+    </div>
+
+    <hr class="mt-4 mb-2">
+    <div class="text-center pb-3 small" data-i18n="footer_copy">© 2025 Business. All rights reserved.</div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+/* ---------- 1. Translation dictionary ---------- */
+
+const translations = {
+  en: {
+     title_strategy_blog: "Strategy Blog",
+  alt_strategy_blog: "Strategy Blog",
+  author_blog2: "Alex Johnson",
+  date_blog2: "September 10, 2025",
+  readtime_blog2: "7 min read",
+  tag_strategy: "Strategy",
+  tag_growth2: "Business Growth",
+  text_strategy_blog: "Effective strategies to grow your business...",
+ header_logo_alt: "Stackly Business Logo",
+    nav_home_dropdown: "Home",
+    nav_home1: "Home 1",
+    nav_home2: "Home 2",
+    nav_about: "About",
+    nav_blog: "Blog",
+    nav_services_dropdown: "Services",
+    nav_service:"All Services",
+    nav_all_services: "All Services",
+    nav_service1: "Innovation & Change",
+    nav_service2: "Governance & Compliance",
+    nav_service3: "Customer Experience & Service",
+    nav_service4: "Data & Business Intelligence",
+    nav_service5: "Sustainability & ESG Strategy",
+    nav_service6: "Acquisitions & Partnership Advisory",
+    nav_contact: "Contact",
+    logout: "Logout",
+  /* Blog Body */
+  intro_blog2:
+    "Crafting a growth roadmap is essential for entrepreneurs aiming to scale efficiently. This post covers actionable strategies to set realistic goals, measure progress, and adapt to market changes.",
+  heading_objectives: "Define Clear Objectives",
+  label_goal_setting: "Goal Setting:",
+  text_goal_setting: "Outline measurable and time-bound goals for your business.",
+  label_kpis: "Key Metrics:",
+  text_kpis: "Track KPIs such as revenue growth, customer retention, and ROI.",
+
+  heading_competitive_research: "Conduct Competitive Research",
+  text_competitive_research:
+    "Study market leaders, understand their strengths, and identify gaps your business can fill.",
+
+  heading_operations: "Strengthen Operations",
+  label_processes: "Streamline Processes:",
+  text_processes: "Automate repetitive tasks to focus on strategy and innovation.",
+  label_team_alignment: "Team Alignment:",
+  text_team_alignment: "Foster collaboration and ensure everyone understands company goals.",
+
+  heading_innovation: "Prioritize Innovation",
+  text_innovation:
+    "Regularly review trends, adopt new technologies, and encourage creative problem-solving to stay ahead of competitors.",
+
+  /* Interactive Section */
+  heading_takeaways2: "Key Strategy Steps",
+  text_takeaways_intro2: "Tap each panel for a quick action plan you can start today:",
+  accordion1_title2: "Set SMART Goals",
+  accordion1_body2:
+    "Define goals that are Specific, Measurable, Achievable, Relevant, and Time-bound.",
+  accordion2_title2: "Analyze Competitors",
+  accordion2_body2:
+    "List 3 competitors, compare offerings, and identify your unique value proposition.",
+  accordion3_title2: "Map Quarterly Action Items",
+  accordion3_body2:
+    "Break down yearly targets into quarterly milestones and assign responsibilities.",
+  cta_subscribe2: "📩 Subscribe for Strategy Insights",
+  footer_logo_alt: "Stackly Logo",
+    footer_desc: "Empowering businesses with innovative consulting, strategy, and technology solutions.\nPartner with us to accelerate growth and transform your organization.",
+    footer_quick_links: "Quick Links",
+    footer_home1: "Home 1",
+    footer_home2: "Home 2",
+    footer_about_us: "About Us",
+    footer_services_link: "Services",
+    footer_blog: "Blog",
+    footer_contact_us_link: "Contact Us",
+    footer_services: "Services",
+    footer_contact_us: "Contact Us",
+    footer_address: "123 Main St, Abc City",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    footer_copy: "© 2025 Business. All rights reserved.",
+    follow:"Follow us",
+    follow1:"facebook",
+    follow2:"twitter",
+    follow3:"instagram"
+  },
+
+  ar: {
+     title_strategy_blog: "مدونة الاستراتيجية",
+  alt_strategy_blog: "مدونة الاستراتيجية",
+  author_blog2: "أليكس جونسون",
+  date_blog2: "10 سبتمبر 2025",
+  readtime_blog2: "٧ دقائق قراءة",
+  tag_strategy: "استراتيجية",
+  tag_growth2: "نمو الأعمال",
+  text_strategy_blog: "استراتيجيات فعالة لتنمية عملك...",
+site_title: "ستاكلي للأعمال",
+    header_logo_alt: "شعار ستاكلي للأعمال",
+    nav_home_dropdown: "الرئيسية",
+    nav_home1: "الصفحة الرئيسية 1",
+    nav_home2: "الصفحة الرئيسية 2",
+    nav_about: "من نحن",
+    nav_blog: "المدونة",
+    nav_services_dropdown: "الخدمات",
+    nav_all_services: "جميع الخدمات",
+
+    nav_service: "جميع الخدمات",
+    nav_service1: "الابتكار والتغيير",
+    nav_service2: "الحوكمة والامتثال",
+    nav_service3: "تجربة العملاء والخدمات",
+    nav_service4: "البيانات وذكاء الأعمال",
+    nav_service5: "الاستدامة واستراتيجية ESG",
+    nav_service6: "الاستحواذ والشراكات",
+    nav_contact: "اتصل بنا",
+    logout: "تسجيل الخروج",
+  intro_blog2:
+    "يعد إعداد خارطة طريق للنمو أمرًا ضروريًا لرواد الأعمال الذين يهدفون إلى التوسع بكفاءة. يتناول هذا المقال استراتيجيات عملية لتحديد أهداف واقعية وقياس التقدم والتكيف مع تغيرات السوق.",
+  heading_objectives: "تحديد أهداف واضحة",
+  label_goal_setting: "تحديد الأهداف:",
+  text_goal_setting: "حدد أهدافًا قابلة للقياس ومحددة بزمن لعملك.",
+  label_kpis: "المؤشرات الرئيسية:",
+  text_kpis: "تتبع مؤشرات الأداء مثل نمو الإيرادات واحتفاظ العملاء والعائد على الاستثمار.",
+
+  heading_competitive_research: "إجراء بحث تنافسي",
+  text_competitive_research:
+    "ادرس قادة السوق وافهم نقاط قوتهم وحدد الثغرات التي يمكن أن يملأها عملك.",
+
+  heading_operations: "تعزيز العمليات",
+  label_processes: "تبسيط العمليات:",
+  text_processes: "أتمت المهام المتكررة للتركيز على الاستراتيجية والابتكار.",
+  label_team_alignment: "مواءمة الفريق:",
+  text_team_alignment: "عزز التعاون وتأكد من فهم الجميع لأهداف الشركة.",
+
+  heading_innovation: "إعطاء الأولوية للابتكار",
+  text_innovation:
+    "راجع الاتجاهات بانتظام، واعتمد تقنيات جديدة، وشجع حل المشكلات الإبداعي للبقاء متقدمًا على المنافسين.",
+
+  heading_takeaways2: "خطوات استراتيجية رئيسية",
+  text_takeaways_intro2: "انقر على كل لوحة لخطة عمل سريعة يمكنك البدء بها اليوم:",
+  accordion1_title2: "حدد أهداف SMART",
+  accordion1_body2:
+    "ضع أهدافًا محددة وقابلة للقياس وقابلة للتحقيق وذات صلة ومحددة بزمن.",
+  accordion2_title2: "حلل المنافسين",
+  accordion2_body2:
+    "أدرج ثلاثة منافسين وقارن عروضهم وحدد ميزة عملك الفريدة.",
+  accordion3_title2: "ضع عناصر عمل ربع سنوية",
+  accordion3_body2:
+    "قسّم الأهداف السنوية إلى مراحل ربع سنوية وحدد المسؤوليات.",
+  cta_subscribe2: "📩 اشترك للحصول على رؤى استراتيجية",
+  footer_logo_alt: "شعار ستاكلي",
+    footer_desc: "تمكين الأعمال بالاستشارات المبتكرة والاستراتيجية والحلول التقنية.\nكن شريكنا لتسريع النمو وتحويل مؤسستك.",
+    footer_quick_links: "روابط سريعة",
+    footer_home1: "الصفحة الرئيسية 1",
+    footer_home2: "الصفحة الرئيسية 2",
+    footer_about_us: "من نحن",
+    footer_services_link: "الخدمات",
+    footer_blog: "المدونة",
+    footer_contact_us_link: "اتصل بنا",
+    footer_services: "الخدمات",
+    footer_contact_us: "اتصل بنا",
+    footer_address: "123 شارع رئيسي، مدينة أبك",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    footer_copy: "© 2025 ستاكلي. جميع الحقوق محفوظة.",
+    follow: "تابعنا",
+    follow1: "فيسبوك",
+    follow2:"تويتر",
+    follow3:"انستغرا"
+  },
+
+  he: {
+    title_strategy_blog: "בלוג אסטרטגיה",
+  alt_strategy_blog: "בלוג אסטרטגיה",
+  author_blog2: "אלכס ג׳ונסון",
+  date_blog2: "10 בספטמבר 2025",
+  readtime_blog2: "7 דקות קריאה",
+  tag_strategy: "אסטרטגיה",
+  tag_growth2: "צמיחת עסק",
+  text_strategy_blog: "אסטרטגיות יעילות לצמיחת העסק שלך...",
+site_title: "סטאקלי ביזנס",
+    header_logo_alt: "לוגו סטאקלי ביזנס",
+    nav_home_dropdown: "דף הבית",
+    nav_home1: "בית 1",
+    nav_home2: "בית 2",
+    nav_about: "אודות",
+    nav_blog: "בלוג",
+    nav_services_dropdown: "שירותים",
+    nav_all_services: "כל השירותים",
+        nav_service: "כל השירותים",
+
+    nav_service1: "חדשנות ושינוי",
+    nav_service2: "ממשל ותאימות",
+    nav_service3: "חווית לקוח ושירות",
+    nav_service4: "נתונים ומודיעין עסקי",
+    nav_service5: "קיימות ואסטרטגיית ESG",
+    nav_service6: "רכישות וייעוץ לשותפויות",
+    nav_contact: "צור קשר",
+    logout: "התנתק",
+  intro_blog2:
+    "בניית מפת דרכים לצמיחה חיונית ליזמים השואפים להתרחב ביעילות. פוסט זה מציג אסטרטגיות מעשיות לקביעת יעדים ריאליים, מדידת התקדמות והסתגלות לשינויים בשוק.",
+  heading_objectives: "הגדר מטרות ברורות",
+  label_goal_setting: "קביעת יעדים:",
+  text_goal_setting: "שרטט מטרות מדידות ומוגדרות בזמן לעסק שלך.",
+  label_kpis: "מדדים עיקריים:",
+  text_kpis: "עקוב אחרי מדדים כמו צמיחת הכנסות, שמירת לקוחות ותשואת השקעה.",
+
+  heading_competitive_research: "בצע מחקר תחרותי",
+  text_competitive_research:
+    "למד מנהיגי שוק, הבן את נקודות החוזק שלהם וזיהה פערים שהעסק שלך יכול למלא.",
+
+  heading_operations: "חזק תפעול",
+  label_processes: "ייעל תהליכים:",
+  text_processes: "מטב משימות חוזרות כדי להתמקד באסטרטגיה ובחדשנות.",
+  label_team_alignment: "יישור צוות:",
+  text_team_alignment: "עודד שיתוף פעולה וודא שכולם מבינים את מטרות החברה.",
+
+  heading_innovation: "תעדף חדשנות",
+  text_innovation:
+    "בדוק מגמות באופן קבוע, אימץ טכנולוגיות חדשות ועודד פתרון בעיות יצירתי כדי להישאר לפני המתחרים.",
+
+  heading_takeaways2: "צעדים אסטרטגיים עיקריים",
+  text_takeaways_intro2: "הקש על כל פאנל לתכנית פעולה מהירה שתוכל להתחיל בה היום:",
+  accordion1_title2: "הגדר מטרות SMART",
+  accordion1_body2:
+    "קבע מטרות שהן ספציפיות, מדידות, ברות השגה, רלוונטיות ומוגדרות בזמן.",
+  accordion2_title2: "נתח מתחרים",
+  accordion2_body2:
+    "ציין שלושה מתחרים, השווה הצעות וזיהה את ההצעה הייחודית שלך.",
+  accordion3_title2: "מפה פעולות רבעוניות",
+  accordion3_body2:
+    "פרק יעדים שנתיים לאבני דרך רבעוניות והקצה אחריות.",
+  cta_subscribe2: "📩 הירשם לתובנות אסטרטגיה",
+  footer_logo_alt: "לוגו סטאקלי",
+    footer_desc: "מעצימים עסקים באמצעות ייעוץ, אסטרטגיה ופתרונות טכנולוגיים חדשניים.\nהצטרף אלינו כדי להאיץ צמיחה ולשנות את הארגון שלך.",
+    footer_quick_links: "קישורים מהירים",
+    footer_home1: "בית 1",
+    footer_home2: "בית 2",
+    footer_about_us: "אודות",
+    footer_services_link: "שירותים",
+    footer_blog: "בלוג",
+    footer_contact_us_link: "צור קשר",
+    footer_services: "שירותים",
+    footer_contact_us: "צור קשר",
+    footer_address: "רחוב ראשי 123, עיר אבק",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    footer_copy: "© 2025 סטאקלי. כל הזכויות שמורות.",
+    follow: "עקבו אחרינו",
+    follow1: "פייסבוק",
+    follow2: "טוויטר",
+    follow3: "אינסטגרם"
+  }
+};
+
+
+
+/* ---------- 2. Translator core ---------- */
+function applyTranslations(lang) {
+  const dict = translations[lang] || translations.en;
+
+  // All elements with data-i18n
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (dict[key]) el.textContent = dict[key];
+  });
+
+  // Elements with data-i18n-attr (may contain multiple attr mappings)
+  document.querySelectorAll("[data-i18n-attr]").forEach(el => {
+    // format: "attr" OR "attr:key" OR "attr1:key1;attr2:key2"
+    const mappings = el.getAttribute("data-i18n-attr").split(";");
+    mappings.forEach(map => {
+      const [attr, keyOverride] = map.split(":").map(s => s.trim());
+      const translationKey = keyOverride || el.getAttribute("data-i18n");
+      if (dict[translationKey]) el.setAttribute(attr, dict[translationKey]);
+    });
+  });
+
+  // Handle direction for RTL languages
+  document.documentElement.dir = (lang === "ar" || lang === "he") ? "rtl" : "ltr";
+}
+
+/* ---------- 3. Init & event ---------- */
+const langSelect = document.getElementById("language-selector");
+langSelect.addEventListener("change", e => applyTranslations(e.target.value));
+
+// Load saved language or default
+const initialLang = localStorage.getItem("lang") || "en";
+langSelect.value = initialLang;
+applyTranslations(initialLang);
+
+// Persist on change
+langSelect.addEventListener("change", () => {
+  localStorage.setItem("lang", langSelect.value);
+});
+</script>
+
+</body>
+</html>

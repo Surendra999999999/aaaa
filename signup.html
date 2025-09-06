@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup</title>
+  <script src="js/signup.js" defer></script>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* ---------- Page Gradient ---------- */
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg,#e0f3ff,#f7faff);
+      transition: background .4s;
+    }
+
+    /* ---------- Card ---------- */
+    .form-box {
+      max-width: 480px;
+      width: 100%;
+      background-color: var(--bs-light);
+      border: 1px solid var(--bs-border-color);
+      border-radius: .75rem;
+      box-shadow: 0 1rem 1.5rem rgba(0,0,0,.1);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: background .3s, color .3s, border-color .3s;
+    }
+    .form-box img.logo {max-height: 70px;}
+    .theme-btn {
+      border: 1px solid var(--bs-border-color);
+      border-radius: 50%;
+      background: transparent;
+      padding: .45rem .65rem;
+      margin-top: .6rem;
+    }
+
+    /* ---------- Dark Mode ---------- */
+    body.dark {
+      background: linear-gradient(135deg,#1c1c1c,#2b2b2b);
+      color: #f8f9fa;
+    }
+    body.dark .form-box {
+      background-color: #1f1f1f;
+      border-color: #444;
+      color: #f8f9fa;
+    }
+    body.dark .form-box input,
+    body.dark .form-box select {
+      background-color: #2b2b2b;
+      border-color: #555;
+      color: #f8f9fa;
+    }
+    body.dark .form-box a {color:#9ecbff;}
+    body.dark .form-box a:hover {color:#74b3ff;}
+    /* ---------- Placeholder visibility in dark mode ---------- */
+body.dark .form-box ::placeholder {
+  color: #bbb;          /* lighter gray, stands out on dark */
+  opacity: 1;           /* make sure it's not transparent */
+}
+
+/* Optional: tweak on focus so it still feels subtle */
+body.dark .form-box input:focus::placeholder {
+  color: #999;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="form-box">
+    <h2 id="signupTitle" class="fw-semibold mb-4">Signup</h2>
+
+    <!-- Language Toggle -->
+    <select id="languageSelect" class="form-select form-select-sm mb-4">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <!-- Signup Form -->
+    <form id="signupForm" class="mb-3">
+      <input type="text" id="firstName" placeholder="First Name" required class="form-control mb-3 py-2">
+      <input type="text" id="lastName" placeholder="Last Name" required class="form-control mb-3 py-2">
+      <input type="email" id="email" placeholder="Email" required class="form-control mb-3 py-2">
+      <input type="password" id="password" placeholder="Password" required class="form-control mb-3 py-2">
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required class="form-control mb-4 py-2">
+      <button type="submit" id="signupBtn" class="btn btn-primary w-100 py-2 fs-5">Signup</button>
+    </form>
+
+    <p id="loginText" class="small">
+      Already have an account? <a href="login.html" id="loginLink">Login</a>
+    </p>
+
+    <!-- Dark Theme Toggle -->
+    <button id="toggle-dark" class="theme-btn">🌙</button>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    /* ---------- Language Strings ---------- */
+    const translations = {
+      en:{title:"Signup",firstName:"First Name",lastName:"Last Name",email:"Email",password:"Password",confirmPassword:"Confirm Password",signup:"Signup",loginText:"Already have an account? ",login:"Login"},
+      ar:{title:"إنشاء حساب",firstName:"الاسم الأول",lastName:"اسم العائلة",email:"البريد الإلكتروني",password:"كلمة المرور",confirmPassword:"تأكيد كلمة المرور",signup:"إنشاء حساب",loginText:"هل لديك حساب؟ ",login:"تسجيل الدخول"},
+      he:{title:"הרשמה",firstName:"שם פרטי",lastName:"שם משפחה",email:"אימייל",password:"סיסמה",confirmPassword:"אשר סיסמה",signup:"הירשם",loginText:"כבר יש לך חשבון? ",login:"התחבר"}
+    };
+
+    function applyTranslation(lang){
+      const t = translations[lang];
+      document.getElementById("signupTitle").textContent = t.title;
+      document.getElementById("firstName").placeholder = t.firstName;
+      document.getElementById("lastName").placeholder = t.lastName;
+      document.getElementById("email").placeholder = t.email;
+      document.getElementById("password").placeholder = t.password;
+      document.getElementById("confirmPassword").placeholder = t.confirmPassword;
+      document.getElementById("signupBtn").textContent = t.signup;
+      document.getElementById("loginText").innerHTML = t.loginText + `<a href="login.html" id="loginLink">${t.login}</a>`;
+      document.body.setAttribute("dir", (lang === "ar" || lang === "he") ? "rtl" : "ltr");
+    }
+    document.getElementById("languageSelect").addEventListener("change", e => applyTranslation(e.target.value));
+    applyTranslation("en");
+
+    /* ---------- Dark Mode Toggle ---------- */
+    document.getElementById("toggle-dark").addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+</body>
+</html>

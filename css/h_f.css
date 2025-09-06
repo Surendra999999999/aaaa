@@ -1,0 +1,80 @@
+/* ======== DARK MODE HEADER & FOOTER ======== */
+body.dark {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+/* ---------- Navbar (Header) ---------- */
+body.dark .navbar {
+  background-color: #1f1f1f !important;   /* dark background */
+}
+
+body.dark .navbar .nav-link {
+  color: #f8f9fa !important;             /* light links */
+}
+
+body.dark .navbar .nav-link:hover {
+  color: #adb5bd !important;
+}
+
+/* Hamburger lines white on dark */
+body.dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28 255,255,255, 0.9 %29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ---------- Footer ---------- */
+body.dark footer {
+  background-color: #1f1f1f !important;  /* dark footer */
+  color: #f8f9fa !important;
+}
+
+/* Footer links */
+body.dark footer a {
+  color: #f8f9fa;
+}
+
+body.dark footer a:hover {
+  color: #adb5bd;
+}
+
+/* Keep HR line subtle in dark */
+body.dark footer hr {
+  border-color: #333;
+}
+
+/* Optional form elements + buttons if needed */
+body.dark .form-select,
+body.dark .form-control {
+  background-color: #2b2b2b;
+  color: #f8f9fa;
+  border-color: #444;
+}
+
+body.dark .btn-outline-secondary {
+  color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+body.dark .btn-outline-secondary:hover {
+  background-color: #f8f9fa;
+  color: #121212;
+}
+/* Dark mode footer link override */
+body.dark footer a,
+body.dark footer .link-dark,
+body.dark footer .text-dark {
+  color: #f8f9fa !important;      /* light gray/white links */
+}
+
+body.dark footer a:hover {
+  color: #9ecbff !important;      /* subtle blue on hover */
+}
+
+/* Dark mode footer headings */
+body.dark footer h6 {
+  color: #ffffff;
+}
+
+/* Optional: dim the small copy slightly less than pure white */
+body.dark footer .small {
+  color: #dddddd;
+}

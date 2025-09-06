@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="site_title">Stackly Business</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+ <link rel="stylesheet" href="css/h_f.css" />
+ <link rel="stylesheet" href="css/services.css" />
+
+  <script src="js/header.js" defer></script>
+  <script src="js/dark_toogle.js" defer></script>
+  <script src="js/auth_check.js" defer></script>
+  <script src="js/login_auth.js" defer></script>
+</head>
+<body data-bs-theme="light">
+
+<!-- ===== Header ===== -->
+<header class="navbar navbar-expand-lg bg-light shadow-sm px-3 sticky-top">
+  <!-- Left: Logo -->
+  <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" alt="Logo" height="40"
+         data-i18n-attr="alt" data-i18n="header_logo_alt">
+  </a>
+
+  <!-- Center: nav links -->
+  <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+    <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_home_dropdown">
+          Home
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="index.html" data-i18n="nav_home1">Home 1</a></li>
+          <li><a class="dropdown-item" href="home2.html" data-i18n="nav_home2">Home 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="blog.html" data-i18n="nav_blog">Blog</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_services_dropdown">
+          Services
+        </a>
+        <ul class="dropdown-menu">
+          <li class="d-lg-none"><a class="dropdown-item" href="services.html" data-i18n="nav_all_services">All Services</a></li>
+                    <li><a class="dropdown-item" href="services.html" data-i18n="nav_service">All Services</a></li>
+
+          <li><a class="dropdown-item" href="service1.html" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a class="dropdown-item" href="service2.html" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a class="dropdown-item" href="service3.html" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a class="dropdown-item" href="service4.html" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a class="dropdown-item" href="service5.html" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a class="dropdown-item" href="service6.html" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Right: lang/profile/dark + hamburger -->
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <select id="language-selector" class="form-select form-select-sm w-auto">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="dropdown">
+      <button class="btn btn-outline-secondary rounded-circle" id="profile-dropdown-toggle" data-bs-toggle="dropdown">
+        <span id="profile-initials"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" id="profile-dropdown">
+        <li><a class="dropdown-item" href="#" id="logout-btn" data-i18n="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark" class="btn btn-outline-secondary btn-sm">🌙</button>
+
+    <!-- Hamburger LAST -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>
+
+
+<!-- ===== Hero Section with Video Background ===== -->
+<section class="hero-section position-relative text-white">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover">
+    <source src="videos/services.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark Overlay -->
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.55);"></div>
+
+  <!-- Content -->
+  <div class="container position-relative z-2 py-5">
+    <div class="row align-items-center text-center text-lg-start">
+      
+      <!-- Left: Text -->
+      <div class="col-lg-7 mx-auto mx-lg-0">
+        <h1 class="display-4 fw-bold mb-3" data-i18n="services_hero_title">
+          Our Services, Your Growth
+        </h1>
+        <p class="lead mb-4" data-i18n="services_hero_subtitle">
+          Discover how our tailored consulting, strategy, and technology solutions 
+          can help your organization innovate, stay compliant, and achieve sustainable success.
+        </p>
+        <a href="#services-list" class="btn btn-primary btn-lg me-2" data-i18n="services_hero_cta1">
+          View All Services
+        </a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg" data-i18n="services_hero_cta2">
+          Get a Free Consultation
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="impact-journey py-5">
+  <div class="container text-center">
+    <h2 class="section-title mb-4" data-i18n="impact_title">
+      Our Impact Journey
+    </h2>
+    <p class="section-subtitle mb-5" data-i18n="impact_subtitle">
+      A story of growth, innovation, and global trust
+    </p>
+
+    <div class="timeline-wrapper">
+      <div class="timeline" id="impactTimeline">
+        <div class="milestone" data-year="2010" data-msg="Founded with a mission to empower businesses.">
+          <span>2010</span>
+        </div>
+        <div class="milestone" data-year="2015" data-msg="Reached 100+ clients across multiple industries.">
+          <span>2015</span>
+        </div>
+        <div class="milestone" data-year="2018" data-msg="Expanded operations into 10 countries.">
+          <span>2018</span>
+        </div>
+        <div class="milestone" data-year="2021" data-msg="Recognized with global industry awards.">
+          <span>2021</span>
+        </div>
+        <div class="milestone" data-year="2023" data-msg="Serving 500+ trusted partners worldwide.">
+          <span>2023</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup message -->
+    <div class="milestone-popup" id="milestonePopup">
+      <h4 id="popupYear"></h4>
+      <p id="popupMsg"></p>
+    </div>
+  </div>
+</section>
+
+<style>
+.impact-journey {
+  background: #f8f9fa;
+  position: relative;
+}
+body.dark .impact-journey {
+  background: #0d1117;
+  color: #f0f6fc;
+}
+
+.timeline-wrapper {
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  min-width: 600px;
+  position: relative;
+  border-top: 3px solid #0d6efd;
+}
+.milestone {
+  position: relative;
+  padding-top: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.milestone span {
+  background: #0d6efd;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+.milestone:hover {
+  transform: scale(1.1);
+}
+
+.milestone-popup {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  background: #fff;
+  color: #000;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: none;
+  width: 300px;
+  z-index: 10;
+}
+body.dark .milestone-popup {
+  background: #161b22;
+  color: #f0f6fc;
+}
+</style>
+
+<script>
+const milestones = document.querySelectorAll(".milestone");
+const popup = document.getElementById("milestonePopup");
+const popupYear = document.getElementById("popupYear");
+const popupMsg = document.getElementById("popupMsg");
+
+milestones.forEach(ms => {
+  ms.addEventListener("mouseenter", () => {
+    popupYear.textContent = ms.dataset.year;
+    popupMsg.textContent = ms.dataset.msg;
+    popup.style.display = "block";
+    popup.style.left = ms.offsetLeft + "px";
+  });
+  ms.addEventListener("mouseleave", () => {
+    popup.style.display = "none";
+  });
+});
+</script>
+<section class="success-stories py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 section-title" data-i18n="success_title">
+      Our Success Stories
+    </h2>
+    <p class="text-center section-subtitle mb-5" data-i18n="success_subtitle">
+      Real transformations that inspire trust and innovation
+    </p>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3 data-i18n="story1_title">Retail Transformation</h3>
+            </div>
+            <div class="flip-card-back">
+              <p data-i18n="story1_desc">
+                Helped a leading retailer boost sales by 40% through digital strategy and data-driven insights.
+              </p>
+              <a href="story1.html" class="btn btn-outline-light btn-sm" data-i18n="story1_cta">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3 data-i18n="story2_title">Financial Growth</h3>
+            </div>
+            <div class="flip-card-back">
+              <p data-i18n="story2_desc">
+                Enabled a bank to streamline compliance and cut costs by 30% with automation solutions.
+              </p>
+              <a href="story2.html" class="btn btn-outline-light btn-sm" data-i18n="story2_cta">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3 data-i18n="story3_title">Global Expansion</h3>
+            </div>
+            <div class="flip-card-back">
+              <p data-i18n="story3_desc">
+                Supported a startup’s journey to 15+ countries with advisory and scalable tech solutions.
+              </p>
+              <a href="story3.html" class="btn btn-outline-light btn-sm" data-i18n="story3_cta">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="services-sphere position-relative">
+  <div class="sphere-bg"></div>
+  <div class="container text-center position-relative z-2 py-5">
+    <h2 class="section-title mb-3" data-i18n="services_section_title">
+      Transform Your Business
+    </h2>
+    <p class="section-subtitle mb-5" data-i18n="services_section_subtitle">
+      Explore our services in an interactive way
+    </p>
+
+    <!-- Rotating Sphere -->
+    <div class="sphere" id="serviceSphere"></div>
+
+    <!-- Floating card (shows on hover) -->
+    <div class="service-card-floating" id="serviceCard">
+      <h3 id="cardTitle" data-i18n="card_title"></h3>
+      <p id="cardDesc" data-i18n="card_desc"></p>
+      <a href="#" id="cardLink" class="btn btn-info btn-sm" data-i18n="card_cta">Learn More →</a>
+    </div>
+  </div>
+</section>
+
+
+<script>
+const services = [
+  {
+    title: "Innovation & Change",
+    desc: "Adapt, innovate and transform your business for the future.",
+    img: "images/innovation.jpeg",
+    link: "service1.html"
+  },
+  {
+    title: "Governance & Compliance",
+    desc: "Ensure compliance with confidence and efficiency.",
+    img: "images/Governance.jpeg",
+    link: "service2.html"
+  },
+  {
+    title: "Customer Experience",
+    desc: "Deliver memorable experiences for your customers.",
+    img: "images/customer_exp.jpeg",
+    link: "service3.html"
+  },
+  {
+    title: "Data & Intelligence",
+    desc: "Unlock actionable insights with smart analytics.",
+    img: "images/data.jpeg",
+    link: "service4.html"
+  },
+  {
+    title: "Sustainability & ESG",
+    desc: "Drive sustainable growth with ESG strategies.",
+    img: "images/esg.jpeg",
+    link: "service5.html"
+  },
+  {
+    title: "Acquisitions & Advisory",
+    desc: "Strategic deals and partnerships for growth.",
+    img: "images/support.jpeg",
+    link: "service6.html"
+  }
+];
+
+// DOM refs
+const sphere = document.getElementById("serviceSphere");
+const card = document.getElementById("serviceCard");
+const cardTitle = document.getElementById("cardTitle");
+const cardDesc = document.getElementById("cardDesc");
+const cardLink = document.getElementById("cardLink");
+
+const radius = 200;
+const step = (2 * Math.PI) / services.length;
+let activeService = null; // keep track of current
+
+// Create service nodes
+services.forEach((svc, i) => {
+  const node = document.createElement("div");
+  node.className = "service-node";
+
+  const angle = i * step;
+  const x = radius * Math.cos(angle);
+  const y = radius * Math.sin(angle);
+  const z = (i % 2 === 0 ? 80 : -80);
+
+  node.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
+  node.innerHTML = `<img src="${svc.img}" alt="${svc.title}">`;
+
+  node.addEventListener("mouseenter", () => {
+    activeService = svc;
+    showCard(svc);
+  });
+
+  sphere.appendChild(node);
+});
+
+// Show floating card
+function showCard(svc) {
+  sphere.classList.add("paused");
+  card.classList.add("active");
+  cardTitle.textContent = svc.title;
+  cardDesc.textContent = svc.desc;
+  cardLink.href = svc.link;
+}
+
+// Hide floating card
+function hideCard() {
+  activeService = null;
+  sphere.classList.remove("paused");
+  card.classList.remove("active");
+}
+
+// Keep card visible while hovering card itself
+card.addEventListener("mouseenter", () => {
+  if (activeService) card.classList.add("active");
+});
+card.addEventListener("mouseleave", () => {
+  hideCard();
+});
+
+// Hide card only when leaving *both* circle & card
+sphere.addEventListener("mouseleave", () => {
+  setTimeout(() => {
+    if (!card.matches(":hover")) hideCard();
+  }, 100);
+});
+</script>
+
+
+<!-- New Section: Service List -->
+<section class="services-list py-5 bg-dark text-light">
+  <div class="container">
+    <h2 class="text-center mb-4">All Our Services</h2>
+    <div class="row g-4" id="servicesList"></div>
+  </div>
+</section>
+
+
+
+<script>
+// same `services` array as in your code
+// (already defined above, so reusing here)
+
+// DOM refs from your existing script
+// sphere, card, cardTitle, cardDesc, cardLink, showCard()
+
+const servicesListContainer = document.getElementById("servicesList");
+
+// Build the service list grid
+services.forEach((svc, i) => {
+  const col = document.createElement("div");
+  col.className = "col-md-4";
+
+  col.innerHTML = `
+    <div class="service-item" data-index="${i}">
+      <img src="${svc.img}" alt="${svc.title}">
+      <h5 class="fw-bold">${svc.title}</h5>
+      <p class="small text-muted">${svc.desc.substring(0, 70)}...</p>
+    </div>
+  `;
+
+  // click → reveal card in sphere section
+  col.querySelector(".service-item").addEventListener("click", () => {
+    showCard(svc);
+    window.scrollTo({ top: document.querySelector(".services-sphere").offsetTop - 100, behavior: 'smooth' });
+  });
+
+  servicesListContainer.appendChild(col);
+});
+</script>
+<section class="testimonials-section py-5 bg-dark text-light">
+  <div class="container">
+    <h2 class="text-center mb-4" data-i18n="testimonials_title">What Our Clients Say</h2>
+    <p class="text-center mb-5 text-muted" data-i18n="testimonials_subtitle">Trusted by businesses worldwide</p>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Testimonial Item 1 -->
+        <div class="carousel-item active">
+          <div class="testimonial-card mx-auto text-center">
+            <p class="testimonial-text" data-i18n="testimonial1_text">
+              "Their innovative solutions transformed our business and boosted growth by 40% in just 6 months."
+            </p>
+            <h5 class="testimonial-name" data-i18n="testimonial1_name">John Smith</h5>
+            <span class="testimonial-role" data-i18n="testimonial1_role">CEO, TechVision</span>
+          </div>
+        </div>
+
+        <!-- Testimonial Item 2 -->
+        <div class="carousel-item">
+          <div class="testimonial-card mx-auto text-center">
+            <p class="testimonial-text" data-i18n="testimonial2_text">
+              "The team’s expertise in strategy and compliance gave us the confidence to scale globally."
+            </p>
+            <h5 class="testimonial-name" data-i18n="testimonial2_name">Sophia Lee</h5>
+            <span class="testimonial-role" data-i18n="testimonial2_role">COO, GreenEdge</span>
+          </div>
+        </div>
+
+        <!-- Testimonial Item 3 -->
+        <div class="carousel-item">
+          <div class="testimonial-card mx-auto text-center">
+            <p class="testimonial-text" data-i18n="testimonial3_text">
+              "A reliable partner that delivers results consistently. Their customer-first approach is unmatched."
+            </p>
+            <h5 class="testimonial-name" data-i18n="testimonial3_name">David Johnson</h5>
+            <span class="testimonial-role" data-i18n="testimonial3_role">Founder, GlobalCore</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+<section class="why-choose-us py-5 position-relative">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Content -->
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <h2 class="fw-bold mb-3 section-title" data-i18n="why_title">
+          Why Choose Us?
+        </h2>
+        <p class="section-subtitle mb-4" data-i18n="why_subtitle">
+          We bring innovation, strategy, and technology together to help your business thrive.
+        </p>
+        <a href="contact.html" class="btn btn-info btn-lg" data-i18n="why_cta">
+          Let’s Talk →
+        </a>
+      </div>
+
+      <!-- Right Features -->
+      <div class="col-lg-7">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="feature-card p-4 text-center" data-animate="fade-up" style="--delay:0s;">
+              <i class="fa-solid fa-lightbulb mb-3 fa-2x text-info"></i>
+              <h5 class="fw-bold" data-i18n="why_innovation">Innovation</h5>
+              <p class="small text-muted" data-i18n="why_innovation_desc">
+                We drive creative solutions and forward-thinking strategies.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="feature-card p-4 text-center" data-animate="fade-up" style="--delay:0.2s;">
+              <i class="fa-solid fa-shield-halved mb-3 fa-2x text-info"></i>
+              <h5 class="fw-bold" data-i18n="why_trust">Trust</h5>
+              <p class="small text-muted" data-i18n="why_trust_desc">
+                Reliability and transparency are at the core of our partnerships.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="feature-card p-4 text-center" data-animate="fade-up" style="--delay:0.4s;">
+              <i class="fa-solid fa-rocket mb-3 fa-2x text-info"></i>
+              <h5 class="fw-bold" data-i18n="why_growth">Growth</h5>
+              <p class="small text-muted" data-i18n="why_growth_desc">
+                We help you scale sustainably and reach new markets.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="feature-card p-4 text-center" data-animate="fade-up" style="--delay:0.6s;">
+              <i class="fa-solid fa-headset mb-3 fa-2x text-info"></i>
+              <h5 class="fw-bold" data-i18n="why_support">Support</h5>
+              <p class="small text-muted" data-i18n="why_support_desc">
+                Our team provides continuous guidance every step of the way.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+const animatedItems = document.querySelectorAll("[data-animate]");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.2 });
+
+animatedItems.forEach(item => observer.observe(item));
+</script>
+
+
+<footer class="shadow-sm mt-5 pt-4">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-md-3">
+        <a href="index.html" class="d-inline-block mb-3">
+          <img src="images/logo.png" alt="Stackly Logo" height="40"
+               data-i18n-attr="alt" data-i18n="footer_logo_alt">
+        </a>
+        <p class="small" data-i18n="footer_desc">
+          Empowering businesses with innovative consulting, strategy, and technology solutions.<br>
+  Partner with us to accelerate growth and transform your organization.
+        </p>
+        <div class="d-flex gap-3 fs-5">
+          <a href="https://www.facebook.com" class="text-dark"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.twitter.com" class="text-dark"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_quick_links">Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html" class="link-dark text-decoration-none" data-i18n="footer_home1">Home 1</a></li>
+          <li><a href="home2.html" class="link-dark text-decoration-none" data-i18n="footer_home2">Home 2</a></li>
+          <li><a href="about.html" class="link-dark text-decoration-none" data-i18n="footer_about_us">About Us</a></li>
+          <li><a href="services.html" class="link-dark text-decoration-none" data-i18n="footer_services_link">Services</a></li>
+          <li><a href="blog.html" class="link-dark text-decoration-none" data-i18n="footer_blog">Blog</a></li>
+          <li><a href="contact.html" class="link-dark text-decoration-none" data-i18n="footer_contact_us_link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_services">Services</h6>
+        <ul class="list-unstyled small">
+          <li><a href="service1.html" class="link-dark text-decoration-none" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a href="service2.html" class="link-dark text-decoration-none" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a href="service3.html" class="link-dark text-decoration-none" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a href="service4.html" class="link-dark text-decoration-none" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a href="service5.html" class="link-dark text-decoration-none" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a href="service6.html" class="link-dark text-decoration-none" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_contact_us">Contact Us</h6>
+        <p class="small mb-1" data-i18n="footer_address"><i class="fas fa-map-marker-alt me-2"></i>123 Main St, Abc City</p>
+        <p class="small mb-1" data-i18n="footer_phone"><i class="fas fa-phone me-2"></i>+1 234 567 890</p>
+        <p class="small mb-0" data-i18n="footer_email"><i class="fas fa-envelope me-2"></i>info@Business.com</p>
+        <div>
+            <h6 data-i18n="follow">Follow us</h6>
+            <a href="https://www.facebook.com" class="text-dark me-2"><i class="fab fa-facebook fa-lg" data-i18n="follow1">facebook</i></a>
+            <a href="https://www.twitter.com" class="text-dark me-2"><i class="fab fa-twitter fa-lg" data-i18n="follow2">twitter</i></a>
+            <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram fa-lg" data-i18n="follow3">instagram</i></a>
+        </div>
+      </div>
+      
+
+    </div>
+
+    <hr class="mt-4 mb-2">
+    <div class="text-center pb-3 small" data-i18n="footer_copy">© 2025 Business. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+// 🌍 Dictionary for translations
+const translations = {
+  en: {
+    site_title: "Stackly Business",
+
+    // Header
+    header_logo_alt: "Stackly Logo",
+    nav_home_dropdown: "Home",
+    nav_home1: "Home 1",
+    nav_home2: "Home 2",
+    nav_about: "About",
+    nav_blog: "Blog",
+    nav_services_dropdown: "Services",
+    nav_all_services: "All Services",
+    nav_service: "All Services",
+    nav_service1: "Innovation & Change",
+    nav_service2: "Governance & Compliance",
+    nav_service3: "Customer Experience & Service",
+    nav_service4: "Data & Business Intelligence",
+    nav_service5: "Sustainability & ESG Strategy",
+    nav_service6: "Acquisitions & Partnership Advisory",
+    nav_contact: "Contact",
+    logout: "Logout",
+
+    // Hero
+    services_hero_title: "Our Services, Your Growth",
+    services_hero_subtitle: "Discover how our tailored consulting, strategy, and technology solutions can help your organization innovate, stay compliant, and achieve sustainable success.",
+    services_hero_cta1: "View All Services",
+    services_hero_cta2: "Get a Free Consultation",
+
+    // Impact Journey
+    impact_title: "Our Impact Journey",
+    impact_subtitle: "A story of growth, innovation, and global trust",
+
+    // Success Stories
+    success_title: "Our Success Stories",
+    success_subtitle: "Real transformations that inspire trust and innovation",
+    story1_title: "Retail Transformation",
+    story1_desc: "Helped a leading retailer boost sales by 40% through digital strategy and data-driven insights.",
+    story1_cta: "Read More →",
+    story2_title: "Financial Growth",
+    story2_desc: "Enabled a bank to streamline compliance and cut costs by 30% with automation solutions.",
+    story2_cta: "Read More →",
+    story3_title: "Global Expansion",
+    story3_desc: "Supported a startup’s journey to 15+ countries with advisory and scalable tech solutions.",
+    story3_cta: "Read More →",
+
+    // Sphere Section
+    services_section_title: "Transform Your Business",
+    services_section_subtitle: "Explore our services in an interactive way",
+    card_title: "Service Title",
+    card_desc: "Service description goes here.",
+    card_cta: "Learn More →",
+
+    // Testimonials
+    testimonials_title: "What Our Clients Say",
+    testimonials_subtitle: "Trusted by businesses worldwide",
+    testimonial1_text: "Their innovative solutions transformed our business and boosted growth by 40% in just 6 months.",
+    testimonial1_name: "John Smith",
+    testimonial1_role: "CEO, TechVision",
+    testimonial2_text: "The team’s expertise in strategy and compliance gave us the confidence to scale globally.",
+    testimonial2_name: "Sophia Lee",
+    testimonial2_role: "COO, GreenEdge",
+    testimonial3_text: "A reliable partner that delivers results consistently. Their customer-first approach is unmatched.",
+    testimonial3_name: "David Johnson",
+    testimonial3_role: "Founder, GlobalCore",
+
+    // Why Choose Us
+    why_title: "Why Choose Us?",
+    why_subtitle: "We bring innovation, strategy, and technology together to help your business thrive.",
+    why_cta: "Let’s Talk →",
+    why_innovation: "Innovation",
+    why_innovation_desc: "We drive creative solutions and forward-thinking strategies.",
+    why_trust: "Trust",
+    why_trust_desc: "Reliability and transparency are at the core of our partnerships.",
+    why_growth: "Growth",
+    why_growth_desc: "We help you scale sustainably and reach new markets.",
+    why_support: "Support",
+    why_support_desc: "Our team provides continuous guidance every step of the way.",
+
+    // Footer
+    footer_logo_alt: "Stackly Logo",
+    footer_desc: "Empowering businesses with innovative consulting, strategy, and technology solutions. Partner with us to accelerate growth and transform your organization.",
+    footer_quick_links: "Quick Links",
+    footer_home1: "Home 1",
+    footer_home2: "Home 2",
+    footer_about_us: "About Us",
+    footer_services_link: "Services",
+    footer_blog: "Blog",
+    footer_contact_us_link: "Contact Us",
+    footer_services: "Services",
+    footer_contact_us: "Contact Us",
+    footer_address: "123 Main St, Abc City",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    follow: "Follow us",
+    follow1: "Facebook",
+    follow2: "Twitter",
+    follow3: "Instagram",
+    footer_copy: "© 2025 Business. All rights reserved.",
+    section_title: "All Our Services",
+    services: [
+      { title: "Innovation & Change", desc: "Adapt, innovate and transform your business for the future." },
+      { title: "Governance & Compliance", desc: "Ensure compliance with confidence and efficiency." },
+      { title: "Customer Experience", desc: "Deliver memorable experiences for your customers." },
+      { title: "Data & Intelligence", desc: "Unlock actionable insights with smart analytics." },
+      { title: "Sustainability & ESG", desc: "Drive sustainable growth with ESG strategies." },
+      { title: "Acquisitions & Advisory", desc: "Strategic deals and partnerships for growth." }
+    ]
+  },
+
+  ar: {
+    site_title: "شركة Stackly",
+
+    // Header
+    header_logo_alt: "شعار Stackly",
+    nav_home_dropdown: "الرئيسية",
+    nav_home1: "الرئيسية 1",
+    nav_home2: "الرئيسية 2",
+    nav_about: "من نحن",
+    nav_blog: "مدونة",
+    nav_services_dropdown: "الخدمات",
+    nav_all_services: "جميع الخدمات",
+    nav_service: "جميع الخدمات",
+    nav_service1: "الابتكار والتغيير",
+    nav_service2: "الحوكمة والامتثال",
+    nav_service3: "تجربة وخدمة العملاء",
+    nav_service4: "البيانات وذكاء الأعمال",
+    nav_service5: "الاستدامة واستراتيجية ESG",
+    nav_service6: "الاستحواذ والاستشارات",
+    nav_contact: "اتصل بنا",
+    logout: "تسجيل خروج",
+
+    // Hero
+    services_hero_title: "خدماتنا، نموك",
+    services_hero_subtitle: "اكتشف كيف يمكن لحلولنا المخصصة في الاستشارات والاستراتيجية والتكنولوجيا أن تساعد مؤسستك على الابتكار والامتثال وتحقيق النجاح المستدام.",
+    services_hero_cta1: "عرض جميع الخدمات",
+    services_hero_cta2: "احصل على استشارة مجانية",
+
+    // Impact Journey
+    impact_title: "رحلة تأثيرنا",
+    impact_subtitle: "قصة نمو وابتكار وثقة عالمية",
+
+    // Success Stories
+    success_title: "قصص نجاحنا",
+    success_subtitle: "تحولات حقيقية تلهم الثقة والابتكار",
+    story1_title: "تحول قطاع التجزئة",
+    story1_desc: "ساعدنا إحدى الشركات الرائدة على زيادة المبيعات بنسبة 40٪ من خلال الاستراتيجية الرقمية والبيانات.",
+    story1_cta: "اقرأ المزيد →",
+    story2_title: "النمو المالي",
+    story2_desc: "مكّنا بنكًا من تبسيط الامتثال وتقليل التكاليف بنسبة 30٪ باستخدام الحلول الآلية.",
+    story2_cta: "اقرأ المزيد →",
+    story3_title: "التوسع العالمي",
+    story3_desc: "دعمنا رحلة شركة ناشئة إلى أكثر من 15 دولة من خلال الاستشارات والحلول التقنية القابلة للتوسع.",
+    story3_cta: "اقرأ المزيد →",
+
+    // Sphere Section
+    services_section_title: "حوّل عملك",
+    services_section_subtitle: "استكشف خدماتنا بطريقة تفاعلية",
+    card_title: "عنوان الخدمة",
+    card_desc: "وصف الخدمة هنا.",
+    card_cta: "اعرف المزيد →",
+
+    // Testimonials
+    testimonials_title: "ماذا يقول عملاؤنا",
+    testimonials_subtitle: "موثوق به من قبل الشركات حول العالم",
+    testimonial1_text: "حلولهم المبتكرة حولت أعمالنا وزادت النمو بنسبة 40٪ خلال 6 أشهر فقط.",
+    testimonial1_name: "جون سميث",
+    testimonial1_role: "المدير التنفيذي، TechVision",
+    testimonial2_text: "خبرة الفريق في الاستراتيجية والامتثال منحتنا الثقة للتوسع عالميًا.",
+    testimonial2_name: "صوفيا لي",
+    testimonial2_role: "المديرة التشغيلية، GreenEdge",
+    testimonial3_text: "شريك موثوق يقدم النتائج باستمرار. نهجهم الموجه نحو العميل لا مثيل له.",
+    testimonial3_name: "ديفيد جونسون",
+    testimonial3_role: "المؤسس، GlobalCore",
+
+    // Why Choose Us
+    why_title: "لماذا تختارنا؟",
+    why_subtitle: "نحن نجمع بين الابتكار والاستراتيجية والتكنولوجيا لمساعدة عملك على الازدهار.",
+    why_cta: "تحدث معنا →",
+    why_innovation: "الابتكار",
+    why_innovation_desc: "نحن نقود الحلول الإبداعية والاستراتيجيات المستقبلية.",
+    why_trust: "الثقة",
+    why_trust_desc: "الموثوقية والشفافية في صميم شراكاتنا.",
+    why_growth: "النمو",
+    why_growth_desc: "نساعدك على التوسع بشكل مستدام والوصول إلى أسواق جديدة.",
+    why_support: "الدعم",
+    why_support_desc: "فريقنا يقدم التوجيه المستمر في كل خطوة.",
+
+    // Footer
+    footer_logo_alt: "شعار Stackly",
+    footer_desc: "تمكين الشركات بحلول مبتكرة في الاستشارات والاستراتيجية والتكنولوجيا. شريكنا لتسريع النمو وتحويل مؤسستك.",
+    footer_quick_links: "روابط سريعة",
+    footer_home1: "الرئيسية 1",
+    footer_home2: "الرئيسية 2",
+    footer_about_us: "من نحن",
+    footer_services_link: "الخدمات",
+    footer_blog: "مدونة",
+    footer_contact_us_link: "اتصل بنا",
+    footer_services: "الخدمات",
+    footer_contact_us: "اتصل بنا",
+    footer_address: "123 الشارع الرئيسي، مدينة Abc",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    follow: "تابعنا",
+    follow1: "فيسبوك",
+    follow2: "تويتر",
+    follow3: "إنستغرام",
+    footer_copy: "© 2025 الشركة. جميع الحقوق محفوظة.",
+     section_title: "جميع خدماتنا",
+    services: [
+      { title: "الابتكار والتغيير", desc: "تكيف وابتكر وحول عملك من أجل المستقبل." },
+      { title: "الحوكمة والامتثال", desc: "ضمان الامتثال بثقة وكفاءة." },
+      { title: "تجربة العملاء", desc: "قدم تجارب لا تُنسى لعملائك." },
+      { title: "البيانات والذكاء", desc: "اكتشف رؤى قابلة للتنفيذ من خلال التحليلات الذكية." },
+      { title: "الاستدامة وESG", desc: "حقق نمواً مستداماً باستخدام استراتيجيات ESG." },
+      { title: "الاستحواذ والاستشارات", desc: "صفقات وشراكات استراتيجية للنمو." }
+    ]
+  },
+
+  he: {
+    site_title: "סטאקלי ביזנס",
+
+    // Header
+    header_logo_alt: "לוגו Stackly",
+    nav_home_dropdown: "בית",
+    nav_home1: "בית 1",
+    nav_home2: "בית 2",
+    nav_about: "אודות",
+    nav_blog: "בלוג",
+    nav_services_dropdown: "שירותים",
+    nav_all_services: "כל השירותים",
+    nav_service: "כל השירותים",
+    nav_service1: "חדשנות ושינוי",
+    nav_service2: "ממשל ותאימות",
+    nav_service3: "חווית ושירות לקוחות",
+    nav_service4: "נתונים ובינה עסקית",
+    nav_service5: "קיימות ואסטרטגיית ESG",
+    nav_service6: "ייעוץ לרכישות ושותפויות",
+    nav_contact: "צור קשר",
+    logout: "התנתק",
+
+    // Hero
+    services_hero_title: "השירותים שלנו, הצמיחה שלך",
+    services_hero_subtitle: "גלה כיצד פתרונות מותאמים באסטרטגיה, ייעוץ וטכנולוגיה יכולים לעזור לארגון שלך לחדש, לעמוד בדרישות ולשגשג.",
+    services_hero_cta1: "צפה בכל השירותים",
+    services_hero_cta2: "קבל ייעוץ חינם",
+
+    // Impact Journey
+    impact_title: "מסע ההשפעה שלנו",
+    impact_subtitle: "סיפור של צמיחה, חדשנות ואמון עולמי",
+
+    // Success Stories
+    success_title: "סיפורי ההצלחה שלנו",
+    success_subtitle: "שינויים אמיתיים שמעוררים אמון וחדשנות",
+    story1_title: "שינוי קמעונאי",
+    story1_desc: "עזרנו לקמעונאי מוביל להגדיל מכירות ב-40% באמצעות אסטרטגיה דיגיטלית ותובנות מבוססות נתונים.",
+    story1_cta: "קרא עוד →",
+    story2_title: "צמיחה פיננסית",
+    story2_desc: "אפשרנו לבנק לייעל תאימות ולהפחית עלויות ב-30% בעזרת פתרונות אוטומציה.",
+    story2_cta: "קרא עוד →",
+    story3_title: "התרחבות גלובלית",
+    story3_desc: "תמכנו בסטארטאפ במסע ל-15+ מדינות בעזרת ייעוץ ופתרונות טכנולוגיים ניתנים להתרחבות.",
+    story3_cta: "קרא עוד →",
+
+    // Sphere Section
+    services_section_title: "הפוך את העסק שלך",
+    services_section_subtitle: "חקור את השירותים שלנו בצורה אינטראקטיבית",
+    card_title: "כותרת השירות",
+    card_desc: "תיאור השירות כאן.",
+    card_cta: "למידע נוסף →",
+
+    // Testimonials
+    testimonials_title: "מה הלקוחות שלנו אומרים",
+    testimonials_subtitle: "נאמנים על ידי עסקים ברחבי העולם",
+    testimonial1_text: "הפתרונות החדשניים שלהם שינו את העסק שלנו והגדילו את הצמיחה ב-40% תוך 6 חודשים בלבד.",
+    testimonial1_name: "ג'ון סמית",
+    testimonial1_role: "מנכ״ל, TechVision",
+    testimonial2_text: "המומחיות של הצוות באסטרטגיה ותאימות העניקה לנו ביטחון להתרחב גלובלית.",
+    testimonial2_name: "סופיה לי",
+    testimonial2_role: "סמנכ״לית תפעול, GreenEdge",
+    testimonial3_text: "שותף אמין שמספק תוצאות בעקביות. הגישה הממוקדת בלקוח שלהם היא ללא תחרות.",
+    testimonial3_name: "דייויד ג'ונסון",
+    testimonial3_role: "מייסד, GlobalCore",
+
+    // Why Choose Us
+    why_title: "למה לבחור בנו?",
+    why_subtitle: "אנחנו משלבים חדשנות, אסטרטגיה וטכנולוגיה כדי לעזור לעסק שלך לשגשג.",
+    why_cta: "בוא נדבר →",
+    why_innovation: "חדשנות",
+    why_innovation_desc: "אנחנו מובילים פתרונות יצירתיים ואסטרטגיות חדשניות.",
+    why_trust: "אמון",
+    why_trust_desc: "אמינות ושקיפות הן הבסיס לשותפויות שלנו.",
+    why_growth: "צמיחה",
+    why_growth_desc: "אנחנו עוזרים לך להתרחב באופן בר קיימא ולהגיע לשווקים חדשים.",
+    why_support: "תמיכה",
+    why_support_desc: "הצוות שלנו מספק ליווי מתמשך בכל שלב.",
+
+    // Footer
+    footer_logo_alt: "לוגו Stackly",
+    footer_desc: "מעניקים כוח לעסקים עם פתרונות חדשניים בייעוץ, אסטרטגיה וטכנולוגיה. שתף פעולה איתנו כדי להאיץ צמיחה ולהפוך את הארגון שלך.",
+    footer_quick_links: "קישורים מהירים",
+    footer_home1: "בית 1",
+    footer_home2: "בית 2",
+    footer_about_us: "אודותינו",
+    footer_services_link: "שירותים",
+    footer_blog: "בלוג",
+    footer_contact_us_link: "צור קשר",
+    footer_services: "שירותים",
+    footer_contact_us: "צור קשר",
+    footer_address: "123 רחוב ראשי, עיר Abc",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    follow: "עקוב אחרינו",
+    follow1: "פייסבוק",
+    follow2: "טוויטר",
+    follow3: "אינסטגרם",
+    footer_copy: "© 2025 עסק. כל הזכויות שמורות."
+  }
+};
+// 🔄 Apply translations
+function applyTranslations(lang) {
+  document.documentElement.lang = lang;
+
+  // Switch direction for RTL langs
+  document.documentElement.dir = (lang === "ar" || lang === "he") ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+    const attr = el.getAttribute("data-i18n-attr");
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.setAttribute(attr, translations[lang][key]);
+    }
+  });
+}
+
+// 🌐 Language selector listener
+document.addEventListener("DOMContentLoaded", () => {
+  const selector = document.getElementById("language-selector");
+
+  selector.addEventListener("change", (e) => {
+    const lang = e.target.value;
+    applyTranslations(lang);
+    localStorage.setItem("lang", lang); // Save preference
+  });
+
+  // Load saved language or default
+  const savedLang = localStorage.getItem("lang") || "en";
+  selector.value = savedLang;
+  applyTranslations(savedLang);
+});
+</script>
+
+</body>
+</html>

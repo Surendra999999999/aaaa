@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="site_title">Stackly Business</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+ <link rel="stylesheet" href="css/h_f.css" />
+ <link rel="stylesheet" href="css/service.css" />
+
+  <script src="js/header.js" defer></script>
+  <script src="js/dark_toogle.js" defer></script>
+ <script src="js/service.js" defer></script>
+</head>
+<body data-bs-theme="light">
+
+<!-- ===== Header ===== -->
+<header class="navbar navbar-expand-lg bg-light shadow-sm px-3 sticky-top">
+  <!-- Left: Logo -->
+  <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" alt="Logo" height="40"
+         data-i18n-attr="alt" data-i18n="header_logo_alt">
+  </a>
+
+  <!-- Center: nav links -->
+  <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+    <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_home_dropdown">
+          Home
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="index.html" data-i18n="nav_home1">Home 1</a></li>
+          <li><a class="dropdown-item" href="home2.html" data-i18n="nav_home2">Home 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="blog.html" data-i18n="nav_blog">Blog</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_services_dropdown">
+          Services
+        </a>
+        <ul class="dropdown-menu">
+          <li class="d-lg-none"><a class="dropdown-item" href="services.html" data-i18n="nav_all_services">All Services</a></li>
+                    <li><a class="dropdown-item" href="services.html" data-i18n="nav_service">All Services</a></li>
+
+          <li><a class="dropdown-item" href="service1.html" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a class="dropdown-item" href="service2.html" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a class="dropdown-item" href="service3.html" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a class="dropdown-item" href="service4.html" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a class="dropdown-item" href="service5.html" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a class="dropdown-item" href="service6.html" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Right: lang/profile/dark + hamburger -->
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <select id="language-selector" class="form-select form-select-sm w-auto">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="dropdown">
+      <button class="btn btn-outline-secondary rounded-circle" id="profile-dropdown-toggle" data-bs-toggle="dropdown">
+        <span id="profile-initials"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" id="profile-dropdown">
+        <li><a class="dropdown-item" href="#" id="logout-btn" data-i18n="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark" class="btn btn-outline-secondary btn-sm">🌙</button>
+
+    <!-- Hamburger LAST -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== Hero Section with Video Background ===== -->
+<section class="hero-section position-relative text-white">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover">
+    <source src="videos/service2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark Overlay -->
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.55);"></div>
+
+  <!-- Content -->
+  <div class="container position-relative z-2 py-5">
+    <div class="row align-items-center text-center text-lg-start">
+      
+      <!-- Left: Text -->
+      <div class="col-lg-7 mx-auto mx-lg-0">
+        <h1 class="display-4 fw-bold mb-3" data-i18n="service5_hero_title">
+          Sustainability & ESG Strategy
+        </h1>
+        <p class="lead mb-4" data-i18n="service5_hero_subtitle">
+          Drive long-term growth with responsible business practices. Our ESG strategies help organizations balance profitability with purpose, building resilience and trust.
+        </p>
+        <a href="#overview" class="btn btn-primary btn-lg me-2" data-i18n="service5_hero_cta1">
+          Build a Sustainable Future
+        </a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg" data-i18n="service5_hero_cta2">
+          Partner with Us
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===== Overview Section ===== -->
+<section id="overview" class="py-5 position-relative">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+
+      <!-- Left: Image with Flip Effect -->
+      <div class="col-lg-6 fade-in">
+        <div class="flip-card glass-box rounded-4 shadow" role="button" tabindex="0" aria-pressed="false">
+          <div class="flip-card-inner">
+            
+            <!-- Front Side (Image) -->
+            <div class="flip-card-front">
+              <img src="images/esg.jpeg" 
+                   alt="Sustainability & ESG Strategy Overview" 
+                   class="img-fluid rounded-3"
+                   data-i18n-attr="alt" 
+                   data-i18n="service5_overview_img_alt">
+            </div>
+            
+            <!-- Back Side (Text) -->
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h4 class="fw-bold mb-2" data-i18n="service5_flip_title">Lead with Purpose</h4>
+              <p class="small" data-i18n="service5_flip_text">
+                Integrate sustainability and ESG principles into your core strategy for long-term impact and growth.
+              </p>
+              <a href="contact.html" class="btn btn-light btn-sm mt-2" data-i18n="service5_flip_cta">
+                Start Today
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Text -->
+      <div class="col-lg-6 fade-in">
+        <div class="glass-box p-4 rounded-4 shadow">
+          <h2 class="fw-bold mb-3" data-i18n="service5_overview_title">
+            Building a Sustainable Future
+          </h2>
+          <p class="lead mb-3" data-i18n="service5_overview_text1">
+            Businesses today face increasing pressure from investors, regulators, and consumers to act responsibly. A strong ESG strategy not only reduces risks but also enhances brand reputation and resilience.
+          </p>
+          <p data-i18n="service5_overview_text2">
+            Our Sustainability & ESG consulting helps organizations align profitability with purpose—embedding environmental stewardship, social responsibility, and sound governance into their decision-making to unlock long-term value.
+          </p>
+          <a href="contact.html" class="btn btn-primary mt-3" data-i18n="service5_overview_cta">
+            Talk to Our ESG Experts
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Service Flip Section ===== -->
+<!-- ===== Service Flip Section ===== -->
+<section id="service-flip" class="py-5 position-relative">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5" data-i18n="services.title">Our Sustainability & ESG Solutions</h2>
+
+    <div class="flip-section-wrapper">
+      <!-- Service 1 -->
+      <div class="flip-section-card active">
+        <div class="flip-section-front">
+          <img src="images/strategy1.jpeg" alt="ESG Strategy Development" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.esg_strategy.title">ESG Strategy Development</h3>
+            <p data-i18n="services.esg_strategy.desc">
+              Build tailored ESG strategies that align sustainability with business goals.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.esg_strategy.point1">✅ Materiality assessments</li>
+              <li data-i18n="services.esg_strategy.point2">✅ Goal setting & roadmaps</li>
+              <li data-i18n="services.esg_strategy.point3">✅ Stakeholder alignment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/ser6_4.jpeg" alt="Environmental Sustainability" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.environmental.title">Environmental Sustainability</h3>
+            <p data-i18n="services.environmental.desc">
+              Reduce environmental impact with green operations and climate initiatives.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.environmental.point1">✅ Carbon footprint reduction</li>
+              <li data-i18n="services.environmental.point2">✅ Renewable energy adoption</li>
+              <li data-i18n="services.environmental.point3">✅ Waste & resource management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/fin1.jpeg" alt="Social Impact & Responsibility" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.social.title">Social Impact & Responsibility</h3>
+            <p data-i18n="services.social.desc">
+              Foster diversity, equity, and community impact through responsible practices.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.social.point1">✅ Diversity & inclusion programs</li>
+              <li data-i18n="services.social.point2">✅ Employee well-being</li>
+              <li data-i18n="services.social.point3">✅ Community engagement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/Governance.jpeg" alt="Governance & Compliance" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.governance.title">Governance & Compliance</h3>
+            <p data-i18n="services.governance.desc">
+              Strengthen governance structures to ensure ethical, transparent business practices.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.governance.point1">✅ Risk & compliance frameworks</li>
+              <li data-i18n="services.governance.point2">✅ Ethical business practices</li>
+              <li data-i18n="services.governance.point3">✅ Board & leadership accountability</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/esg.jpeg" alt="ESG Reporting & Disclosure" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.reporting.title">ESG Reporting & Disclosure</h3>
+            <p data-i18n="services.reporting.desc">
+              Deliver transparent ESG disclosures aligned with global reporting standards.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.reporting.point1">✅ GRI, SASB, TCFD compliance</li>
+              <li data-i18n="services.reporting.point2">✅ Integrated reporting</li>
+              <li data-i18n="services.reporting.point3">✅ Investor & stakeholder reporting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/strategy3.jpeg" alt="Sustainable Innovation & Growth" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.sustainable_innovation.title">Sustainable Innovation & Growth</h3>
+            <p data-i18n="services.sustainable_innovation.desc">
+              Accelerate innovation with solutions that balance profit and purpose.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.sustainable_innovation.point1">✅ Green product design</li>
+              <li data-i18n="services.sustainable_innovation.point2">✅ Circular economy models</li>
+              <li data-i18n="services.sustainable_innovation.point3">✅ Long-term growth strategies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="strategy-highlights" class="py-5 position-relative overflow-hidden">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4" data-i18n="service5_strategy.title">Sustainability & ESG in Action</h2>
+    <p class="text-muted mb-5" data-i18n="service5_strategy.subtitle">
+      Core pillars of building responsible, resilient, and future-ready businesses
+    </p>
+
+    <!-- Circles (different left % so they look scattered) -->
+    <div class="emoji-circle" style="left:15%;" data-delay="0">
+      <span class="emoji">🌍</span>
+      <p data-i18n="service5_strategy.point1">Environmental Stewardship</p>
+    </div>
+
+    <div class="emoji-circle" style="left:35%;" data-delay="200">
+      <span class="emoji">🤝</span>
+      <p data-i18n="service5_strategy.point2">Social Responsibility</p>
+    </div>
+
+    <div class="emoji-circle" style="left:55%;" data-delay="400">
+      <span class="emoji">⚖️</span>
+      <p data-i18n="service5_strategy.point3">Strong Governance</p>
+    </div>
+
+    <div class="emoji-circle" style="left:75%;" data-delay="600">
+      <span class="emoji">📑</span>
+      <p data-i18n="service5_strategy.point4">Transparent Reporting</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== What Our Clients Say ===== -->
+<section id="client-testimonials" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4" data-i18n="service5_testimonials.title">
+      What Our Clients Say
+    </h2>
+    <p class="text-muted text-center mb-5" data-i18n="service5_testimonials.subtitle">
+      Organizations that partnered with us to embed sustainability and ESG principles into their strategy
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="testimonial-card p-4 h-100 shadow-sm">
+          <p class="mb-3" data-i18n="service5_testimonials.client1.quote">
+            “Their ESG roadmap helped us balance profitability with purpose, earning stronger trust from our investors and customers.”
+          </p>
+          <h6 class="fw-semibold mb-0" data-i18n="service5_testimonials.client1.name">
+            James Carter
+          </h6>
+          <small class="text-muted" data-i18n="service5_testimonials.client1.role">
+            CEO, GreenFuture Industries
+          </small>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial-card p-4 h-100 shadow-sm">
+          <p class="mb-3" data-i18n="service5_testimonials.client2.quote">
+            “Their sustainability strategies not only reduced our carbon footprint but also improved operational efficiency.”
+          </p>
+          <h6 class="fw-semibold mb-0" data-i18n="service5_testimonials.client2.name">
+            Aisha Rahman
+          </h6>
+          <small class="text-muted" data-i18n="service5_testimonials.client2.role">
+            Operations Director, EcoTech Solutions
+          </small>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial-card p-4 h-100 shadow-sm">
+          <p class="mb-3" data-i18n="service5_testimonials.client3.quote">
+            “With their ESG reporting guidance, we achieved global compliance and strengthened our brand reputation.”
+          </p>
+          <h6 class="fw-semibold mb-0" data-i18n="service5_testimonials.client3.name">
+            David Wilson
+          </h6>
+          <small class="text-muted" data-i18n="service5_testimonials.client3.role">
+            Sustainability Lead, Horizon Group
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ===== Final Call-to-Action Section ===== -->
+<section id="final-cta" class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-3" data-i18n="service5_cta.title">Shape a Sustainable Future</h2>
+    <p class="text-muted mb-4" data-i18n="service5_cta.subtitle">
+      Drive meaningful impact with strategies that balance profitability and purpose. Together, we can build a resilient, responsible, and future-ready business.
+    </p>
+    <a href="contact.html" class="btn btn-primary px-4" data-i18n="service5_cta.button">
+      🌱 Partner with Us Today
+    </a>
+  </div>
+</section>
+
+<footer class="shadow-sm mt-5 pt-4">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-md-3">
+        <a href="index.html" class="d-inline-block mb-3">
+          <img src="images/logo.png" alt="Stackly Logo" height="40"
+               data-i18n-attr="alt" data-i18n="footer_logo_alt">
+        </a>
+        <p class="small" data-i18n="footer_desc">
+          Empowering businesses with innovative consulting, strategy, and technology solutions.<br>
+  Partner with us to accelerate growth and transform your organization.
+        </p>
+        <div class="d-flex gap-3 fs-5">
+          <a href="https://www.facebook.com" class="text-dark"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.twitter.com" class="text-dark"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_quick_links">Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html" class="link-dark text-decoration-none" data-i18n="footer_home1">Home 1</a></li>
+          <li><a href="home2.html" class="link-dark text-decoration-none" data-i18n="footer_home2">Home 2</a></li>
+          <li><a href="about.html" class="link-dark text-decoration-none" data-i18n="footer_about_us">About Us</a></li>
+          <li><a href="services.html" class="link-dark text-decoration-none" data-i18n="footer_services_link">Services</a></li>
+          <li><a href="blog.html" class="link-dark text-decoration-none" data-i18n="footer_blog">Blog</a></li>
+          <li><a href="contact.html" class="link-dark text-decoration-none" data-i18n="footer_contact_us_link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_services">Services</h6>
+        <ul class="list-unstyled small">
+          <li><a href="service1.html" class="link-dark text-decoration-none" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a href="service2.html" class="link-dark text-decoration-none" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a href="service3.html" class="link-dark text-decoration-none" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a href="service4.html" class="link-dark text-decoration-none" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a href="service5.html" class="link-dark text-decoration-none" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a href="service6.html" class="link-dark text-decoration-none" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_contact_us">Contact Us</h6>
+        <p class="small mb-1" data-i18n="footer_address"><i class="fas fa-map-marker-alt me-2"></i>123 Main St, Abc City</p>
+        <p class="small mb-1" data-i18n="footer_phone"><i class="fas fa-phone me-2"></i>+1 234 567 890</p>
+        <p class="small mb-0" data-i18n="footer_email"><i class="fas fa-envelope me-2"></i>info@Business.com</p>
+        <div>
+            <h6 data-i18n="follow">Follow us</h6>
+            <a href="https://www.facebook.com" class="text-dark me-2"><i class="fab fa-facebook fa-lg" data-i18n="follow1">facebook</i></a>
+            <a href="https://www.twitter.com" class="text-dark me-2"><i class="fab fa-twitter fa-lg" data-i18n="follow2">twitter</i></a>
+            <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram fa-lg" data-i18n="follow3">instagram</i></a>
+        </div>
+      </div>
+      
+
+    </div>
+
+    <hr class="mt-4 mb-2">
+    <div class="text-center pb-3 small" data-i18n="footer_copy">© 2025 Business. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+// 🌍 Dictionary for translations
+const translations = {
+  en: {
+    // ===== Header =====
+    header_logo_alt: "Logo",
+    nav_home_dropdown: "Home",
+    nav_home1: "Home 1",
+    nav_home2: "Home 2",
+    nav_about: "About",
+    nav_blog: "Blog",
+    nav_services_dropdown: "Services",
+    nav_all_services: "All Services",
+    nav_service: "All Services",
+    nav_service1: "Innovation & Change",
+    nav_service2: "Governance & Compliance",
+    nav_service3: "Customer Experience & Service",
+    nav_service4: "Data & Business Intelligence",
+    nav_service5: "Sustainability & ESG Strategy",
+    nav_service6: "Acquisitions & Partnership Advisory",
+    nav_contact: "Contact",
+    logout: "Logout",
+
+    // ===== Hero =====
+    service5_hero_title: "Sustainability & ESG Strategy",
+    service5_hero_subtitle: "Drive long-term growth with responsible business practices. Our ESG strategies help organizations balance profitability with purpose, building resilience and trust.",
+    service5_hero_cta1: "Build a Sustainable Future",
+    service5_hero_cta2: "Partner with Us",
+
+    // ===== Overview =====
+    service5_overview_img_alt: "Sustainability & ESG Strategy Overview",
+    service5_flip_title: "Lead with Purpose",
+    service5_flip_text: "Integrate sustainability and ESG principles into your core strategy for long-term impact and growth.",
+    service5_flip_cta: "Start Today",
+    service5_overview_title: "Building a Sustainable Future",
+    service5_overview_text1: "Businesses today face increasing pressure from investors, regulators, and consumers to act responsibly. A strong ESG strategy not only reduces risks but also enhances brand reputation and resilience.",
+    service5_overview_text2: "Our Sustainability & ESG consulting helps organizations align profitability with purpose—embedding environmental stewardship, social responsibility, and sound governance into their decision-making to unlock long-term value.",
+    service5_overview_cta: "Talk to Our ESG Experts",
+
+    // ===== Service Flip Section =====
+    "services.title": "Our Sustainability & ESG Solutions",
+    "services.esg_strategy.title": "ESG Strategy Development",
+    "services.esg_strategy.desc": "Build tailored ESG strategies that align sustainability with business goals.",
+    "services.esg_strategy.point1": "✅ Materiality assessments",
+    "services.esg_strategy.point2": "✅ Goal setting & roadmaps",
+    "services.esg_strategy.point3": "✅ Stakeholder alignment",
+    "services.environmental.title": "Environmental Sustainability",
+    "services.environmental.desc": "Reduce environmental impact with green operations and climate initiatives.",
+    "services.environmental.point1": "✅ Carbon footprint reduction",
+    "services.environmental.point2": "✅ Renewable energy adoption",
+    "services.environmental.point3": "✅ Waste & resource management",
+    "services.social.title": "Social Impact & Responsibility",
+    "services.social.desc": "Foster diversity, equity, and community impact through responsible practices.",
+    "services.social.point1": "✅ Diversity & inclusion programs",
+    "services.social.point2": "✅ Employee well-being",
+    "services.social.point3": "✅ Community engagement",
+    "services.governance.title": "Governance & Compliance",
+    "services.governance.desc": "Strengthen governance structures to ensure ethical, transparent business practices.",
+    "services.governance.point1": "✅ Risk & compliance frameworks",
+    "services.governance.point2": "✅ Ethical business practices",
+    "services.governance.point3": "✅ Board & leadership accountability",
+    "services.reporting.title": "ESG Reporting & Disclosure",
+    "services.reporting.desc": "Deliver transparent ESG disclosures aligned with global reporting standards.",
+    "services.reporting.point1": "✅ GRI, SASB, TCFD compliance",
+    "services.reporting.point2": "✅ Integrated reporting",
+    "services.reporting.point3": "✅ Investor & stakeholder reporting",
+    "services.sustainable_innovation.title": "Sustainable Innovation & Growth",
+    "services.sustainable_innovation.desc": "Accelerate innovation with solutions that balance profit and purpose.",
+    "services.sustainable_innovation.point1": "✅ Green product design",
+    "services.sustainable_innovation.point2": "✅ Circular economy models",
+    "services.sustainable_innovation.point3": "✅ Long-term growth strategies",
+
+    // ===== Strategy Highlights =====
+    "service5_strategy.title": "Sustainability & ESG in Action",
+    "service5_strategy.subtitle": "Core pillars of building responsible, resilient, and future-ready businesses",
+    "service5_strategy.point1": "Environmental Stewardship",
+    "service5_strategy.point2": "Social Responsibility",
+    "service5_strategy.point3": "Strong Governance",
+    "service5_strategy.point4": "Transparent Reporting",
+
+    // ===== Testimonials =====
+    "service5_testimonials.title": "What Our Clients Say",
+    "service5_testimonials.subtitle": "Organizations that partnered with us to embed sustainability and ESG principles into their strategy",
+    "service5_testimonials.client1.quote": "“Their ESG roadmap helped us balance profitability with purpose, earning stronger trust from our investors and customers.”",
+    "service5_testimonials.client1.name": "James Carter",
+    "service5_testimonials.client1.role": "CEO, GreenFuture Industries",
+    "service5_testimonials.client2.quote": "“Their sustainability strategies not only reduced our carbon footprint but also improved operational efficiency.”",
+    "service5_testimonials.client2.name": "Aisha Rahman",
+    "service5_testimonials.client2.role": "Operations Director, EcoTech Solutions",
+    "service5_testimonials.client3.quote": "“With their ESG reporting guidance, we achieved global compliance and strengthened our brand reputation.”",
+    "service5_testimonials.client3.name": "David Wilson",
+    "service5_testimonials.client3.role": "Sustainability Lead, Horizon Group",
+
+    // ===== Final CTA =====
+    "service5_cta.title": "Shape a Sustainable Future",
+    "service5_cta.subtitle": "Drive meaningful impact with strategies that balance profitability and purpose. Together, we can build a resilient, responsible, and future-ready business.",
+    "service5_cta.button": "🌱 Partner with Us Today",
+
+    // ===== Footer =====
+    footer_logo_alt: "Stackly Logo",
+    footer_desc: "Empowering businesses with innovative consulting, strategy, and technology solutions. Partner with us to accelerate growth and transform your organization.",
+    footer_quick_links: "Quick Links",
+    footer_home1: "Home 1",
+    footer_home2: "Home 2",
+    footer_about_us: "About Us",
+    footer_services_link: "Services",
+    footer_blog: "Blog",
+    footer_contact_us_link: "Contact Us",
+    footer_services: "Services",
+    footer_contact_us: "Contact Us",
+    footer_address: "123 Main St, Abc City",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    follow: "Follow us",
+    follow1: "facebook",
+    follow2: "twitter",
+    follow3: "instagram",
+    footer_copy: "© 2025 Business. All rights reserved."
+  },
+
+  ar: {
+    header_logo_alt: "الشعار",
+    nav_home_dropdown: "الرئيسية",
+    nav_home1: "الصفحة الرئيسية 1",
+    nav_home2: "الصفحة الرئيسية 2",
+    nav_about: "من نحن",
+    nav_blog: "المدونة",
+    nav_services_dropdown: "الخدمات",
+    nav_all_services: "جميع الخدمات",
+    nav_service: "جميع الخدمات",
+    nav_service1: "الابتكار والتغيير",
+    nav_service2: "الحوكمة والامتثال",
+    nav_service3: "تجربة العملاء والخدمة",
+    nav_service4: "البيانات وذكاء الأعمال",
+    nav_service5: "استراتيجية الاستدامة وESG",
+    nav_service6: "الاستحواذ والاستشارات الشراكية",
+    nav_contact: "اتصل بنا",
+    logout: "تسجيل الخروج",
+
+    service5_hero_title: "استراتيجية الاستدامة وESG",
+    service5_hero_subtitle: "قم بدفع النمو طويل المدى من خلال ممارسات الأعمال المسؤولة. تساعد استراتيجيات ESG المنظمات على موازنة الربحية مع الهدف، وبناء المرونة والثقة.",
+    service5_hero_cta1: "ابنِ مستقبلًا مستدامًا",
+    service5_hero_cta2: "تعاون معنا",
+
+    service5_overview_img_alt: "نظرة عامة على استراتيجية الاستدامة وESG",
+    service5_flip_title: "قد بالهدف",
+    service5_flip_text: "ادمج مبادئ الاستدامة وESG في استراتيجيتك الأساسية لتحقيق تأثير ونمو طويل المدى.",
+    service5_flip_cta: "ابدأ اليوم",
+    service5_overview_title: "بناء مستقبل مستدام",
+    service5_overview_text1: "تواجه الشركات اليوم ضغوطًا متزايدة من المستثمرين والمنظمين والمستهلكين للتصرف بمسؤولية. استراتيجية ESG قوية تقلل المخاطر وتعزز سمعة العلامة التجارية والمرونة.",
+    service5_overview_text2: "تساعد استشارات الاستدامة وESG المنظمات على مواءمة الربحية مع الهدف، من خلال دمج الحفاظ على البيئة والمسؤولية الاجتماعية والحوكمة الرشيدة في اتخاذ القرار لخلق قيمة طويلة المدى.",
+    service5_overview_cta: "تحدث مع خبراء ESG لدينا",
+
+    "services.title": "حلول الاستدامة وESG لدينا",
+    "services.esg_strategy.title": "تطوير استراتيجية ESG",
+    "services.esg_strategy.desc": "قم ببناء استراتيجيات ESG مصممة تتوافق مع أهداف الأعمال والاستدامة.",
+    "services.esg_strategy.point1": "✅ تقييم الأهمية",
+    "services.esg_strategy.point2": "✅ تحديد الأهداف وخطط الطريق",
+    "services.esg_strategy.point3": "✅ مواءمة أصحاب المصلحة",
+    "services.environmental.title": "الاستدامة البيئية",
+    "services.environmental.desc": "قلل من التأثير البيئي من خلال العمليات الخضراء والمبادرات المناخية.",
+    "services.environmental.point1": "✅ تقليل البصمة الكربونية",
+    "services.environmental.point2": "✅ اعتماد الطاقة المتجددة",
+    "services.environmental.point3": "✅ إدارة النفايات والموارد",
+    "services.social.title": "الأثر الاجتماعي والمسؤولية",
+    "services.social.desc": "تعزيز التنوع والمساواة وأثر المجتمع من خلال ممارسات مسؤولة.",
+    "services.social.point1": "✅ برامج التنوع والشمول",
+    "services.social.point2": "✅ رفاهية الموظفين",
+    "services.social.point3": "✅ التفاعل مع المجتمع",
+    "services.governance.title": "الحوكمة والامتثال",
+    "services.governance.desc": "تعزيز هياكل الحوكمة لضمان ممارسات تجارية أخلاقية وشفافة.",
+    "services.governance.point1": "✅ أطر المخاطر والامتثال",
+    "services.governance.point2": "✅ ممارسات تجارية أخلاقية",
+    "services.governance.point3": "✅ مساءلة المجلس والقيادة",
+    "services.reporting.title": "التقارير والإفصاح عن ESG",
+    "services.reporting.desc": "تقديم إفصاحات ESG شفافة ومتوافقة مع المعايير العالمية.",
+    "services.reporting.point1": "✅ الامتثال لـ GRI, SASB, TCFD",
+    "services.reporting.point2": "✅ التقارير المتكاملة",
+    "services.reporting.point3": "✅ تقارير للمستثمرين وأصحاب المصلحة",
+    "services.sustainable_innovation.title": "الابتكار والنمو المستدام",
+    "services.sustainable_innovation.desc": "تسريع الابتكار بحلول توازن بين الربح والهدف.",
+    "services.sustainable_innovation.point1": "✅ تصميم منتجات خضراء",
+    "services.sustainable_innovation.point2": "✅ نماذج الاقتصاد الدائري",
+    "services.sustainable_innovation.point3": "✅ استراتيجيات النمو الطويلة المدى",
+
+    "service5_strategy.title": "الاستدامة وESG قيد التنفيذ",
+    "service5_strategy.subtitle": "أركان أساسية لبناء شركات مسؤولة ومرنة وجاهزة للمستقبل",
+    "service5_strategy.point1": "الحفاظ على البيئة",
+    "service5_strategy.point2": "المسؤولية الاجتماعية",
+    "service5_strategy.point3": "حوكمة قوية",
+    "service5_strategy.point4": "تقارير شفافة",
+
+    "service5_testimonials.title": "ماذا يقول عملاؤنا",
+    "service5_testimonials.subtitle": "المنظمات التي تعاونت معنا لتطبيق مبادئ الاستدامة وESG في استراتيجيتها",
+    "service5_testimonials.client1.quote": "“ساعدنا مخطط ESG الخاص بهم على موازنة الربحية مع الهدف، وكسب ثقة أقوى من المستثمرين والعملاء.”",
+    "service5_testimonials.client1.name": "جيمس كارتر",
+    "service5_testimonials.client1.role": "الرئيس التنفيذي، GreenFuture Industries",
+    "service5_testimonials.client2.quote": "“لم تقلل استراتيجيات الاستدامة الخاصة بهم من بصمتنا الكربونية فحسب، بل حسّنت كفاءة العمليات أيضًا.”",
+    "service5_testimonials.client2.name": "عائشة رحمن",
+    "service5_testimonials.client2.role": "مديرة العمليات، EcoTech Solutions",
+    "service5_testimonials.client3.quote": "“بفضل إرشاداتهم حول تقارير ESG، حققنا الامتثال العالمي وعززنا سمعة علامتنا التجارية.”",
+    "service5_testimonials.client3.name": "ديفيد ويلسون",
+    "service5_testimonials.client3.role": "مسؤول الاستدامة، Horizon Group",
+
+    "service5_cta.title": "شكل مستقبلًا مستدامًا",
+    "service5_cta.subtitle": "قم بتحقيق تأثير ذي معنى من خلال استراتيجيات توازن بين الربحية والهدف. معًا، يمكننا بناء شركة مرنة ومسؤولة وجاهزة للمستقبل.",
+    "service5_cta.button": "🌱 تعاون معنا اليوم",
+
+    footer_logo_alt: "شعار Stackly",
+    footer_desc: "تمكين الشركات من خلال الاستشارات المبتكرة والاستراتيجية وحلول التكنولوجيا. تعاون معنا لتسريع النمو وتحويل مؤسستك.",
+    footer_quick_links: "روابط سريعة",
+    footer_home1: "الصفحة الرئيسية 1",
+    footer_home2: "الصفحة الرئيسية 2",
+    footer_about_us: "من نحن",
+    footer_services_link: "الخدمات",
+    footer_blog: "المدونة",
+    footer_contact_us_link: "اتصل بنا",
+    footer_services: "الخدمات",
+    footer_contact_us: "اتصل بنا",
+    footer_address: "123 الشارع الرئيسي، مدينة ABC",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    follow: "تابعنا",
+    follow1: "فيسبوك",
+    follow2: "تويتر",
+    follow3: "إنستغرام",
+    footer_copy: "© 2025 جميع الحقوق محفوظة."
+  },
+
+  he: {
+    header_logo_alt: "לוגו",
+    nav_home_dropdown: "בית",
+    nav_home1: "בית 1",
+    nav_home2: "בית 2",
+    nav_about: "אודות",
+    nav_blog: "בלוג",
+    nav_services_dropdown: "שירותים",
+    nav_all_services: "כל השירותים",
+    nav_service: "כל השירותים",
+    nav_service1: "חדשנות ושינוי",
+    nav_service2: "ממשל וציות",
+    nav_service3: "חוויה ושירות ללקוח",
+    nav_service4: "נתונים ובינה עסקית",
+    nav_service5: "אסטרטגיית קיימות ו-ESG",
+    nav_service6: "ייעוץ רכישות ושיתופי פעולה",
+    nav_contact: "צור קשר",
+    logout: "התנתק",
+
+    service5_hero_title: "אסטרטגיית קיימות ו-ESG",
+    service5_hero_subtitle: "קדם צמיחה ארוכת טווח עם שיטות עבודה אחראיות. אסטרטגיות ESG שלנו עוזרות לארגונים לאזן בין רווחיות למטרה, ולבנות עמידות ואמון.",
+    service5_hero_cta1: "בנה עתיד בר קיימא",
+    service5_hero_cta2: "שתף פעולה איתנו",
+
+    service5_overview_img_alt: "סקירה כללית של אסטרטגיית קיימות ו-ESG",
+    service5_flip_title: "הובל עם מטרה",
+    service5_flip_text: "שלב עקרונות ESG וקיימות באסטרטגיה הליבה שלך להשפעה וצמיחה ארוכת טווח.",
+    service5_flip_cta: "התחל היום",
+    service5_overview_title: "בניית עתיד בר קיימא",
+    service5_overview_text1: "חברות כיום עומדות בפני לחץ גובר מצד משקיעים, רגולטורים וצרכנים לפעול באחריות. אסטרטגיית ESG חזקה מפחיתה סיכונים ומשפרת את המוניטין והעמידות.",
+    service5_overview_text2: "ייעוץ ESG והקיימות שלנו עוזר לארגונים ליישר רווחיות עם מטרה - תוך שילוב שמירה על הסביבה, אחריות חברתית וממשל תקין בקבלת ההחלטות כדי ליצור ערך ארוך טווח.",
+    service5_overview_cta: "דבר עם מומחי ESG שלנו",
+
+    "services.title": "פתרונות הקיימות ו-ESG שלנו",
+    "services.esg_strategy.title": "פיתוח אסטרטגיית ESG",
+    "services.esg_strategy.desc": "בנה אסטרטגיות ESG מותאמות המשלבות קיימות עם מטרות עסקיות.",
+    "services.esg_strategy.point1": "✅ הערכות מהותיות",
+    "services.esg_strategy.point2": "✅ קביעת יעדים ומפות דרכים",
+    "services.esg_strategy.point3": "✅ יישור בעלי עניין",
+    "services.environmental.title": "קיימות סביבתית",
+    "services.environmental.desc": "צמצם את ההשפעה הסביבתית עם תפעול ירוק ויוזמות אקלים.",
+    "services.environmental.point1": "✅ הפחתת טביעת רגל פחמנית",
+    "services.environmental.point2": "✅ שימוש באנרגיה מתחדשת",
+    "services.environmental.point3": "✅ ניהול פסולת ומשאבים",
+    "services.social.title": "השפעה חברתית ואחריות",
+    "services.social.desc": "טפח גיוון, שוויון והשפעה קהילתית באמצעות פרקטיקות אחראיות.",
+    "services.social.point1": "✅ תוכניות גיוון ושילוב",
+    "services.social.point2": "✅ רווחת עובדים",
+    "services.social.point3": "✅ מעורבות בקהילה",
+    "services.governance.title": "ממשל וציות",
+    "services.governance.desc": "חזק מבני ממשל כדי להבטיח פרקטיקות עסקיות אתיות ושקופות.",
+    "services.governance.point1": "✅ מסגרות סיכון וציות",
+    "services.governance.point2": "✅ פרקטיקות עסקיות אתיות",
+    "services.governance.point3": "✅ אחריות הנהלה ודירקטוריון",
+    "services.reporting.title": "דיווח ו-ESG גילוי",
+    "services.reporting.desc": "ספק גילויים שקופים בהתאם לסטנדרטים גלובליים.",
+    "services.reporting.point1": "✅ עמידה ב-GRI, SASB, TCFD",
+    "services.reporting.point2": "✅ דיווח משולב",
+    "services.reporting.point3": "✅ דיווח למשקיעים ובעלי עניין",
+    "services.sustainable_innovation.title": "חדשנות וצמיחה בר-קיימא",
+    "services.sustainable_innovation.desc": "האץ חדשנות עם פתרונות שמאזנים רווח ומטרה.",
+    "services.sustainable_innovation.point1": "✅ עיצוב מוצרים ירוקים",
+    "services.sustainable_innovation.point2": "✅ מודלים של כלכלה מעגלית",
+    "services.sustainable_innovation.point3": "✅ אסטרטגיות צמיחה ארוכות טווח",
+
+    "service5_strategy.title": "קיימות ו-ESG בפועל",
+    "service5_strategy.subtitle": "עמודים עיקריים לבניית עסקים אחראיים, עמידים ומוכנים לעתיד",
+    "service5_strategy.point1": "שמירה על הסביבה",
+    "service5_strategy.point2": "אחריות חברתית",
+    "service5_strategy.point3": "ממשל חזק",
+    "service5_strategy.point4": "דיווח שקוף",
+
+    "service5_testimonials.title": "מה הלקוחות שלנו אומרים",
+    "service5_testimonials.subtitle": "ארגונים שעבדו איתנו לשילוב עקרונות ESG וקיימות באסטרטגיה שלהם",
+    "service5_testimonials.client1.quote": "“מפת הדרכים ESG שלהם עזרה לנו לאזן בין רווחיות למטרה, והביאה אמון חזק יותר מהמשקיעים והלקוחות שלנו.”",
+    "service5_testimonials.client1.name": "ג'יימס קרטר",
+    "service5_testimonials.client1.role": "מנכ\"ל, GreenFuture Industries",
+    "service5_testimonials.client2.quote": "“אסטרטגיות הקיימות שלהם לא רק צמצמו את טביעת הרגל הפחמנית שלנו אלא גם שיפרו את היעילות התפעולית.”",
+    "service5_testimonials.client2.name": "אישה רחמן",
+    "service5_testimonials.client2.role": "מנהל תפעול, EcoTech Solutions",
+    "service5_testimonials.client3.quote": "“עם הדרכתם לדיווח ESG, השגנו עמידה גלובלית וחיזקנו את המוניטין שלנו.”",
+    "service5_testimonials.client3.name": "דיוויד וילסון",
+    "service5_testimonials.client3.role": "מוביל קיימות, Horizon Group",
+
+    "service5_cta.title": "עצב עתיד בר קיימא",
+    "service5_cta.subtitle": "צור השפעה משמעותית עם אסטרטגיות שמאזנות רווחיות ומטרה. יחד, נוכל לבנות עסק עמיד, אחראי ומוכן לעתיד.",
+    "service5_cta.button": "🌱 שתף פעולה איתנו היום",
+
+    footer_logo_alt: "לוגו Stackly",
+    footer_desc: "העצמת עסקים באמצעות ייעוץ חדשני, אסטרטגיה ופתרונות טכנולוגיים. שתף פעולה איתנו כדי לזרז צמיחה ולהפוך את הארגון שלך.",
+    footer_quick_links: "קישורים מהירים",
+    footer_home1: "בית 1",
+    footer_home2: "בית 2",
+    footer_about_us: "אודות",
+    footer_services_link: "שירותים",
+    footer_blog: "בלוג",
+    footer_contact_us_link: "צור קשר",
+    footer_services: "שירותים",
+    footer_contact_us: "צור קשר",
+    footer_address: "רחוב ראשי 123, עיר ABC",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    follow: "עקוב אחרינו",
+    follow1: "פייסבוק",
+    follow2: "טוויטר",
+    follow3: "אינסטגרם",
+    footer_copy: "© 2025 כל הזכויות שמורות."
+  }
+};
+
+// 🔄 Apply translations
+function applyTranslations(lang) {
+  document.documentElement.lang = lang;
+
+  // Switch direction for RTL langs
+  document.documentElement.dir = (lang === "ar" || lang === "he") ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+    const attr = el.getAttribute("data-i18n-attr");
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.setAttribute(attr, translations[lang][key]);
+    }
+  });
+}
+
+// 🌐 Language selector listener
+document.addEventListener("DOMContentLoaded", () => {
+  const selector = document.getElementById("language-selector");
+
+  selector.addEventListener("change", (e) => {
+    const lang = e.target.value;
+    applyTranslations(lang);
+    localStorage.setItem("lang", lang); // Save preference
+  });
+
+  // Load saved language or default
+  const savedLang = localStorage.getItem("lang") || "en";
+  selector.value = savedLang;
+  applyTranslations(savedLang);
+});
+</script>
+
+</body>
+</html>

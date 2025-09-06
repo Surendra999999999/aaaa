@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="site_title">Stackly Business</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+ <link rel="stylesheet" href="css/h_f.css" />
+ <link rel="stylesheet" href="css/service.css" />
+
+  <script src="js/header.js" defer></script>
+  <script src="js/dark_toogle.js" defer></script>
+ <script src="js/service.js" defer></script>
+</head>
+<body data-bs-theme="light">
+
+<!-- ===== Header ===== -->
+<header class="navbar navbar-expand-lg bg-light shadow-sm px-3 sticky-top">
+  <!-- Left: Logo -->
+  <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" alt="Logo" height="40"
+         data-i18n-attr="alt" data-i18n="header_logo_alt">
+  </a>
+
+  <!-- Center: nav links -->
+  <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+    <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_home_dropdown">
+          Home
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="index.html" data-i18n="nav_home1">Home 1</a></li>
+          <li><a class="dropdown-item" href="home2.html" data-i18n="nav_home2">Home 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="blog.html" data-i18n="nav_blog">Blog</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_services_dropdown">
+          Services
+        </a>
+        <ul class="dropdown-menu">
+          <li class="d-lg-none"><a class="dropdown-item" href="services.html" data-i18n="nav_all_services">All Services</a></li>
+                    <li><a class="dropdown-item" href="services.html" data-i18n="nav_service">All Services</a></li>
+
+          <li><a class="dropdown-item" href="service1.html" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a class="dropdown-item" href="service2.html" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a class="dropdown-item" href="service3.html" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a class="dropdown-item" href="service4.html" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a class="dropdown-item" href="service5.html" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a class="dropdown-item" href="service6.html" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Right: lang/profile/dark + hamburger -->
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <select id="language-selector" class="form-select form-select-sm w-auto">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="dropdown">
+      <button class="btn btn-outline-secondary rounded-circle" id="profile-dropdown-toggle" data-bs-toggle="dropdown">
+        <span id="profile-initials"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" id="profile-dropdown">
+        <li><a class="dropdown-item" href="#" id="logout-btn" data-i18n="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark" class="btn btn-outline-secondary btn-sm">🌙</button>
+
+    <!-- Hamburger LAST -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>
+
+
+<!-- ===== Hero Section with Video Background ===== -->
+<section class="hero-section position-relative text-white">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover">
+    <source src="videos/service1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark Overlay -->
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.55);"></div>
+
+  <!-- Content -->
+  <div class="container position-relative z-2 py-5">
+    <div class="row align-items-center text-center text-lg-start">
+      
+      <!-- Left: Text -->
+      <div class="col-lg-7 mx-auto mx-lg-0">
+        <h1 class="display-4 fw-bold mb-3" data-i18n="service1_hero_title">
+          Innovation & Change
+        </h1>
+        <p class="lead mb-4" data-i18n="service1_hero_subtitle">
+          We help organizations embrace change, foster creativity, and build a culture of continuous innovation to stay ahead in a fast-moving world.
+        </p>
+        <a href="#overview" class="btn btn-primary btn-lg me-2" data-i18n="service1_hero_cta1">
+          Learn More
+        </a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg" data-i18n="service1_hero_cta2">
+          Start Your Transformation
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===== Overview Section ===== -->
+<section id="overview" class="py-5 position-relative">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+
+      <!-- Left: Image with Flip Effect -->
+      <div class="col-lg-6 fade-in">
+        <div class="flip-card glass-box rounded-4 shadow" role="button" tabindex="0" aria-pressed="false">
+          <div class="flip-card-inner">
+            
+            <!-- Front Side (Image) -->
+            <div class="flip-card-front">
+              <img src="images/innovation.jpeg" 
+                   alt="Innovation & Change Overview" 
+                   class="img-fluid rounded-3"
+                   data-i18n-attr="alt" 
+                   data-i18n="service1_overview_img_alt">
+            </div>
+            
+            <!-- Back Side (Text) -->
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h4 class="fw-bold mb-2" data-i18n="service1_flip_title">Take Our Service</h4>
+              <p class="small" data-i18n="service1_flip_text">
+                Unlock transformation with innovation-driven strategies tailored to your business.
+              </p>
+              <a href="contact.html" class="btn btn-light btn-sm mt-2" data-i18n="service1_flip_cta">
+                Get Started
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Text -->
+      <div class="col-lg-6 fade-in">
+        <div class="glass-box p-4 rounded-4 shadow">
+          <h2 class="fw-bold mb-3" data-i18n="service1_overview_title">
+            Driving Innovation &amp; Embracing Change
+          </h2>
+          <p class="lead mb-3" data-i18n="service1_overview_text1">
+            In today’s rapidly evolving business environment, staying competitive requires more than just keeping up — it demands leading the change.
+          </p>
+          <p data-i18n="service1_overview_text2">
+            Our Innovation &amp; Change services empower organizations to adopt forward-thinking strategies, redesign processes, and create a culture of agility that embraces transformation with confidence.
+          </p>
+          <a href="contact.html" class="btn btn-primary mt-3" data-i18n="service1_overview_cta">
+            Talk to Our Experts
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ===== Service Flip Section ===== -->
+<!-- ===== Service Flip Section ===== -->
+<section id="service-flip" class="py-5 position-relative">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5" data-i18n="services.title">Our Services</h2>
+
+    <div class="flip-section-wrapper">
+      <!-- Service 1 -->
+      <div class="flip-section-card active">
+        <div class="flip-section-front">
+          <img src="images/Business1.jpeg" alt="Strategy Workshops" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.strategy_workshops.title">Strategy Workshops</h3>
+            <p data-i18n="services.strategy_workshops.desc">
+              Collaborate with our experts to design actionable strategies that drive growth and adaptability.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.strategy_workshops.point1">✅ Tailored business strategies</li>
+              <li data-i18n="services.strategy_workshops.point2">✅ Hands-on collaborative sessions</li>
+              <li data-i18n="services.strategy_workshops.point3">✅ Measurable outcomes & roadmaps</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/business2.jpeg" alt="Process Redesign" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.process_redesign.title">Process Redesign</h3>
+            <p data-i18n="services.process_redesign.desc">
+              Streamline your operations to improve efficiency, scalability, and customer satisfaction.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.process_redesign.point1">✅ Simplified workflows</li>
+              <li data-i18n="services.process_redesign.point2">✅ Increased efficiency</li>
+              <li data-i18n="services.process_redesign.point3">✅ Reduced operational costs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/business3.jpeg" alt="Innovation Labs" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.innovation_labs.title">Innovation Labs</h3>
+            <p data-i18n="services.innovation_labs.desc">
+              Foster creativity and develop breakthrough solutions with rapid prototyping environments.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.innovation_labs.point1">✅ Culture of experimentation</li>
+              <li data-i18n="services.innovation_labs.point2">✅ Agile prototypes</li>
+              <li data-i18n="services.innovation_labs.point3">✅ Future-driven ideas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/strategy1.jpeg" alt="Change Management" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.change_management.title">Change Management</h3>
+            <p data-i18n="services.change_management.desc">
+              Support teams through transformation using structured and proven frameworks.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.change_management.point1">✅ Smooth transitions</li>
+              <li data-i18n="services.change_management.point2">✅ Employee engagement</li>
+              <li data-i18n="services.change_management.point3">✅ Reduced resistance to change</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/strategy2.jpeg" alt="Technology Integration" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.tech_integration.title">Technology Integration</h3>
+            <p data-i18n="services.tech_integration.desc">
+              Seamlessly integrate cutting-edge technologies into your business ecosystem.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.tech_integration.point1">✅ Cloud & digital adoption</li>
+              <li data-i18n="services.tech_integration.point2">✅ Seamless system integration</li>
+              <li data-i18n="services.tech_integration.point3">✅ Improved customer experience</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/strategy3.jpeg" alt="Future-Ready Culture" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.future_ready.title">Future-Ready Culture</h3>
+            <p data-i18n="services.future_ready.desc">
+              Build resilience and agility with forward-thinking strategies for tomorrow.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.future_ready.point1">✅ Leadership development</li>
+              <li data-i18n="services.future_ready.point2">✅ Growth mindset training</li>
+              <li data-i18n="services.future_ready.point3">✅ Long-term sustainability</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="strategy-highlights" class="py-5 position-relative overflow-hidden">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4" data-i18n="strategy.title">Strategy in Action</h2>
+    <p class="text-muted mb-5" data-i18n="strategy.subtitle">
+      Key elements of our workshops drop in as you reach this section
+    </p>
+
+    <!-- Circles (different left % so they look scattered) -->
+    <div class="emoji-circle" style="left:15%;" data-delay="0">
+      <span class="emoji">🧭</span>
+      <p data-i18n="strategy.point1">Tailored Roadmaps</p>
+    </div>
+
+    <div class="emoji-circle" style="left:35%;" data-delay="200">
+      <span class="emoji">🤝</span>
+      <p data-i18n="strategy.point2">Collaborative Sessions</p>
+    </div>
+
+    <div class="emoji-circle" style="left:55%;" data-delay="400">
+      <span class="emoji">📊</span>
+      <p data-i18n="strategy.point3">Measurable Outcomes</p>
+    </div>
+
+    <div class="emoji-circle" style="left:75%;" data-delay="600">
+      <span class="emoji">👌</span>
+      <p data-i18n="strategy.point4">Growth-Driven Change</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== What Our Clients Say ===== -->
+<section id="client-testimonials" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4" data-i18n="testimonials.title">
+      What Our Clients Say
+    </h2>
+    <p class="text-muted text-center mb-5" data-i18n="testimonials.subtitle">
+      Honest feedback from the partners we’ve helped grow
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="testimonial-card p-4 h-100 shadow-sm">
+          <p class="mb-3" data-i18n="testimonials.client1.quote">
+            “The strategy workshops reshaped our roadmap. We’re already seeing measurable growth.”
+          </p>
+          <h6 class="fw-semibold mb-0" data-i18n="testimonials.client1.name">
+            Alex Morgan
+          </h6>
+          <small class="text-muted" data-i18n="testimonials.client1.role">
+            CEO, NovaCorp
+          </small>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial-card p-4 h-100 shadow-sm">
+          <p class="mb-3" data-i18n="testimonials.client2.quote">
+            “Clear, collaborative, and actionable. Our team embraced change faster than we imagined.”
+          </p>
+          <h6 class="fw-semibold mb-0" data-i18n="testimonials.client2.name">
+            Priya Desai
+          </h6>
+          <small class="text-muted" data-i18n="testimonials.client2.role">
+            Head of Operations, Zenith
+          </small>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial-card p-4 h-100 shadow-sm">
+          <p class="mb-3" data-i18n="testimonials.client3.quote">
+            “From planning to execution, their guidance made tech integration seamless.”
+          </p>
+          <h6 class="fw-semibold mb-0" data-i18n="testimonials.client3.name">
+            Mateo Silva
+          </h6>
+          <small class="text-muted" data-i18n="testimonials.client3.role">
+            Product Manager, Orion Labs
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Final Call-to-Action Section ===== -->
+<section id="final-cta" class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-3" data-i18n="cta.title">Let’s Build the Future Together</h2>
+    <p class="text-muted mb-4" data-i18n="cta.subtitle">
+      Ready to take the next step? Connect with us today.
+    </p>
+    <a href="contact.html" class="btn btn-primary px-4" data-i18n="cta.button">
+      📩 Get in Touch
+    </a>
+  </div>
+</section>
+
+
+
+<footer class="shadow-sm mt-5 pt-4">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-md-3">
+        <a href="index.html" class="d-inline-block mb-3">
+          <img src="images/logo.png" alt="Stackly Logo" height="40"
+               data-i18n-attr="alt" data-i18n="footer_logo_alt">
+        </a>
+        <p class="small" data-i18n="footer_desc">
+          Empowering businesses with innovative consulting, strategy, and technology solutions.<br>
+  Partner with us to accelerate growth and transform your organization.
+        </p>
+        <div class="d-flex gap-3 fs-5">
+          <a href="https://www.facebook.com" class="text-dark"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.twitter.com" class="text-dark"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_quick_links">Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html" class="link-dark text-decoration-none" data-i18n="footer_home1">Home 1</a></li>
+          <li><a href="home2.html" class="link-dark text-decoration-none" data-i18n="footer_home2">Home 2</a></li>
+          <li><a href="about.html" class="link-dark text-decoration-none" data-i18n="footer_about_us">About Us</a></li>
+          <li><a href="services.html" class="link-dark text-decoration-none" data-i18n="footer_services_link">Services</a></li>
+          <li><a href="blog.html" class="link-dark text-decoration-none" data-i18n="footer_blog">Blog</a></li>
+          <li><a href="contact.html" class="link-dark text-decoration-none" data-i18n="footer_contact_us_link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_services">Services</h6>
+        <ul class="list-unstyled small">
+          <li><a href="service1.html" class="link-dark text-decoration-none" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a href="service2.html" class="link-dark text-decoration-none" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a href="service3.html" class="link-dark text-decoration-none" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a href="service4.html" class="link-dark text-decoration-none" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a href="service5.html" class="link-dark text-decoration-none" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a href="service6.html" class="link-dark text-decoration-none" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_contact_us">Contact Us</h6>
+        <p class="small mb-1" data-i18n="footer_address"><i class="fas fa-map-marker-alt me-2"></i>123 Main St, Abc City</p>
+        <p class="small mb-1" data-i18n="footer_phone"><i class="fas fa-phone me-2"></i>+1 234 567 890</p>
+        <p class="small mb-0" data-i18n="footer_email"><i class="fas fa-envelope me-2"></i>info@Business.com</p>
+        <div>
+            <h6 data-i18n="follow">Follow us</h6>
+            <a href="https://www.facebook.com" class="text-dark me-2"><i class="fab fa-facebook fa-lg" data-i18n="follow1">facebook</i></a>
+            <a href="https://www.twitter.com" class="text-dark me-2"><i class="fab fa-twitter fa-lg" data-i18n="follow2">twitter</i></a>
+            <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram fa-lg" data-i18n="follow3">instagram</i></a>
+        </div>
+      </div>
+      
+
+    </div>
+
+    <hr class="mt-4 mb-2">
+    <div class="text-center pb-3 small" data-i18n="footer_copy">© 2025 Business. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+// 🌍 Dictionary for translations
+const translations={
+  "en": {
+    "header_logo_alt": "Business Logo",
+    "nav_home_dropdown": "Home",
+    "nav_home1": "Home 1",
+    "nav_home2": "Home 2",
+    "nav_about": "About",
+    "nav_blog": "Blog",
+    "nav_services_dropdown": "Services",
+    "nav_all_services": "All Services",
+    "nav_service1": "Innovation & Change",
+    "nav_service2": "Governance & Compliance",
+    "nav_service3": "Customer Experience & Service",
+    "nav_service4": "Data & Business Intelligence",
+    "nav_service5": "Sustainability & ESG Strategy",
+    "nav_service6": "Acquisitions & Partnership Advisory",
+    "nav_contact": "Contact",
+    "logout": "Logout",
+
+    "service1_hero_title": "Innovation & Change",
+    "service1_hero_subtitle": "We help organizations embrace change, foster creativity, and build a culture of continuous innovation to stay ahead in a fast-moving world.",
+    "service1_hero_cta1": "Learn More",
+    "service1_hero_cta2": "Start Your Transformation",
+
+    "service1_overview_img_alt": "Innovation & Change Overview",
+    "service1_flip_title": "Take Our Service",
+    "service1_flip_text": "Unlock transformation with innovation-driven strategies tailored to your business.",
+    "service1_flip_cta": "Get Started",
+    "service1_overview_title": "Driving Innovation & Embracing Change",
+    "service1_overview_text1": "In today’s rapidly evolving business environment, staying competitive requires more than just keeping up — it demands leading the change.",
+    "service1_overview_text2": "Our Innovation & Change services empower organizations to adopt forward-thinking strategies, redesign processes, and create a culture of agility that embraces transformation with confidence.",
+    "service1_overview_cta": "Talk to Our Experts",
+
+    "services.title": "Our Services",
+    "services.strategy_workshops.title": "Strategy Workshops",
+    "services.strategy_workshops.desc": "Collaborate with our experts to design actionable strategies that drive growth and adaptability.",
+    "services.strategy_workshops.point1": "✅ Tailored business strategies",
+    "services.strategy_workshops.point2": "✅ Hands-on collaborative sessions",
+    "services.strategy_workshops.point3": "✅ Measurable outcomes & roadmaps",
+
+    "services.process_redesign.title": "Process Redesign",
+    "services.process_redesign.desc": "Streamline your operations to improve efficiency, scalability, and customer satisfaction.",
+    "services.process_redesign.point1": "✅ Simplified workflows",
+    "services.process_redesign.point2": "✅ Increased efficiency",
+    "services.process_redesign.point3": "✅ Reduced operational costs",
+
+    "services.innovation_labs.title": "Innovation Labs",
+    "services.innovation_labs.desc": "Foster creativity and develop breakthrough solutions with rapid prototyping environments.",
+    "services.innovation_labs.point1": "✅ Culture of experimentation",
+    "services.innovation_labs.point2": "✅ Agile prototypes",
+    "services.innovation_labs.point3": "✅ Future-driven ideas",
+
+    "services.change_management.title": "Change Management",
+    "services.change_management.desc": "Support teams through transformation using structured and proven frameworks.",
+    "services.change_management.point1": "✅ Smooth transitions",
+    "services.change_management.point2": "✅ Employee engagement",
+    "services.change_management.point3": "✅ Reduced resistance to change",
+
+    "services.tech_integration.title": "Technology Integration",
+    "services.tech_integration.desc": "Seamlessly integrate cutting-edge technologies into your business ecosystem.",
+    "services.tech_integration.point1": "✅ Cloud & digital adoption",
+    "services.tech_integration.point2": "✅ Seamless system integration",
+    "services.tech_integration.point3": "✅ Improved customer experience",
+
+    "services.future_ready.title": "Future-Ready Culture",
+    "services.future_ready.desc": "Build resilience and agility with forward-thinking strategies for tomorrow.",
+    "services.future_ready.point1": "✅ Leadership development",
+    "services.future_ready.point2": "✅ Growth mindset training",
+    "services.future_ready.point3": "✅ Long-term sustainability",
+
+    "strategy.title": "Strategy in Action",
+    "strategy.subtitle": "Key elements of our workshops drop in as you reach this section",
+    "strategy.point1": "Tailored Roadmaps",
+    "strategy.point2": "Collaborative Sessions",
+    "strategy.point3": "Measurable Outcomes",
+    "strategy.point4": "Growth-Driven Change",
+
+    "testimonials.title": "What Our Clients Say",
+    "testimonials.subtitle": "Honest feedback from the partners we’ve helped grow",
+    "testimonials.client1.quote": "“The strategy workshops reshaped our roadmap. We’re already seeing measurable growth.”",
+    "testimonials.client1.name": "Alex Morgan",
+    "testimonials.client1.role": "CEO, NovaCorp",
+    "testimonials.client2.quote": "“Clear, collaborative, and actionable. Our team embraced change faster than we imagined.”",
+    "testimonials.client2.name": "Priya Desai",
+    "testimonials.client2.role": "Head of Operations, Zenith",
+    "testimonials.client3.quote": "“From planning to execution, their guidance made tech integration seamless.”",
+    "testimonials.client3.name": "Mateo Silva",
+    "testimonials.client3.role": "Product Manager, Orion Labs",
+
+    "cta.title": "Let’s Build the Future Together",
+    "cta.subtitle": "Ready to take the next step? Connect with us today.",
+    "cta.button": "📩 Get in Touch",
+
+    "footer_logo_alt": "Business Logo",
+    "footer_desc": "Empowering businesses with innovative consulting, strategy, and technology solutions. Partner with us to accelerate growth and transform your organization.",
+    "footer_quick_links": "Quick Links",
+    "footer_home1": "Home 1",
+    "footer_home2": "Home 2",
+    "footer_about_us": "About Us",
+    "footer_services_link": "Services",
+    "footer_blog": "Blog",
+    "footer_contact_us_link": "Contact Us",
+    "footer_services": "Services",
+    "footer_contact_us": "Contact Us",
+    "footer_address": "123 Main St, Abc City",
+    "footer_phone": "+1 234 567 890",
+    "footer_email": "info@Business.com",
+    "follow": "Follow us",
+    "follow1": "Facebook",
+    "follow2": "Twitter",
+    "follow3": "Instagram",
+    "footer_copy": "© 2025 Business. All rights reserved."
+  },
+
+  "ar": {
+    "header_logo_alt": "شعار الشركة",
+    "nav_home_dropdown": "الرئيسية",
+    "nav_home1": "الصفحة الرئيسية 1",
+    "nav_home2": "الصفحة الرئيسية 2",
+    "nav_about": "من نحن",
+    "nav_blog": "المدونة",
+    "nav_services_dropdown": "الخدمات",
+    "nav_all_services": "جميع الخدمات",
+    "nav_service1": "الابتكار والتغيير",
+    "nav_service2": "الحوكمة والامتثال",
+    "nav_service3": "تجربة العملاء والخدمة",
+    "nav_service4": "البيانات وذكاء الأعمال",
+    "nav_service5": "الاستدامة واستراتيجية ESG",
+    "nav_service6": "الاستحواذ والاستشارات",
+    "nav_contact": "اتصل بنا",
+    "logout": "تسجيل خروج",
+
+    "service1_hero_title": "الابتكار والتغيير",
+    "service1_hero_subtitle": "نساعد المؤسسات على احتضان التغيير وتعزيز الإبداع وبناء ثقافة الابتكار المستمر للبقاء في صدارة المنافسة.",
+    "service1_hero_cta1": "اعرف المزيد",
+    "service1_hero_cta2": "ابدأ رحلتك للتحول",
+
+    "service1_overview_img_alt": "نظرة عامة على الابتكار والتغيير",
+    "service1_flip_title": "اطلب خدمتنا",
+    "service1_flip_text": "حقق التحول باستراتيجيات مدفوعة بالابتكار ومصممة خصيصًا لعملك.",
+    "service1_flip_cta": "ابدأ الآن",
+    "service1_overview_title": "قيادة الابتكار واحتضان التغيير",
+    "service1_overview_text1": "في بيئة الأعمال المتسارعة اليوم، يتطلب البقاء في المنافسة قيادة التغيير لا مجرد مواكبته.",
+    "service1_overview_text2": "تمكن خدمات الابتكار والتغيير مؤسستك من تبني استراتيجيات مستقبلية وإعادة تصميم العمليات وبناء ثقافة مرنة تتعامل بثقة مع التحول.",
+    "service1_overview_cta": "تحدث مع خبرائنا",
+
+    "services.title": "خدماتنا",
+    "services.strategy_workshops.title": "ورش العمل الاستراتيجية",
+    "services.strategy_workshops.desc": "تعاون مع خبرائنا لوضع استراتيجيات عملية تدفع النمو والقدرة على التكيف.",
+    "services.strategy_workshops.point1": "✅ استراتيجيات مخصصة للأعمال",
+    "services.strategy_workshops.point2": "✅ جلسات تعاونية عملية",
+    "services.strategy_workshops.point3": "✅ نتائج قابلة للقياس وخطط طريق",
+
+    "services.process_redesign.title": "إعادة تصميم العمليات",
+    "services.process_redesign.desc": "بسّط عملياتك لتحسين الكفاءة وقابلية التوسع ورضا العملاء.",
+    "services.process_redesign.point1": "✅ سير عمل مبسط",
+    "services.process_redesign.point2": "✅ كفاءة أعلى",
+    "services.process_redesign.point3": "✅ خفض التكاليف التشغيلية",
+
+    "services.innovation_labs.title": "مختبرات الابتكار",
+    "services.innovation_labs.desc": "عزز الإبداع وطوّر حلولاً رائدة عبر بيئات النماذج السريعة.",
+    "services.innovation_labs.point1": "✅ ثقافة التجريب",
+    "services.innovation_labs.point2": "✅ نماذج أولية سريعة",
+    "services.innovation_labs.point3": "✅ أفكار مستقبلية",
+
+    "services.change_management.title": "إدارة التغيير",
+    "services.change_management.desc": "دعم الفرق خلال التحول باستخدام أطر عمل منهجية مثبتة.",
+    "services.change_management.point1": "✅ انتقالات سلسة",
+    "services.change_management.point2": "✅ تفاعل الموظفين",
+    "services.change_management.point3": "✅ تقليل مقاومة التغيير",
+
+    "services.tech_integration.title": "تكامل التكنولوجيا",
+    "services.tech_integration.desc": "دمج التقنيات الحديثة بسلاسة في بيئة عملك.",
+    "services.tech_integration.point1": "✅ تبني السحابة والتحول الرقمي",
+    "services.tech_integration.point2": "✅ تكامل الأنظمة بسلاسة",
+    "services.tech_integration.point3": "✅ تحسين تجربة العملاء",
+
+    "services.future_ready.title": "ثقافة جاهزة للمستقبل",
+    "services.future_ready.desc": "ابنِ المرونة والقدرة على التكيف باستراتيجيات استشرافية.",
+    "services.future_ready.point1": "✅ تطوير القيادات",
+    "services.future_ready.point2": "✅ تدريب عقلية النمو",
+    "services.future_ready.point3": "✅ استدامة طويلة الأمد",
+
+    "strategy.title": "الاستراتيجية قيد التنفيذ",
+    "strategy.subtitle": "عناصر رئيسية من ورش العمل تسقط عند الوصول إلى هذا القسم",
+    "strategy.point1": "خطط طريق مخصصة",
+    "strategy.point2": "جلسات تعاونية",
+    "strategy.point3": "نتائج قابلة للقياس",
+    "strategy.point4": "تغيير مدفوع بالنمو",
+
+    "testimonials.title": "آراء عملائنا",
+    "testimonials.subtitle": "آراء صادقة من شركائنا الذين ساعدناهم على النمو",
+    "testimonials.client1.quote": "“أعادت ورش العمل الاستراتيجية تشكيل خطتنا. بدأنا نرى نموًا ملموسًا.”",
+    "testimonials.client1.name": "أليكس مورغان",
+    "testimonials.client1.role": "الرئيس التنفيذي، نوفاكورب",
+    "testimonials.client2.quote": "“واضحة وتعاونية وقابلة للتنفيذ. تبنّت فرقنا التغيير بسرعة غير متوقعة.”",
+    "testimonials.client2.name": "بريا ديساي",
+    "testimonials.client2.role": "رئيس العمليات، زينيث",
+    "testimonials.client3.quote": "“من التخطيط إلى التنفيذ، جعلت إرشاداتهم دمج التقنية سلسًا.”",
+    "testimonials.client3.name": "ماتيو سيلفا",
+    "testimonials.client3.role": "مدير المنتج، أوريون لابز",
+
+    "cta.title": "لنصنع المستقبل معًا",
+    "cta.subtitle": "هل أنت مستعد للخطوة التالية؟ تواصل معنا اليوم.",
+    "cta.button": "📩 تواصل معنا",
+
+    "footer_logo_alt": "شعار الشركة",
+    "footer_desc": "تمكين الشركات بحلول استشارية مبتكرة واستراتيجيات وتقنيات متقدمة. شاركنا لتسريع النمو وتحويل منظمتك.",
+    "footer_quick_links": "روابط سريعة",
+    "footer_home1": "الصفحة الرئيسية 1",
+    "footer_home2": "الصفحة الرئيسية 2",
+    "footer_about_us": "من نحن",
+    "footer_services_link": "الخدمات",
+    "footer_blog": "المدونة",
+    "footer_contact_us_link": "اتصل بنا",
+    "footer_services": "الخدمات",
+    "footer_contact_us": "اتصل بنا",
+    "footer_address": "123 شارع رئيسي، مدينة أبك",
+    "footer_phone": "+1 234 567 890",
+    "footer_email": "info@business.com",
+    "follow": "تابعنا",
+    "follow1": "فيسبوك",
+    "follow2": "تويتر",
+    "follow3": "إنستغرام",
+    "footer_copy": "© 2025 الشركة. جميع الحقوق محفوظة."
+  },
+
+  "he": {
+    "header_logo_alt": "לוגו העסק",
+    "nav_home_dropdown": "בית",
+    "nav_home1": "דף בית 1",
+    "nav_home2": "דף בית 2",
+    "nav_about": "אודות",
+    "nav_blog": "בלוג",
+    "nav_services_dropdown": "שירותים",
+    "nav_all_services": "כל השירותים",
+    "nav_service1": "חדשנות ושינוי",
+    "nav_service2": "ממשל וציות",
+    "nav_service3": "חוויית לקוח ושירות",
+    "nav_service4": "נתונים ובינה עסקית",
+    "nav_service5": "קיימות ואסטרטגיית ESG",
+    "nav_service6": "רכישות וייעוץ לשותפויות",
+    "nav_contact": "צור קשר",
+    "logout": "התנתק",
+
+    "service1_hero_title": "חדשנות ושינוי",
+    "service1_hero_subtitle": "אנו מסייעים לארגונים לאמץ שינוי, לטפח יצירתיות ולבנות תרבות של חדשנות מתמשכת כדי להוביל בשוק משתנה.",
+    "service1_hero_cta1": "למד עוד",
+    "service1_hero_cta2": "התחל את ההטמעה",
+
+    "service1_overview_img_alt": "סקירה על חדשנות ושינוי",
+    "service1_flip_title": "קח את השירות שלנו",
+    "service1_flip_text": "פתח טרנספורמציה בעזרת אסטרטגיות מונעות חדשנות המותאמות לעסק שלך.",
+    "service1_flip_cta": "התחל עכשיו",
+    "service1_overview_title": "הובלת חדשנות ואימוץ שינוי",
+    "service1_overview_text1": "בעולם העסקי המשתנה במהירות, הישרדות דורשת הובלת שינוי ולא רק מעקב.",
+    "service1_overview_text2": "השירותים שלנו מאפשרים לארגונים לאמץ אסטרטגיות חדשניות, לעצב מחדש תהליכים ולבנות תרבות גמישה שמקבלת טרנספורמציה בביטחון.",
+    "service1_overview_cta": "שוחח עם המומחים שלנו",
+
+    "services.title": "השירותים שלנו",
+    "services.strategy_workshops.title": "סדנאות אסטרטגיה",
+    "services.strategy_workshops.desc": "שתף פעולה עם המומחים שלנו כדי לבנות אסטרטגיות מעשיות המקדמות צמיחה וגמישות.",
+    "services.strategy_workshops.point1": "✅ אסטרטגיות מותאמות לעסק",
+    "services.strategy_workshops.point2": "✅ מפגשים שיתופיים מעשיים",
+    "services.strategy_workshops.point3": "✅ תוצאות מדידות ומפת דרכים",
+
+    "services.process_redesign.title": "עיצוב מחדש של תהליכים",
+    "services.process_redesign.desc": "ייעל את הפעילות לשיפור יעילות, קנה מידה ושביעות רצון לקוחות.",
+    "services.process_redesign.point1": "✅ זרימות עבודה פשוטות",
+    "services.process_redesign.point2": "✅ יעילות גבוהה יותר",
+    "services.process_redesign.point3": "✅ הפחתת עלויות תפעול",
+
+    "services.innovation_labs.title": "מעבדות חדשנות",
+    "services.innovation_labs.desc": "טפח יצירתיות ופיתוח פתרונות פורצי דרך בסביבות אב-טיפוס מהירות.",
+    "services.innovation_labs.point1": "✅ תרבות ניסוי",
+    "services.innovation_labs.point2": "✅ אב-טיפוסים זריזים",
+    "services.innovation_labs.point3": "✅ רעיונות עתידיים",
+
+    "services.change_management.title": "ניהול שינוי",
+    "services.change_management.desc": "תמיכה בצוותים במהלך טרנספורמציה באמצעות מסגרות עבודה מוכחות.",
+    "services.change_management.point1": "✅ מעברים חלקים",
+    "services.change_management.point2": "✅ מעורבות עובדים",
+    "services.change_management.point3": "✅ הפחתת התנגדות לשינוי",
+
+    "services.tech_integration.title": "שילוב טכנולוגי",
+    "services.tech_integration.desc": "שלב טכנולוגיות מתקדמות במערכת הארגונית שלך ללא קושי.",
+    "services.tech_integration.point1": "✅ אימוץ ענן ודיגיטציה",
+    "services.tech_integration.point2": "✅ שילוב מערכות חלק",
+    "services.tech_integration.point3": "✅ חוויית לקוח משופרת",
+
+    "services.future_ready.title": "תרבות מוכנה לעתיד",
+    "services.future_ready.desc": "בנה חוסן וגמישות עם אסטרטגיות ממוקדות עתיד.",
+    "services.future_ready.point1": "✅ פיתוח מנהיגות",
+    "services.future_ready.point2": "✅ אימון חשיבה מתפתחת",
+    "services.future_ready.point3": "✅ קיימות לטווח ארוך",
+
+    "strategy.title": "אסטרטגיה בפעולה",
+    "strategy.subtitle": "המרכיבים המרכזיים נופלים למקומם עם ההגעה לחלק זה",
+    "strategy.point1": "מפת דרכים מותאמת",
+    "strategy.point2": "מפגשים שיתופיים",
+    "strategy.point3": "תוצאות מדידות",
+    "strategy.point4": "שינוי מונע צמיחה",
+
+    "testimonials.title": "מה הלקוחות שלנו אומרים",
+    "testimonials.subtitle": "משוב כן מהשותפים שגדלו איתנו",
+    "testimonials.client1.quote": "“סדנאות האסטרטגיה עיצבו מחדש את התוכנית שלנו. כבר רואים צמיחה ניכרת.”",
+    "testimonials.client1.name": "אלכס מורגן",
+    "testimonials.client1.role": "מנכ\"ל, נובהקורפ",
+    "testimonials.client2.quote": "“ברור, שיתופי ובר יישום. הצוות שלנו אימץ שינוי מהר מהצפוי.”",
+    "testimonials.client2.name": "פריה דסאי",
+    "testimonials.client2.role": "ראש תפעול, זניט",
+    "testimonials.client3.quote": "“מהתכנון ועד ההטמעה, ההכוונה שלהם הפכה את שילוב הטכנולוגיה לפשוט.”",
+    "testimonials.client3.name": "מתאו סילבה",
+    "testimonials.client3.role": "מנהל מוצר, אוריון לאבס",
+
+    "cta.title": "בואו נבנה את העתיד יחד",
+    "cta.subtitle": "מוכנים לצעד הבא? פנו אלינו עוד היום.",
+    "cta.button": "📩 צור קשר",
+
+    "footer_logo_alt": "לוגו העסק",
+    "footer_desc": "מתן פתרונות ייעוץ, אסטרטגיה וטכנולוגיה חדשניים לעסקים. שתפו פעולה איתנו כדי להאיץ צמיחה ולהוביל שינוי בארגון שלכם.",
+    "footer_quick_links": "קישורים מהירים",
+    "footer_home1": "דף בית 1",
+    "footer_home2": "דף בית 2",
+    "footer_about_us": "אודותינו",
+    "footer_services_link": "שירותים",
+    "footer_blog": "בלוג",
+    "footer_contact_us_link": "צור קשר",
+    "footer_services": "שירותים",
+    "footer_contact_us": "צור קשר",
+    "footer_address": "רחוב ראשי 123, עיר ABC",
+    "footer_phone": "+1 234 567 890",
+    "footer_email": "info@business.com",
+    "follow": "עקבו אחרינו",
+    "follow1": "פייסבוק",
+    "follow2": "טוויטר",
+    "follow3": "אינסטגרם",
+    "footer_copy": "© 2025 העסק. כל הזכויות שמורות."
+  }
+};
+// 🔄 Apply translations
+function applyTranslations(lang) {
+  document.documentElement.lang = lang;
+
+  // Switch direction for RTL langs
+  document.documentElement.dir = (lang === "ar" || lang === "he") ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+    const attr = el.getAttribute("data-i18n-attr");
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.setAttribute(attr, translations[lang][key]);
+    }
+  });
+}
+
+// 🌐 Language selector listener
+document.addEventListener("DOMContentLoaded", () => {
+  const selector = document.getElementById("language-selector");
+
+  selector.addEventListener("change", (e) => {
+    const lang = e.target.value;
+    applyTranslations(lang);
+    localStorage.setItem("lang", lang); // Save preference
+  });
+
+  // Load saved language or default
+  const savedLang = localStorage.getItem("lang") || "en";
+  selector.value = savedLang;
+  applyTranslations(savedLang);
+});
+</script>
+
+</body>
+</html>

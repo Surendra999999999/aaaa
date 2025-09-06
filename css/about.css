@@ -1,0 +1,373 @@
+/* ===== Dark Mode: About Hero Section ===== */
+body.dark .hero-section {
+  color: #e0e0e0; /* lighter text */
+}
+
+body.dark .hero-section h1,
+body.dark .hero-section p {
+  color: #ffffff;
+}
+
+body.dark .hero-section .overlay {
+  background: rgba(0, 0, 0, 0.65); /* stronger overlay for readability */
+}
+
+/* Buttons in dark mode */
+body.dark .hero-section .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+body.dark .hero-section .btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+body.dark .hero-section .btn-outline-light {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+body.dark .hero-section .btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+/* Section background */
+.features-section {
+  background: linear-gradient(135deg, #f8f9ff, #eef3f9);
+  position: relative;
+  z-index: 1;
+}
+
+body.dark .features-section {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+}
+
+/* Feature card styling */
+.feature-card {
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #212529;
+  background-color: #fff;
+}
+
+.feature-card .icon {
+  font-size: 2rem;
+  color: #fff;
+  display: inline-block;
+  padding: 12px;
+  border-radius: 0.75rem;
+}
+
+/* Hover effects */
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Color variations */
+.feature-blue .icon { background: linear-gradient(135deg, #007bff, #00c6ff); }
+.feature-purple .icon { background: linear-gradient(135deg, #6f42c1, #b25fff); }
+.feature-teal .icon { background: linear-gradient(135deg, #20c997, #00d4ff); }
+.feature-orange .icon { background: linear-gradient(135deg, #fd7e14, #ffb347); }
+
+/* Dark mode */
+body.dark .feature-card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #333;
+}
+body.dark .features-section h2,
+body.dark .features-section h5 {
+  color: #fff;
+}
+body.dark .features-section p {
+  color: #bbb;
+}
+/* Section background */
+.features-section {
+  background: linear-gradient(135deg, #f8f9ff, #eef3f9);
+  position: relative;
+  z-index: 1;
+}
+
+body.dark .features-section {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+}
+
+/* Feature card styling */
+.feature-card {
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #212529;
+  background-color: #fff;
+}
+
+.feature-card .icon {
+  font-size: 2rem;
+  color: #fff;
+  display: inline-block;
+  padding: 12px;
+  border-radius: 0.75rem;
+}
+
+/* Hover effects */
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+
+
+/* Dark mode */
+body.dark .feature-card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #333;
+}
+body.dark .features-section h2,
+body.dark .features-section h5 {
+  color: #fff;
+}
+body.dark .features-section p {
+  color: #bbb;
+}
+
+
+/* Icon container */
+.feature-card .icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: #007bff; /* fallback background if no img */
+  overflow: hidden;
+}
+
+/* Image inside icon */
+.feature-card .icon img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  display: block;
+}
+/* Color variations */
+.feature-blue .icon { background: linear-gradient(135deg, #007bff, #00c6ff); }
+.feature-purple .icon { background: linear-gradient(135deg, #6f42c1, #b25fff); }
+.feature-teal .icon { background: linear-gradient(135deg, #20c997, #00d4ff); }
+.feature-orange .icon { background: linear-gradient(135deg, #fd7e14, #ffb347); }
+
+
+/* Video wrapper */
+.video-wrapper {
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating images */
+.floating-img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  animation: float 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+.float-1 {
+  top: -20px;
+  left: -30px;
+  animation-delay: 0s;
+}
+.float-2 {
+  bottom: -20px;
+  right: -30px;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.team-card {
+  transition: transform 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+.team-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.team-img-wrapper img {
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.1);
+}
+
+.team-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover .team-overlay {
+  opacity: 1;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+.social-links a:hover {
+  color: var(--bs-primary);
+}
+/* ================= TEAM SECTION DARK MODE ================= */
+body.dark .team-section,
+body.dark-mode .team-section {
+  background: #0f0f0f !important;
+  color: #f0f0f0 !important;
+}
+
+body.dark .team-section h2,
+body.dark-mode .team-section h2 {
+  color: #ffffff !important;
+}
+
+body.dark .team-section p,
+body.dark-mode .team-section p {
+  color: #bbbbbb !important;
+}
+
+/* Team Cards */
+body.dark .team-card,
+body.dark-mode .team-card {
+  background: #1a1a1a !important;
+  border: 1px solid #2c2c2c !important;
+  color: #f0f0f0 !important;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark .team-card:hover,
+body.dark-mode .team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
+  border-color: #0d6efd; /* Bootstrap primary blue */
+}
+
+/* Card Body */
+body.dark .team-card .card-body,
+body.dark-mode .team-card .card-body {
+  background: #151515 !important;
+  border-top: 1px solid #2c2c2c;
+}
+
+body.dark .team-card h5,
+body.dark-mode .team-card h5 {
+  color: #fff !important;
+}
+
+body.dark .team-card p,
+body.dark-mode .team-card p {
+  color: #aaa !important;
+}
+
+/* Overlay */
+body.dark .team-overlay,
+body.dark-mode .team-overlay {
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+body.dark .team-card:hover .team-overlay,
+body.dark-mode .team-card:hover .team-overlay {
+  opacity: 1;
+}
+
+/* Social Links */
+body.dark .team-card .social-links a,
+body.dark-mode .team-card .social-links a {
+  display: inline-block;
+  margin: 0 6px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+body.dark .team-card .social-links a:hover,
+body.dark-mode .team-card .social-links a:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+/* Reviews Section */
+.reviews-section {
+  background: #f8f9fa;
+}
+
+.review-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Dark Mode */
+body.dark .reviews-section,
+body.dark-mode .reviews-section {
+  background: #0f0f0f !important;
+  color: #f0f0f0 !important;
+}
+
+body.dark .review-card,
+body.dark-mode .review-card {
+  background: #1a1a1a !important;
+  color: #f0f0f0 !important;
+  border: 1px solid #2c2c2c !important;
+}
+
+body.dark .review-card small,
+body.dark-mode .review-card small {
+  color: #bbb !important;
+}
+.final-cta-section {
+  background: url("../images/cta.jpg") center/cover no-repeat fixed;
+  position: relative;
+  z-index: 1;
+}
+
+.final-cta-section .bg-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}

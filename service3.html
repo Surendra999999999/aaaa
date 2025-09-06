@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="site_title">Stackly Business</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+ <link rel="stylesheet" href="css/h_f.css" />
+ <link rel="stylesheet" href="css/service.css" />
+
+  <script src="js/header.js" defer></script>
+  <script src="js/dark_toogle.js" defer></script>
+ <script src="js/service.js" defer></script>
+</head>
+<body data-bs-theme="light">
+
+<!-- ===== Header ===== -->
+<header class="navbar navbar-expand-lg bg-light shadow-sm px-3 sticky-top">
+  <!-- Left: Logo -->
+  <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" alt="Logo" height="40"
+         data-i18n-attr="alt" data-i18n="header_logo_alt">
+  </a>
+
+  <!-- Center: nav links -->
+  <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+    <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_home_dropdown">
+          Home
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="index.html" data-i18n="nav_home1">Home 1</a></li>
+          <li><a class="dropdown-item" href="home2.html" data-i18n="nav_home2">Home 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="blog.html" data-i18n="nav_blog">Blog</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_services_dropdown">
+          Services
+        </a>
+        <ul class="dropdown-menu">
+          <li class="d-lg-none"><a class="dropdown-item" href="services.html" data-i18n="nav_all_services">All Services</a></li>
+                    <li><a class="dropdown-item" href="services.html" data-i18n="nav_service">All Services</a></li>
+
+          <li><a class="dropdown-item" href="service1.html" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a class="dropdown-item" href="service2.html" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a class="dropdown-item" href="service3.html" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a class="dropdown-item" href="service4.html" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a class="dropdown-item" href="service5.html" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a class="dropdown-item" href="service6.html" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Right: lang/profile/dark + hamburger -->
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <select id="language-selector" class="form-select form-select-sm w-auto">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="dropdown">
+      <button class="btn btn-outline-secondary rounded-circle" id="profile-dropdown-toggle" data-bs-toggle="dropdown">
+        <span id="profile-initials"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" id="profile-dropdown">
+        <li><a class="dropdown-item" href="#" id="logout-btn" data-i18n="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark" class="btn btn-outline-secondary btn-sm">🌙</button>
+
+    <!-- Hamburger LAST -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>
+
+
+<!-- ===== Hero Section with Video Background ===== -->
+<section class="hero-section position-relative text-white">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover">
+    <source src="videos/service3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark Overlay -->
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.55);"></div>
+
+  <!-- Content -->
+  <div class="container position-relative z-2 py-5">
+    <div class="row align-items-center text-center text-lg-start">
+      
+      <!-- Left: Text -->
+      <div class="col-lg-7 mx-auto mx-lg-0">
+        <h1 class="display-4 fw-bold mb-3" data-i18n="service2_hero_title">
+          Customer Experience & Service
+        </h1>
+        <p class="lead mb-4" data-i18n="service2_hero_subtitle">
+          Enhance customer loyalty, satisfaction, and engagement by delivering seamless, personalized, and value-driven service experiences.
+        </p>
+        <a href="#overview" class="btn btn-primary btn-lg me-2" data-i18n="service2_hero_cta1">
+          Discover Solutions
+        </a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg" data-i18n="service2_hero_cta2">
+          Transform Experience
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Overview Section ===== -->
+<section id="overview" class="py-5 position-relative">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+
+      <!-- Left: Image with Flip Effect -->
+      <div class="col-lg-6 fade-in">
+        <div class="flip-card glass-box rounded-4 shadow" role="button" tabindex="0" aria-pressed="false">
+          <div class="flip-card-inner">
+            
+            <!-- Front Side (Image) -->
+            <div class="flip-card-front">
+              <img src="images/customer_exp.jpeg" 
+                   alt="Customer Experience & Service Overview" 
+                   class="img-fluid rounded-3"
+                   data-i18n-attr="alt" 
+                   data-i18n="service2_overview_img_alt">
+            </div>
+            
+            <!-- Back Side (Text) -->
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h4 class="fw-bold mb-2" data-i18n="service2_flip_title">Delight Customers</h4>
+              <p class="small" data-i18n="service2_flip_text">
+                Deliver seamless, personalized experiences that strengthen loyalty and satisfaction.
+              </p>
+              <a href="contact.html" class="btn btn-light btn-sm mt-2" data-i18n="service2_flip_cta">
+                Get Started
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Text -->
+      <div class="col-lg-6 fade-in">
+        <div class="glass-box p-4 rounded-4 shadow">
+          <h2 class="fw-bold mb-3" data-i18n="service2_overview_title">
+            Elevating Customer Experience &amp; Service
+          </h2>
+          <p class="lead mb-3" data-i18n="service2_overview_text1">
+            In today’s competitive landscape, exceptional customer experiences are the key to loyalty and long-term growth. Organizations must go beyond service to create real value at every touchpoint.
+          </p>
+          <p data-i18n="service2_overview_text2">
+            Our Customer Experience &amp; Service solutions help businesses design seamless journeys, integrate customer-centric processes, and empower teams to deliver consistent, memorable interactions that drive engagement and retention.
+          </p>
+          <a href="contact.html" class="btn btn-primary mt-3" data-i18n="service2_overview_cta">
+            Talk to Our Experts
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Service Flip Section ===== -->
+<!-- ===== Service Flip Section ===== -->
+<section id="service-flip" class="py-5 position-relative">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5" data-i18n="services.title">Our Customer Experience &amp; Service Solutions</h2>
+
+    <div class="flip-section-wrapper">
+      <!-- Service 1 -->
+      <div class="flip-section-card active">
+        <div class="flip-section-front">
+          <img src="images/strategy1.jpeg" alt="Customer Journey Design" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.journey_design.title">Customer Journey Design</h3>
+            <p data-i18n="services.journey_design.desc">
+              Map and optimize customer touchpoints to deliver seamless, value-driven experiences.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.journey_design.point1">✅ End-to-end journey mapping</li>
+              <li data-i18n="services.journey_design.point2">✅ Pain-point identification</li>
+              <li data-i18n="services.journey_design.point3">✅ Experience optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/business3.jpeg" alt="Customer Service Excellence" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.service_excellence.title">Customer Service Excellence</h3>
+            <p data-i18n="services.service_excellence.desc">
+              Empower your teams to deliver proactive, empathetic, and consistent service.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.service_excellence.point1">✅ Service training programs</li>
+              <li data-i18n="services.service_excellence.point2">✅ Omni-channel support models</li>
+              <li data-i18n="services.service_excellence.point3">✅ Measurable service quality</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/fin1.jpeg" alt="Customer Feedback & Insights" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.customer_feedback.title">Customer Feedback &amp; Insights</h3>
+            <p data-i18n="services.customer_feedback.desc">
+              Leverage real-time insights to enhance satisfaction and retention.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.customer_feedback.point1">✅ Voice-of-customer programs</li>
+              <li data-i18n="services.customer_feedback.point2">✅ Data-driven experience analytics</li>
+              <li data-i18n="services.customer_feedback.point3">✅ Continuous improvement loops</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/business3.jpeg" alt="Personalization Strategies" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.personalization.title">Personalization Strategies</h3>
+            <p data-i18n="services.personalization.desc">
+              Create tailored experiences that resonate with customer needs and expectations.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.personalization.point1">✅ Customer segmentation</li>
+              <li data-i18n="services.personalization.point2">✅ AI-driven recommendations</li>
+              <li data-i18n="services.personalization.point3">✅ Context-aware interactions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/strategy3.jpeg" alt="Employee Enablement" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.employee_enablement.title">Employee Enablement</h3>
+            <p data-i18n="services.employee_enablement.desc">
+              Equip teams with tools, knowledge, and empowerment to deliver exceptional service.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.employee_enablement.point1">✅ Service culture training</li>
+              <li data-i18n="services.employee_enablement.point2">✅ Knowledge-sharing platforms</li>
+              <li data-i18n="services.employee_enablement.point3">✅ Empowered decision-making</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/fin2.jpeg" alt="Experience Monitoring & Improvement" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.experience_improvement.title">Experience Monitoring &amp; Improvement</h3>
+            <p data-i18n="services.experience_improvement.desc">
+              Continuously refine service delivery through insights, testing, and adaptation.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.experience_improvement.point1">✅ KPI and satisfaction tracking</li>
+              <li data-i18n="services.experience_improvement.point2">✅ Early-issue resolution</li>
+              <li data-i18n="services.experience_improvement.point3">✅ Iterative service enhancements</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="strategy-highlights" class="py-5 position-relative overflow-hidden">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4" data-i18n="strategy.title">Customer Experience in Action</h2>
+    <p class="text-muted mb-5" data-i18n="strategy.subtitle">
+      Core pillars of delivering exceptional customer experiences and service excellence
+    </p>
+
+    <!-- Circles (different left % so they look scattered) -->
+    <div class="emoji-circle" style="left:15%;" data-delay="0">
+      <span class="emoji">🤝</span>
+      <p data-i18n="strategy.point1">Personalized Interactions</p>
+    </div>
+
+    <div class="emoji-circle" style="left:35%;" data-delay="200">
+      <span class="emoji">💡</span>
+      <p data-i18n="strategy.point2">Proactive Service Solutions</p>
+    </div>
+
+    <div class="emoji-circle" style="left:55%;" data-delay="400">
+      <span class="emoji">📈</span>
+      <p data-i18n="strategy.point3">Data-Driven Insights</p>
+    </div>
+
+    <div class="emoji-circle" style="left:75%;" data-delay="600">
+      <span class="emoji">🌟</span>
+      <p data-i18n="strategy.point4">Memorable Experiences</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===== What Our Clients Say ===== -->
+<section id="client-testimonials" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4" data-i18n="testimonials.title">
+      What Our Clients Say
+    </h2>
+    <p class="text-muted text-center mb-5" data-i18n="testimonials.subtitle">
+      Partners who trust our customer experience and service transformation
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="testimonial-card p-4 h-100 shadow-sm">
+          <p class="mb-3" data-i18n="testimonials.client1.quote">
+            “They redesigned our customer journey, and our satisfaction scores have never been higher.”
+          </p>
+          <h6 class="fw-semibold mb-0" data-i18n="testimonials.client1.name">
+            Elena Parker
+          </h6>
+          <small class="text-muted" data-i18n="testimonials.client1.role">
+            COO, Apex Global
+          </small>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial-card p-4 h-100 shadow-sm">
+          <p class="mb-3" data-i18n="testimonials.client2.quote">
+            “Our teams are now empowered to deliver consistent, empathetic service across every channel.”
+          </p>
+          <h6 class="fw-semibold mb-0" data-i18n="testimonials.client2.name">
+            Sanjay Mehra
+          </h6>
+          <small class="text-muted" data-i18n="testimonials.client2.role">
+            Customer Experience Head, Trident Finance
+          </small>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial-card p-4 h-100 shadow-sm">
+          <p class="mb-3" data-i18n="testimonials.client3.quote">
+            “Their service transformation strategy helped us boost retention and build long-term loyalty.”
+          </p>
+          <h6 class="fw-semibold mb-0" data-i18n="testimonials.client3.name">
+            Clara Johansson
+          </h6>
+          <small class="text-muted" data-i18n="testimonials.client3.role">
+            Customer Success Director, Nordico
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===== Final Call-to-Action Section ===== -->
+<section id="final-cta" class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-3" data-i18n="cta.title">Elevate Your Customer Experience</h2>
+    <p class="text-muted mb-4" data-i18n="cta.subtitle">
+      Deliver seamless, personalized, and impactful service at every touchpoint. Let’s design your customer experience transformation today.
+    </p>
+    <a href="contact.html" class="btn btn-primary px-4" data-i18n="cta.button">
+      📩 Start Your Transformation
+    </a>
+  </div>
+</section>
+
+
+<footer class="shadow-sm mt-5 pt-4">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-md-3">
+        <a href="index.html" class="d-inline-block mb-3">
+          <img src="images/logo.png" alt="Stackly Logo" height="40"
+               data-i18n-attr="alt" data-i18n="footer_logo_alt">
+        </a>
+        <p class="small" data-i18n="footer_desc">
+          Empowering businesses with innovative consulting, strategy, and technology solutions.<br>
+  Partner with us to accelerate growth and transform your organization.
+        </p>
+        <div class="d-flex gap-3 fs-5">
+          <a href="https://www.facebook.com" class="text-dark"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.twitter.com" class="text-dark"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_quick_links">Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html" class="link-dark text-decoration-none" data-i18n="footer_home1">Home 1</a></li>
+          <li><a href="home2.html" class="link-dark text-decoration-none" data-i18n="footer_home2">Home 2</a></li>
+          <li><a href="about.html" class="link-dark text-decoration-none" data-i18n="footer_about_us">About Us</a></li>
+          <li><a href="services.html" class="link-dark text-decoration-none" data-i18n="footer_services_link">Services</a></li>
+          <li><a href="blog.html" class="link-dark text-decoration-none" data-i18n="footer_blog">Blog</a></li>
+          <li><a href="contact.html" class="link-dark text-decoration-none" data-i18n="footer_contact_us_link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_services">Services</h6>
+        <ul class="list-unstyled small">
+          <li><a href="service1.html" class="link-dark text-decoration-none" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a href="service2.html" class="link-dark text-decoration-none" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a href="service3.html" class="link-dark text-decoration-none" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a href="service4.html" class="link-dark text-decoration-none" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a href="service5.html" class="link-dark text-decoration-none" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a href="service6.html" class="link-dark text-decoration-none" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_contact_us">Contact Us</h6>
+        <p class="small mb-1" data-i18n="footer_address"><i class="fas fa-map-marker-alt me-2"></i>123 Main St, Abc City</p>
+        <p class="small mb-1" data-i18n="footer_phone"><i class="fas fa-phone me-2"></i>+1 234 567 890</p>
+        <p class="small mb-0" data-i18n="footer_email"><i class="fas fa-envelope me-2"></i>info@Business.com</p>
+        <div>
+            <h6 data-i18n="follow">Follow us</h6>
+            <a href="https://www.facebook.com" class="text-dark me-2"><i class="fab fa-facebook fa-lg" data-i18n="follow1">facebook</i></a>
+            <a href="https://www.twitter.com" class="text-dark me-2"><i class="fab fa-twitter fa-lg" data-i18n="follow2">twitter</i></a>
+            <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram fa-lg" data-i18n="follow3">instagram</i></a>
+        </div>
+      </div>
+      
+
+    </div>
+
+    <hr class="mt-4 mb-2">
+    <div class="text-center pb-3 small" data-i18n="footer_copy">© 2025 Business. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+// 🌍 Dictionary for translations
+const translations={
+  
+  "en": {
+    "header_logo_alt": "Logo",
+    "nav_home_dropdown": "Home",
+    "nav_home1": "Home 1",
+    "nav_home2": "Home 2",
+    "nav_about": "About",
+    "nav_blog": "Blog",
+    "nav_services_dropdown": "Services",
+    "nav_all_services": "All Services",
+    "nav_service": "All Services",
+    "nav_service1": "Innovation & Change",
+    "nav_service2": "Governance & Compliance",
+    "nav_service3": "Customer Experience & Service",
+    "nav_service4": "Data & Business Intelligence",
+    "nav_service5": "Sustainability & ESG Strategy",
+    "nav_service6": "Acquisitions & Partnership Advisory",
+    "nav_contact": "Contact",
+    "logout": "Logout",
+
+    "service2_hero_title": "Customer Experience & Service",
+    "service2_hero_subtitle": "Enhance customer loyalty, satisfaction, and engagement by delivering seamless, personalized, and value-driven service experiences.",
+    "service2_hero_cta1": "Discover Solutions",
+    "service2_hero_cta2": "Transform Experience",
+
+    "service2_overview_img_alt": "Customer Experience & Service Overview",
+    "service2_flip_title": "Delight Customers",
+    "service2_flip_text": "Deliver seamless, personalized experiences that strengthen loyalty and satisfaction.",
+    "service2_flip_cta": "Get Started",
+
+    "service2_overview_title": "Elevating Customer Experience & Service",
+    "service2_overview_text1": "In today’s competitive landscape, exceptional customer experiences are the key to loyalty and long-term growth. Organizations must go beyond service to create real value at every touchpoint.",
+    "service2_overview_text2": "Our Customer Experience & Service solutions help businesses design seamless journeys, integrate customer-centric processes, and empower teams to deliver consistent, memorable interactions that drive engagement and retention.",
+    "service2_overview_cta": "Talk to Our Experts",
+
+    "services.title": "Our Customer Experience & Service Solutions",
+    "services.journey_design.title": "Customer Journey Design",
+    "services.journey_design.desc": "Map and optimize customer touchpoints to deliver seamless, value-driven experiences.",
+    "services.journey_design.point1": "✅ End-to-end journey mapping",
+    "services.journey_design.point2": "✅ Pain-point identification",
+    "services.journey_design.point3": "✅ Experience optimization",
+
+    "services.service_excellence.title": "Customer Service Excellence",
+    "services.service_excellence.desc": "Empower your teams to deliver proactive, empathetic, and consistent service.",
+    "services.service_excellence.point1": "✅ Service training programs",
+    "services.service_excellence.point2": "✅ Omni-channel support models",
+    "services.service_excellence.point3": "✅ Measurable service quality",
+
+    "services.customer_feedback.title": "Customer Feedback & Insights",
+    "services.customer_feedback.desc": "Leverage real-time insights to enhance satisfaction and retention.",
+    "services.customer_feedback.point1": "✅ Voice-of-customer programs",
+    "services.customer_feedback.point2": "✅ Data-driven experience analytics",
+    "services.customer_feedback.point3": "✅ Continuous improvement loops",
+
+    "services.personalization.title": "Personalization Strategies",
+    "services.personalization.desc": "Create tailored experiences that resonate with customer needs and expectations.",
+    "services.personalization.point1": "✅ Customer segmentation",
+    "services.personalization.point2": "✅ AI-driven recommendations",
+    "services.personalization.point3": "✅ Context-aware interactions",
+
+    "services.employee_enablement.title": "Employee Enablement",
+    "services.employee_enablement.desc": "Equip teams with tools, knowledge, and empowerment to deliver exceptional service.",
+    "services.employee_enablement.point1": "✅ Service culture training",
+    "services.employee_enablement.point2": "✅ Knowledge-sharing platforms",
+    "services.employee_enablement.point3": "✅ Empowered decision-making",
+
+    "services.experience_improvement.title": "Experience Monitoring & Improvement",
+    "services.experience_improvement.desc": "Continuously refine service delivery through insights, testing, and adaptation.",
+    "services.experience_improvement.point1": "✅ KPI and satisfaction tracking",
+    "services.experience_improvement.point2": "✅ Early-issue resolution",
+    "services.experience_improvement.point3": "✅ Iterative service enhancements",
+
+    "strategy.title": "Customer Experience in Action",
+    "strategy.subtitle": "Core pillars of delivering exceptional customer experiences and service excellence",
+    "strategy.point1": "Personalized Interactions",
+    "strategy.point2": "Proactive Service Solutions",
+    "strategy.point3": "Data-Driven Insights",
+    "strategy.point4": "Memorable Experiences",
+
+    "testimonials.title": "What Our Clients Say",
+    "testimonials.subtitle": "Partners who trust our customer experience and service transformation",
+    "testimonials.client1.quote": "“They redesigned our customer journey, and our satisfaction scores have never been higher.”",
+    "testimonials.client1.name": "Elena Parker",
+    "testimonials.client1.role": "COO, Apex Global",
+    "testimonials.client2.quote": "“Our teams are now empowered to deliver consistent, empathetic service across every channel.”",
+    "testimonials.client2.name": "Sanjay Mehra",
+    "testimonials.client2.role": "Customer Experience Head, Trident Finance",
+    "testimonials.client3.quote": "“Their service transformation strategy helped us boost retention and build long-term loyalty.”",
+    "testimonials.client3.name": "Clara Johansson",
+    "testimonials.client3.role": "Customer Success Director, Nordico",
+
+    "cta.title": "Elevate Your Customer Experience",
+    "cta.subtitle": "Deliver seamless, personalized, and impactful service at every touchpoint. Let’s design your customer experience transformation today.",
+    "cta.button": "📩 Start Your Transformation",
+
+    "footer_logo_alt": "Stackly Logo",
+    "footer_desc": "Empowering businesses with innovative consulting, strategy, and technology solutions. Partner with us to accelerate growth and transform your organization.",
+    "footer_quick_links": "Quick Links",
+    "footer_home1": "Home 1",
+    "footer_home2": "Home 2",
+    "footer_about_us": "About Us",
+    "footer_services_link": "Services",
+    "footer_blog": "Blog",
+    "footer_contact_us_link": "Contact Us",
+    "footer_services": "Services",
+    "footer_contact_us": "Contact Us",
+    "footer_address": "123 Main St, Abc City",
+    "footer_phone": "+1 234 567 890",
+    "footer_email": "info@Business.com",
+    "follow": "Follow us",
+    "follow1": "Facebook",
+    "follow2": "Twitter",
+    "follow3": "Instagram",
+    "footer_copy": "© 2025 Business. All rights reserved."
+  },
+
+  "he": {
+    "header_logo_alt": "לוגו",
+    "nav_home_dropdown": "בית",
+    "nav_home1": "בית 1",
+    "nav_home2": "בית 2",
+    "nav_about": "אודות",
+    "nav_blog": "בלוג",
+    "nav_services_dropdown": "שירותים",
+    "nav_all_services": "כל השירותים",
+    "nav_service": "כל השירותים",
+    "nav_service1": "חדשנות ושינוי",
+    "nav_service2": "ממשל וציות",
+    "nav_service3": "חווית ושירות לקוחות",
+    "nav_service4": "נתונים ואינטליגנציה עסקית",
+    "nav_service5": "אסטרטגיית קיימות ו-ESG",
+    "nav_service6": "ייעוץ במיזוגים ושיתופי פעולה",
+    "nav_contact": "צור קשר",
+    "logout": "התנתק",
+
+    "service2_hero_title": "חווית ושירות לקוחות",
+    "service2_hero_subtitle": "שפר נאמנות, שביעות רצון ומעורבות על ידי מתן חוויות שירות חלקות, מותאמות אישית ומבוססות ערך.",
+    "service2_hero_cta1": "גלה פתרונות",
+    "service2_hero_cta2": "הפוך את החוויה",
+
+    "service2_overview_img_alt": "סקירת חווית ושירות לקוחות",
+    "service2_flip_title": "להפתיע את הלקוחות",
+    "service2_flip_text": "ספק חוויות מותאמות אישית וחלקות המחזקות נאמנות ושביעות רצון.",
+    "service2_flip_cta": "התחל עכשיו",
+
+    "service2_overview_title": "שדרוג חווית ושירות לקוחות",
+    "service2_overview_text1": "בנוף התחרותי של היום, חוויות לקוח יוצאות דופן הן המפתח לנאמנות ולצמיחה ארוכת טווח. ארגונים חייבים להציע יותר משירות בלבד ולספק ערך אמיתי בכל נקודת מגע.",
+    "service2_overview_text2": "פתרונות חווית ושירות הלקוחות שלנו עוזרים לעסקים לעצב מסעות חלקים, לשלב תהליכים ממוקדי לקוח ולהעצים צוותים לספק אינטראקציות עקביות ובלתי נשכחות שמניעות מעורבות ושימור.",
+    "service2_overview_cta": "דבר עם המומחים שלנו",
+
+    "services.title": "פתרונות חווית ושירות הלקוחות שלנו",
+    "services.journey_design.title": "עיצוב מסע לקוח",
+    "services.journey_design.desc": "מיפוי ואופטימיזציה של נקודות מגע ליצירת חוויות חלקות ומבוססות ערך.",
+    "services.journey_design.point1": "✅ מיפוי מסע מקצה לקצה",
+    "services.journey_design.point2": "✅ זיהוי נקודות כאב",
+    "services.journey_design.point3": "✅ אופטימיזציית חוויה",
+
+    "services.service_excellence.title": "מצוינות בשירות לקוחות",
+    "services.service_excellence.desc": "העצמת הצוותים שלך לספק שירות פרואקטיבי, אמפתי ועקבי.",
+    "services.service_excellence.point1": "✅ תוכניות הדרכת שירות",
+    "services.service_excellence.point2": "✅ מודלים של תמיכה רב-ערוצית",
+    "services.service_excellence.point3": "✅ איכות שירות מדידה",
+
+    "services.customer_feedback.title": "משוב ותובנות לקוחות",
+    "services.customer_feedback.desc": "נצל תובנות בזמן אמת לשיפור שביעות הרצון והשימור.",
+    "services.customer_feedback.point1": "✅ תוכניות קול הלקוח",
+    "services.customer_feedback.point2": "✅ ניתוח חוויות מבוסס נתונים",
+    "services.customer_feedback.point3": "✅ לולאות שיפור מתמשכות",
+
+    "services.personalization.title": "אסטרטגיות התאמה אישית",
+    "services.personalization.desc": "צור חוויות מותאמות אישית שמתכתבות עם הצרכים והציפיות של הלקוחות.",
+    "services.personalization.point1": "✅ פילוח לקוחות",
+    "services.personalization.point2": "✅ המלצות מבוססות AI",
+    "services.personalization.point3": "✅ אינטראקציות מבוססות הקשר",
+
+    "services.employee_enablement.title": "העצמת עובדים",
+    "services.employee_enablement.desc": "צייד את הצוותים בכלים, ידע והעצמה כדי לספק שירות יוצא דופן.",
+    "services.employee_enablement.point1": "✅ הכשרה על תרבות שירות",
+    "services.employee_enablement.point2": "✅ פלטפורמות שיתוף ידע",
+    "services.employee_enablement.point3": "✅ קבלת החלטות מועצמת",
+
+    "services.experience_improvement.title": "מעקב ושיפור חוויות",
+    "services.experience_improvement.desc": "שפר את השירות באופן מתמשך בעזרת תובנות, בדיקות והתאמות.",
+    "services.experience_improvement.point1": "✅ מעקב אחר KPI ושביעות רצון",
+    "services.experience_improvement.point2": "✅ פתרון בעיות מוקדם",
+    "services.experience_improvement.point3": "✅ שיפורי שירות מחזוריים",
+
+    "strategy.title": "חווית לקוח בפעולה",
+    "strategy.subtitle": "עמודי התווך של אספקת חוויות לקוח יוצאות דופן ומצוינות בשירות",
+    "strategy.point1": "אינטראקציות מותאמות אישית",
+    "strategy.point2": "פתרונות שירות פרואקטיביים",
+    "strategy.point3": "תובנות מבוססות נתונים",
+    "strategy.point4": "חוויות בלתי נשכחות",
+
+    "testimonials.title": "מה הלקוחות שלנו אומרים",
+    "testimonials.subtitle": "שותפים שסומכים עלינו לשינוי חווית ושירות הלקוחות",
+    "testimonials.client1.quote": "“הם עיצבו מחדש את מסע הלקוח שלנו, ציוני שביעות הרצון שלנו בשיא.”",
+    "testimonials.client1.name": "אלנה פרקר",
+    "testimonials.client1.role": "COO, Apex Global",
+    "testimonials.client2.quote": "“הצוותים שלנו כעת מועצמים לספק שירות עקבי ואמפתי בכל ערוץ.”",
+    "testimonials.client2.name": "סנג'יי מהרה",
+    "testimonials.client2.role": "ראש חווית לקוחות, Trident Finance",
+    "testimonials.client3.quote": "“אסטרטגיית שינוי השירות שלהם עזרה לנו לשפר את השימור ולבנות נאמנות ארוכת טווח.”",
+    "testimonials.client3.name": "קלרה יוהנסון",
+    "testimonials.client3.role": "מנהלת הצלחת לקוחות, Nordico",
+
+    "cta.title": "שדרג את חווית הלקוח שלך",
+    "cta.subtitle": "ספק שירות מותאם אישית, חלק ובעל השפעה בכל נקודת מגע. בואו נעצב את שינוי החוויה שלך היום.",
+    "cta.button": "📩 התחל את השינוי",
+
+    "footer_logo_alt": "לוגו סטאקלי",
+    "footer_desc": "העצמת עסקים עם ייעוץ חדשני, אסטרטגיה ופתרונות טכנולוגיים. הצטרפו אלינו כדי להאיץ צמיחה ולשנות את הארגון שלכם.",
+    "footer_quick_links": "קישורים מהירים",
+    "footer_home1": "בית 1",
+    "footer_home2": "בית 2",
+    "footer_about_us": "אודות",
+    "footer_services_link": "שירותים",
+    "footer_blog": "בלוג",
+    "footer_contact_us_link": "צור קשר",
+    "footer_services": "שירותים",
+    "footer_contact_us": "צור קשר",
+    "footer_address": "רחוב הראשי 123, עיר אבס",
+    "footer_phone": "+1 234 567 890",
+    "footer_email": "info@Business.com",
+    "follow": "עקבו אחרינו",
+    "follow1": "פייסבוק",
+    "follow2": "טוויטר",
+    "follow3": "אינסטגרם",
+    "footer_copy": "© 2025 Business. כל הזכויות שמורות."
+  },
+
+  "ar": {
+    "header_logo_alt": "شعار",
+    "nav_home_dropdown": "الرئيسية",
+    "nav_home1": "الصفحة الرئيسية 1",
+    "nav_home2": "الصفحة الرئيسية 2",
+    "nav_about": "من نحن",
+    "nav_blog": "مدونة",
+    "nav_services_dropdown": "الخدمات",
+    "nav_all_services": "كل الخدمات",
+    "nav_service": "كل الخدمات",
+    "nav_service1": "الابتكار والتغيير",
+    "nav_service2": "الحوكمة والامتثال",
+    "nav_service3": "تجربة وخدمة العملاء",
+    "nav_service4": "البيانات والاستخبارات التجارية",
+    "nav_service5": "استراتيجية الاستدامة و ESG",
+    "nav_service6": "استشارات الاندماج والشراكات",
+    "nav_contact": "اتصل بنا",
+    "logout": "تسجيل الخروج",
+
+    "service2_hero_title": "تجربة وخدمة العملاء",
+    "service2_hero_subtitle": "عزز الولاء والرضا والمشاركة من خلال تقديم تجارب خدمة سلسة وشخصية وقائمة على القيمة.",
+    "service2_hero_cta1": "اكتشف الحلول",
+    "service2_hero_cta2": "حوّل التجربة",
+
+    "service2_overview_img_alt": "نظرة عامة على تجربة وخدمة العملاء",
+    "service2_flip_title": "إبهار العملاء",
+    "service2_flip_text": "قدم تجارب سلسة ومخصصة تعزز الولاء والرضا.",
+    "service2_flip_cta": "ابدأ الآن",
+
+    "service2_overview_title": "الارتقاء بتجربة وخدمة العملاء",
+    "service2_overview_text1": "في بيئة اليوم التنافسية، تعد تجارب العملاء الاستثنائية مفتاح الولاء والنمو طويل الأجل. يجب على المؤسسات أن تتجاوز تقديم الخدمة لتوفير قيمة حقيقية في كل نقطة اتصال.",
+    "service2_overview_text2": "تساعد حلول تجربة وخدمة العملاء لدينا الشركات على تصميم رحلات سلسة، ودمج العمليات التي تركز على العميل، وتمكين الفرق من تقديم تفاعلات متسقة ولا تُنسى تعزز المشاركة والاحتفاظ.",
+    "service2_overview_cta": "تحدث إلى خبرائنا",
+
+    "services.title": "حلول تجربة وخدمة العملاء لدينا",
+    "services.journey_design.title": "تصميم رحلة العميل",
+    "services.journey_design.desc": "رسم وتحسين نقاط الاتصال لتقديم تجارب سلسة وقائمة على القيمة.",
+    "services.journey_design.point1": "✅ رسم رحلة شاملة",
+    "services.journey_design.point2": "✅ تحديد نقاط الضعف",
+    "services.journey_design.point3": "✅ تحسين التجربة",
+
+    "services.service_excellence.title": "تميز خدمة العملاء",
+    "services.service_excellence.desc": "مكّن فرقك من تقديم خدمة استباقية، متعاطفة ومتسقة.",
+    "services.service_excellence.point1": "✅ برامج تدريب الخدمة",
+    "services.service_excellence.point2": "✅ نماذج دعم متعددة القنوات",
+    "services.service_excellence.point3": "✅ جودة خدمة قابلة للقياس",
+
+    "services.customer_feedback.title": "ملاحظات العملاء والرؤى",
+    "services.customer_feedback.desc": "استخدم الرؤى في الوقت الحقيقي لتعزيز الرضا والاحتفاظ.",
+    "services.customer_feedback.point1": "✅ برامج صوت العميل",
+    "services.customer_feedback.point2": "✅ تحليلات تجربة قائمة على البيانات",
+    "services.customer_feedback.point3": "✅ دورات تحسين مستمرة",
+
+    "services.personalization.title": "استراتيجيات التخصيص",
+    "services.personalization.desc": "أنشئ تجارب مخصصة تتماشى مع احتياجات العملاء وتوقعاتهم.",
+    "services.personalization.point1": "✅ تقسيم العملاء",
+    "services.personalization.point2": "✅ توصيات مدعومة بالذكاء الاصطناعي",
+    "services.personalization.point3": "✅ تفاعلات قائمة على السياق",
+
+    "services.employee_enablement.title": "تمكين الموظفين",
+    "services.employee_enablement.desc": "زوّد الفرق بالأدوات والمعرفة والتمكين لتقديم خدمة استثنائية.",
+    "services.employee_enablement.point1": "✅ تدريب ثقافة الخدمة",
+    "services.employee_enablement.point2": "✅ منصات تبادل المعرفة",
+    "services.employee_enablement.point3": "✅ اتخاذ قرارات ممكّنة",
+
+    "services.experience_improvement.title": "مراقبة وتحسين التجربة",
+    "services.experience_improvement.desc": "قم بتحسين تقديم الخدمة بشكل مستمر من خلال الرؤى والاختبار والتكيف.",
+    "services.experience_improvement.point1": "✅ تتبع مؤشرات الأداء والرضا",
+    "services.experience_improvement.point2": "✅ حل المشكلات مبكرًا",
+    "services.experience_improvement.point3": "✅ تحسينات خدمة دورية",
+
+    "strategy.title": "تجربة العملاء في العمل",
+    "strategy.subtitle": "أركان تقديم تجارب عملاء استثنائية وتميز في الخدمة",
+    "strategy.point1": "تفاعلات شخصية",
+    "strategy.point2": "حلول خدمة استباقية",
+    "strategy.point3": "رؤى قائمة على البيانات",
+    "strategy.point4": "تجارب لا تُنسى",
+
+    "testimonials.title": "ماذا يقول عملاؤنا",
+    "testimonials.subtitle": "شركاء يثقون بتحول تجربة وخدمة العملاء معنا",
+    "testimonials.client1.quote": "“لقد أعادوا تصميم رحلة العميل لدينا، وارتفعت درجات الرضا بشكل لم يسبق له مثيل.”",
+    "testimonials.client1.name": "إلينا باركر",
+    "testimonials.client1.role": "COO, Apex Global",
+    "testimonials.client2.quote": "“فرقنا الآن قادرة على تقديم خدمة متعاطفة ومتسقة عبر كل القنوات.”",
+    "testimonials.client2.name": "سانجاي ميهرا",
+    "testimonials.client2.role": "رئيس تجربة العملاء، Trident Finance",
+    "testimonials.client3.quote": "“ساعدتنا استراتيجيتهم لتحول الخدمة في تعزيز الاحتفاظ وبناء ولاء طويل الأجل.”",
+    "testimonials.client3.name": "كلارا يوهانسون",
+    "testimonials.client3.role": "مديرة نجاح العملاء، Nordico",
+
+    "cta.title": "ارتقِ بتجربة عملائك",
+    "cta.subtitle": "قدّم خدمة سلسة، شخصية وفعالة في كل نقطة اتصال. لنعمل معًا على تصميم تحول تجربة العملاء اليوم.",
+    "cta.button": "📩 ابدأ التحول",
+
+    "footer_logo_alt": "شعار Stackly",
+    "footer_desc": "تمكين الشركات من خلال الاستشارات المبتكرة، والاستراتيجية، وحلول التكنولوجيا. انضم إلينا لتسريع النمو وتحويل مؤسستك.",
+    "footer_quick_links": "روابط سريعة",
+    "footer_home1": "الصفحة الرئيسية 1",
+    "footer_home2": "الصفحة الرئيسية 2",
+    "footer_about_us": "من نحن",
+    "footer_services_link": "الخدمات",
+    "footer_blog": "مدونة",
+    "footer_contact_us_link": "اتصل بنا",
+    "footer_services": "الخدمات",
+    "footer_contact_us": "اتصل بنا",
+    "footer_address": "123 الشارع الرئيسي، مدينة ABC",
+    "footer_phone": "+1 234 567 890",
+    "footer_email": "info@Business.com",
+    "follow": "تابعنا",
+    "follow1": "فيسبوك",
+    "follow2": "تويتر",
+    "follow3": "إنستغرام",
+    "footer_copy": "© 2025 Business. جميع الحقوق محفوظة."
+  }
+
+};
+// 🔄 Apply translations
+function applyTranslations(lang) {
+  document.documentElement.lang = lang;
+
+  // Switch direction for RTL langs
+  document.documentElement.dir = (lang === "ar" || lang === "he") ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+    const attr = el.getAttribute("data-i18n-attr");
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.setAttribute(attr, translations[lang][key]);
+    }
+  });
+}
+
+// 🌐 Language selector listener
+document.addEventListener("DOMContentLoaded", () => {
+  const selector = document.getElementById("language-selector");
+
+  selector.addEventListener("change", (e) => {
+    const lang = e.target.value;
+    applyTranslations(lang);
+    localStorage.setItem("lang", lang); // Save preference
+  });
+
+  // Load saved language or default
+  const savedLang = localStorage.getItem("lang") || "en";
+  selector.value = savedLang;
+  applyTranslations(savedLang);
+});
+</script>
+
+</body>
+</html>

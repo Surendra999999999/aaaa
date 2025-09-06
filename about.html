@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="site_title">Stackly Business</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+ <link rel="stylesheet" href="css/h_f.css" />
+ <link rel="stylesheet" href="css/about.css" />
+
+  <script src="js/header.js" defer></script>
+  <script src="js/dark_toogle.js" defer></script>
+  <script src="js/auth_check.js" defer></script>
+  <script src="js/login_auth.js" defer></script>
+</head>
+<body data-bs-theme="light">
+
+<!-- ===== Header ===== -->
+<header class="navbar navbar-expand-lg bg-light shadow-sm px-3 sticky-top">
+  <!-- Left: Logo -->
+  <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" alt="Logo" height="40"
+         data-i18n-attr="alt" data-i18n="header_logo_alt">
+  </a>
+
+  <!-- Center: nav links -->
+  <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+    <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_home_dropdown">
+          Home
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="index.html" data-i18n="nav_home1">Home 1</a></li>
+          <li><a class="dropdown-item" href="home2.html" data-i18n="nav_home2">Home 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="blog.html" data-i18n="nav_blog">Blog</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_services_dropdown">
+          Services
+        </a>
+        <ul class="dropdown-menu">
+          <li class="d-lg-none"><a class="dropdown-item" href="services.html" data-i18n="nav_all_services">All Services</a></li>
+                    <li><a class="dropdown-item" href="services.html" data-i18n="nav_service">All Services</a></li>
+
+          <li><a class="dropdown-item" href="service1.html" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a class="dropdown-item" href="service2.html" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a class="dropdown-item" href="service3.html" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a class="dropdown-item" href="service4.html" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a class="dropdown-item" href="service5.html" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a class="dropdown-item" href="service6.html" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Right: lang/profile/dark + hamburger -->
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <select id="language-selector" class="form-select form-select-sm w-auto">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="dropdown">
+      <button class="btn btn-outline-secondary rounded-circle" id="profile-dropdown-toggle" data-bs-toggle="dropdown">
+        <span id="profile-initials"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" id="profile-dropdown">
+        <li><a class="dropdown-item" href="#" id="logout-btn" data-i18n="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark" class="btn btn-outline-secondary btn-sm">🌙</button>
+
+    <!-- Hamburger LAST -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== About Hero Section ===== -->
+<section class="hero-section position-relative text-white">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover">
+    <source src="videos/aboutvideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark Overlay -->
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.55);"></div>
+
+  <!-- Content -->
+  <div class="container position-relative z-2 py-5">
+    <div class="row align-items-center text-center text-lg-start">
+      
+      <!-- Left: Text -->
+      <div class="col-lg-7 mx-auto mx-lg-0">
+        <h1 class="display-3 fw-bold mb-4" data-i18n="about_hero_title">
+          Who We Are
+        </h1>
+        <p class="lead mb-5" data-i18n="about_hero_subtitle">
+          At Stackly Business, we are driven by innovation and strategy.  
+          Our mission is to empower organizations with tailored solutions,  
+          helping them thrive in a rapidly evolving digital world.
+        </p>
+
+        <!-- Buttons -->
+        <a href="services.html" class="btn btn-primary btn-lg me-2" data-i18n="about_hero_cta1">
+          Explore Services
+        </a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg" data-i18n="about_hero_cta2">
+          Meet Our Team
+        </a>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="col-lg-5 d-none d-lg-block text-center">
+        <img src="images/about_hero.jpg" alt="Our Team" class="img-fluid rounded-3 shadow-lg animate-float">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Features Section ===== -->
+<section class="features-section py-5">
+  <div class="container text-center">
+    <!-- Heading -->
+    <h2 class="fw-bold mb-3" data-i18n="features_title">
+      Core features that set us apart from the competition
+    </h2>
+    <p class="text-muted mb-5" data-i18n="features_subtitle">
+      Explore our standout features designed to deliver exceptional performance 
+      and value, distinguishing us from the competition.
+    </p>
+
+    <div class="row g-4 align-items-center">
+      <!-- Left Column -->
+      <div class="col-lg-4">
+        <div class="card feature-card feature-blue shadow-sm border-0 mb-4">
+          <div class="card-body text-start">
+            <div class="icon mb-3"><i class="fas fa-chart-line"><img src="images/analytics.png"></i></div>
+            <h5 class="fw-bold" data-i18n="feature1_title">Real-time analytics</h5>
+            <p class="mb-0" data-i18n="feature1_desc">
+              Gain actionable insights with our real-time analytics feature.
+            </p>
+          </div>
+        </div>
+
+        <div class="card feature-card feature-purple shadow-sm border-0">
+          <div class="card-body text-start">
+            <div class="icon mb-3"><i class="fas fa-file-alt"><img src="images/reports.png"></i></div>
+            <h5 class="fw-bold" data-i18n="feature2_title">Customizable reports</h5>
+            <p class="mb-0" data-i18n="feature2_desc">
+              Streamline your workflows with automated reports.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Image -->
+      <div class="col-lg-4 text-center">
+        <img src="images/about.jpeg" alt="Features" class="img-fluid rounded shadow-lg">
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-4">
+        <div class="card feature-card feature-teal shadow-sm border-0 mb-4">
+          <div class="card-body text-start">
+            <div class="icon mb-3"><i class="fas fa-mobile-alt"><img src="images/mobile.png"></i></div>
+            <h5 class="fw-bold" data-i18n="feature3_title">Mobile accessibility</h5>
+            <p class="mb-0" data-i18n="feature3_desc">
+              Manage your work on the go with our mobile-friendly platform.
+            </p>
+          </div>
+        </div>
+
+        <div class="card feature-card feature-orange shadow-sm border-0">
+          <div class="card-body text-start">
+            <div class="icon mb-3"><i class="fas fa-lock"><img src="images/security.png"></i></div>
+            <h5 class="fw-bold" data-i18n="feature4_title">Enhanced security</h5>
+            <p class="mb-0" data-i18n="feature4_desc">
+              Protect your sensitive data with state-of-the-art security measures.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Video & Text Section ===== -->
+<section class="video-text-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left: Video + Floating Images -->
+      <div class="col-lg-6 position-relative mb-4 mb-lg-0">
+        <!-- Main Video -->
+        <div class="video-wrapper shadow-lg rounded overflow-hidden">
+          <video autoplay muted loop playsinline class="w-100 h-100">
+            <source src="videos/hero-bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Floating Images -->
+        <img src="images/analytics.png" alt="Floating" class="floating-img float-1">
+        <img src="images/security.png" alt="Floating" class="floating-img float-2">
+        
+      </div>
+
+      <!-- Right: Text with Fade-in -->
+      <div class="col-lg-6">
+        <div class="fade-in-on-scroll">
+          <h2 class="fw-bold mb-3" data-i18n="video_section_title">
+            Experience Innovation in Action
+          </h2>
+          <p class="text-muted mb-4" data-i18n="video_section_desc">
+            See how our platform brings ideas to life with real-time interaction, 
+            seamless integration, and modern design principles.
+          </p>
+          <ul class="list-unstyled">
+           <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-i18n="feature_list1">Real-time collaboration</span></li>
+  <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-i18n="feature_list2">Easy integration</span></li>
+  <li><i class="fas fa-check-circle text-primary me-2"></i> <span data-i18n="feature_list3">Secure & scalable</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ===== Text & Video Section (Mirrored) ===== -->
+<section class="video-text-section py-5">
+  <div class="container">
+    <div class="row align-items-center flex-lg-row-reverse">
+      
+      <!-- Right: Video + Floating Images -->
+      <div class="col-lg-6 position-relative mb-4 mb-lg-0">
+        <!-- Main Video -->
+        <div class="video-wrapper shadow-lg rounded overflow-hidden">
+          <video autoplay muted loop playsinline class="w-100 h-100">
+            <source src="videos/about2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Floating Images -->
+        <img src="images/mobile.png" alt="Floating" class="floating-img float-1">
+        <img src="images/reports.png" alt="Floating" class="floating-img float-2">
+      </div>
+
+      <!-- Left: Text with Fade-in -->
+      <div class="col-lg-6">
+        <div class="fade-in-on-scroll">
+          <h2 class="fw-bold mb-3" data-i18n="video_section2_title">
+            Empower Your Business Digitally
+          </h2>
+          <p class="text-muted mb-4" data-i18n="video_section2_desc">
+            Transform your workflow with our advanced digital tools that 
+            ensure efficiency, flexibility, and unmatched performance.
+          </p>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-i18n="feature_list4">Seamless automation</span></li>
+  <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-i18n="feature_list5">Cross-platform support</span></li>
+  <li><i class="fas fa-check-circle text-primary me-2"></i> <span data-i18n="feature_list6">Future-ready technology</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const faders = document.querySelectorAll(".fade-in-on-scroll");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in-active");
+      } else {
+        entry.target.classList.remove("fade-in-active"); // 👈 reset when leaving
+      }
+    });
+  }, { threshold: 0.2 }); // adjust threshold as needed
+
+  faders.forEach((el) => observer.observe(el));
+});
+
+</script>
+
+
+<!-- ===== Meet Our Team Section ===== -->
+<section class="team-section py-5 bg-light">
+  <div class="container text-center">
+    <!-- Heading -->
+    <h2 class="fw-bold mb-3" data-i18n="team_title">Meet Our Team</h2>
+    <p class="text-muted mb-5" data-i18n="team_subtitle">
+      Our dedicated professionals bring expertise, creativity, and passion 
+      to deliver exceptional solutions for our clients.
+    </p>
+
+    <div class="row g-4">
+      <!-- Team Member 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card team-card shadow-sm border-0 h-100">
+          <div class="team-img-wrapper">
+            <img src="images/1.jpg" alt="Team Member" class="card-img-top">
+            <div class="team-overlay d-flex justify-content-center align-items-center">
+              <div class="social-links">
+                <a href="https://facebook.com"><i class="fab fa-linkedin-in"><img src="images/fb.png" style="height:50px;"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-twitter"><img src="images/x.png" style="height:50px;"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="fw-bold mb-1">Alex Johnson</h5>
+            <p class="text-muted mb-0">CEO & Founder</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card team-card shadow-sm border-0 h-100">
+          <div class="team-img-wrapper">
+            <img src="images/test3.jpg" alt="Team Member" class="card-img-top">
+            <div class="team-overlay d-flex justify-content-center align-items-center">
+              <div class="social-links">
+                <a href="https://facebook.com"><i class="fab fa-linkedin-in"><img src="images/fb.png" style="height:50px;"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-github"><img src="images/x.png" style="height:50px;"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="fw-bold mb-1">Sophia Lee</h5>
+            <p class="text-muted mb-0">Head of Marketing</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card team-card shadow-sm border-0 h-100">
+          <div class="team-img-wrapper">
+            <img src="images/test2.jpg" alt="Team Member" class="card-img-top">
+            <div class="team-overlay d-flex justify-content-center align-items-center">
+              <div class="social-links">
+                <a href="https://facebook.com"><i class="fab fa-linkedin-in"><img src="images/fb.png" style="height:50px;"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-dribbble"><img src="images/x.png" style="height: 50px;"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="fw-bold mb-1">Michael Smith</h5>
+            <p class="text-muted mb-0">Lead Designer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card team-card shadow-sm border-0 h-100">
+          <div class="team-img-wrapper">
+            <img src="images/ser4_t2.jpeg" alt="Team Member" class="card-img-top">
+            <div class="team-overlay d-flex justify-content-center align-items-center">
+              <div class="social-links">
+                <a href="https://facebook.com"><i class="fab fa-linkedin-in"><img src="images/fb.png" style="height:50px;"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-facebook-f"><img src="images/x.png" style="height:50px;"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="fw-bold mb-1">Emily Davis</h5>
+            <p class="text-muted mb-0">Project Manager</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Client Reviews Section ===== -->
+<section class="reviews-section py-5 bg-light">
+  <div class="container text-center">
+    <!-- Heading -->
+    <h2 class="fw-bold mb-3" data-i18n="reviews_title">What Our Clients Say</h2>
+    <p class="text-muted mb-5" data-i18n="reviews_subtitle">
+      Hear from our valued clients about how our consulting and business solutions 
+      have made a difference in their success.
+    </p>
+
+    <!-- Carousel -->
+    <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+
+        <!-- Review 1 -->
+        <div class="carousel-item active">
+          <div class="card review-card shadow-sm border-0 mx-auto" style="max-width: 700px;">
+            <div class="card-body">
+              <p class="lead fst-italic">
+                "The consulting strategies provided by this team have transformed our operations. 
+                We are now more efficient and profitable than ever."
+              </p>
+              <div class="d-flex align-items-center justify-content-center mt-4">
+                <img src="images/1.jpg" alt="Client 1" class="rounded-circle me-3" style="width:60px; height:60px; object-fit:cover;">
+                <div class="text-start">
+                 <h6 class="fw-bold mb-0" data-i18n="client1_name">James Carter</h6>
+<small class="text-muted" data-i18n="client1_title">CEO, TechCorp Solutions</small>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="carousel-item">
+          <div class="card review-card shadow-sm border-0 mx-auto" style="max-width: 700px;">
+            <div class="card-body">
+              <p class="lead fst-italic">
+                "Their digital transformation solutions helped us modernize quickly. 
+                The team’s insights are invaluable."
+              </p>
+              <div class="d-flex align-items-center justify-content-center mt-4">
+                <img src="images/abt-t1.jpeg" alt="Client 2" class="rounded-circle me-3" style="width:60px; height:60px; object-fit:cover;">
+                <div class="text-start">
+                 <h6 class="fw-bold mb-0" data-i18n="client2_name">Maria Lopez</h6>
+<small class="text-muted" data-i18n="client2_title">Head of Operations, BrightEdge</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="carousel-item">
+          <div class="card review-card shadow-sm border-0 mx-auto" style="max-width: 700px;">
+            <div class="card-body">
+              <p class="lead fst-italic">
+                "A truly client-focused consulting firm. They went above and beyond 
+                to deliver measurable results."
+              </p>
+              <div class="d-flex align-items-center justify-content-center mt-4">
+                <img src="images/abt-t33.jpeg" alt="Client 3" class="rounded-circle me-3" style="width:60px; height:60px; object-fit:cover;">
+                <div class="text-start">
+                  <h6 class="fw-bold mb-0" data-i18n="client3_name">David Wilson</h6>
+<small class="text-muted" data-i18n="client3_title">Founder, InnovateNow</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Final CTA Section ===== -->
+<section class="final-cta-section py-5 text-white position-relative">
+  <!-- Background Image -->
+  <div class="bg-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <div class="container position-relative text-center">
+    <!-- Heading -->
+    <h2 class="fw-bold mb-3" data-i18n="cta_title">
+      Ready to Transform Your Business?
+    </h2>
+    <p class="lead mb-4" data-i18n="cta_subtitle">
+      Partner with us today and experience innovative consulting solutions designed 
+      to drive sustainable growth and success.
+    </p>
+
+    <!-- Buttons -->
+    <a href="services.html" class="btn btn-primary btn-lg me-2" data-i18n="cta_btn1">
+      Explore Services
+    </a>
+    <a href="contact.html" class="btn btn-outline-light btn-lg" data-i18n="cta_btn2">
+      Contact Us
+    </a>
+  </div>
+</section>
+
+
+<footer class="shadow-sm mt-5 pt-4">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-md-3">
+        <a href="index.html" class="d-inline-block mb-3">
+          <img src="images/logo.png" alt="Stackly Logo" height="40"
+               data-i18n-attr="alt" data-i18n="footer_logo_alt">
+        </a>
+        <p class="small" data-i18n="footer_desc">
+          Empowering businesses with innovative consulting, strategy, and technology solutions.<br>
+  Partner with us to accelerate growth and transform your organization.
+        </p>
+        <div class="d-flex gap-3 fs-5">
+          <a href="https://www.facebook.com" class="text-dark"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.twitter.com" class="text-dark"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_quick_links">Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html" class="link-dark text-decoration-none" data-i18n="footer_home1">Home 1</a></li>
+          <li><a href="home2.html" class="link-dark text-decoration-none" data-i18n="footer_home2">Home 2</a></li>
+          <li><a href="about.html" class="link-dark text-decoration-none" data-i18n="footer_about_us">About Us</a></li>
+          <li><a href="services.html" class="link-dark text-decoration-none" data-i18n="footer_services_link">Services</a></li>
+          <li><a href="blog.html" class="link-dark text-decoration-none" data-i18n="footer_blog">Blog</a></li>
+          <li><a href="contact.html" class="link-dark text-decoration-none" data-i18n="footer_contact_us_link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_services">Services</h6>
+        <ul class="list-unstyled small">
+          <li><a href="service1.html" class="link-dark text-decoration-none" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a href="service2.html" class="link-dark text-decoration-none" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a href="service3.html" class="link-dark text-decoration-none" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a href="service4.html" class="link-dark text-decoration-none" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a href="service5.html" class="link-dark text-decoration-none" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a href="service6.html" class="link-dark text-decoration-none" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_contact_us">Contact Us</h6>
+        <p class="small mb-1" data-i18n="footer_address"><i class="fas fa-map-marker-alt me-2"></i>123 Main St, Abc City</p>
+        <p class="small mb-1" data-i18n="footer_phone"><i class="fas fa-phone me-2"></i>+1 234 567 890</p>
+        <p class="small mb-0" data-i18n="footer_email"><i class="fas fa-envelope me-2"></i>info@Business.com</p>
+        <div>
+            <h6 data-i18n="follow">Follow us</h6>
+            <a href="https://www.facebook.com" class="text-dark me-2"><i class="fab fa-facebook fa-lg" data-i18n="follow1">facebook</i></a>
+            <a href="https://www.twitter.com" class="text-dark me-2"><i class="fab fa-twitter fa-lg" data-i18n="follow2">twitter</i></a>
+            <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram fa-lg" data-i18n="follow3">instagram</i></a>
+        </div>
+      </div>
+      
+
+
+
+    </div>
+
+    <hr class="mt-4 mb-2">
+    <div class="text-center pb-3 small" data-i18n="footer_copy">© 2025 Business. All rights reserved.</div>
+  </div>
+</footer>
+<script>
+    // js/lang.js
+
+const translations = {
+  en: {
+    site_title: "Stackly Business",
+    header_logo_alt: "Stackly Logo",
+    nav_home_dropdown: "Home",
+    nav_home1: "Home 1",
+    nav_home2: "Home 2",
+    nav_about: "About",
+    nav_blog: "Blog",
+    nav_services_dropdown: "Services",
+    nav_all_services: "All Services",
+    nav_service:"All Services",
+    nav_service1: "Innovation & Change",
+    nav_service2: "Governance & Compliance",
+    nav_service3: "Customer Experience & Service",
+    nav_service4: "Data & Business Intelligence",
+    nav_service5: "Sustainability & ESG Strategy",
+    nav_service6: "Acquisitions & Partnership Advisory",
+    nav_contact: "Contact",
+    logout: "Logout",
+    about_hero_title: "Who We Are",
+    about_hero_subtitle:
+      "At Stackly Business, we are driven by innovation and strategy. Our mission is to empower organizations with tailored solutions, helping them thrive in a rapidly evolving digital world.",
+    about_hero_cta1: "Explore Services",
+    about_hero_cta2: "Meet Our Team",
+    
+    features_title: "Core features that set us apart from the competition",
+    features_subtitle:
+      "Explore our standout features designed to deliver exceptional performance and value, distinguishing us from the competition.",
+    feature1_title: "Real-time analytics",
+    feature1_desc: "Gain actionable insights with our real-time analytics feature.",
+    feature2_title: "Customizable reports",
+    feature2_desc: "Streamline your workflows with automated reports.",
+    feature3_title: "Mobile accessibility",
+    feature3_desc: "Manage your work on the go with our mobile-friendly platform.",
+    feature4_title: "Enhanced security",
+    feature4_desc: "Protect your sensitive data with state-of-the-art security measures.",
+    video_section_title: "Experience Innovation in Action",
+    video_section_desc:
+      "See how our platform brings ideas to life with real-time interaction, seamless integration, and modern design principles.",
+    video_section2_title: "Empower Your Business Digitally",
+    video_section2_desc:
+      "Transform your workflow with our advanced digital tools that ensure efficiency, flexibility, and unmatched performance.",
+    team_title: "Meet Our Team",
+    team_subtitle:
+      "Our dedicated professionals bring expertise, creativity, and passion to deliver exceptional solutions for our clients.",
+    reviews_title: "What Our Clients Say",
+    reviews_subtitle:
+      "Hear from our valued clients about how our consulting and business solutions have made a difference in their success.",
+    cta_title: "Ready to Transform Your Business?",
+    cta_subtitle:
+      "Partner with us today and experience innovative consulting solutions designed to drive sustainable growth and success.",
+    cta_btn1: "Explore Services",
+    cta_btn2: "Contact Us",
+    footer_logo_alt: "Stackly Logo",
+    footer_desc:
+      "Empowering businesses with innovative consulting, strategy, and technology solutions. Partner with us to accelerate growth and transform your organization.",
+    footer_quick_links: "Quick Links",
+    footer_home1: "Home 1",
+    footer_home2: "Home 2",
+    footer_about_us: "About Us",
+    footer_services_link: "Services",
+    footer_blog: "Blog",
+    footer_contact_us_link: "Contact Us",
+    footer_services: "Services",
+    footer_contact_us: "Contact Us",
+    footer_address: "123 Main St, Abc City",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    footer_copy: "© 2025 Business. All rights reserved.",
+    follow: "Follow us",
+    follow1: "Facebook",
+    follow2: "Twitter",
+    follow3: "Instagram",
+    feature_list1: "Real-time collaboration",
+    feature_list2: "Easy integration",
+    feature_list3: "Secure & scalable",
+    feature_list4: "Seamless automation",
+    feature_list5: "Cross-platform support",
+    feature_list6: "Future-ready technology",
+    client1_name: "James Carter",
+    client1_title: "CEO, TechCorp Solutions",
+    client2_name: "Maria Lopez",
+    client2_title: "Head of Operations, BrightEdge",
+    client3_name: "David Wilson",
+    client3_title: "Founder, InnovateNow",
+  },
+  ar: {
+    site_title: "ستاكلي للأعمال",
+    header_logo_alt: "شعار ستاكلي",
+    nav_home_dropdown: "الرئيسية",
+    nav_home1: "الرئيسية 1",
+    nav_home2: "الرئيسية 2",
+    nav_about: "من نحن",
+    nav_blog: "المدونة",
+    nav_services_dropdown: "الخدمات",
+    nav_all_services: "جميع الخدمات",
+
+    nav_service: "جميع الخدمات",
+    nav_service1: "الابتكار والتغيير",
+    nav_service2: "الحوكمة والامتثال",
+    nav_service3: "تجربة العملاء والخدمة",
+    nav_service4: "البيانات وذكاء الأعمال",
+    nav_service5: "الاستدامة واستراتيجية ESG",
+    nav_service6: "الاستحواذ والشراكات",
+    nav_contact: "اتصل بنا",
+    logout: "تسجيل خروج",
+    about_hero_title: "من نحن",
+    about_hero_subtitle:
+      "في ستاكلي للأعمال، نقود بالابتكار والاستراتيجية. مهمتنا هي تمكين المؤسسات من خلال حلول مخصصة لمساعدتها على النجاح في عالم رقمي متطور.",
+    about_hero_cta1: "استكشف الخدمات",
+    about_hero_cta2: "تعرف على فريقنا",
+    features_title: "الميزات الأساسية التي تميزنا عن المنافسين",
+    features_subtitle:
+      "اكتشف ميزاتنا المميزة المصممة لتقديم أداء استثنائي وقيمة عالية، مما يميزنا عن المنافسة.",
+    feature1_title: "تحليلات فورية",
+    feature1_desc: "احصل على رؤى قابلة للتنفيذ باستخدام التحليلات الفورية.",
+    feature2_title: "تقارير قابلة للتخصيص",
+    feature2_desc: "قم بتبسيط سير عملك من خلال التقارير الآلية.",
+    feature3_title: "الوصول عبر الهاتف المحمول",
+    feature3_desc: "أدر عملك أثناء التنقل من خلال منصتنا المتوافقة مع الأجهزة المحمولة.",
+    feature4_title: "أمان معزز",
+    feature4_desc: "احم بياناتك الحساسة باستخدام أحدث تدابير الأمان.",
+    video_section_title: "عِش الابتكار عمليًا",
+    video_section_desc:
+      "شاهد كيف تحوّل منصتنا الأفكار إلى واقع من خلال التفاعل الفوري، التكامل السلس، ومبادئ التصميم الحديثة.",
+    video_section2_title: "مكّن عملك رقميًا",
+    video_section2_desc:
+      "حوّل سير عملك باستخدام أدواتنا الرقمية المتقدمة التي تضمن الكفاءة والمرونة والأداء المتميز.",
+    team_title: "تعرف على فريقنا",
+    team_subtitle:
+      "يقدم خبراؤنا المتميزون الإبداع والشغف لتقديم حلول استثنائية لعملائنا.",
+    reviews_title: "ماذا يقول عملاؤنا",
+    reviews_subtitle:
+      "استمع إلى عملائنا حول كيف ساعدتهم حلولنا واستشاراتنا في النجاح.",
+    cta_title: "هل أنت مستعد لتحويل عملك؟",
+    cta_subtitle:
+      "كن شريكًا لنا اليوم واختبر حلول الاستشارات المبتكرة المصممة لدفع النمو المستدام والنجاح.",
+    cta_btn1: "استكشف الخدمات",
+    cta_btn2: "اتصل بنا",
+    footer_logo_alt: "شعار ستاكلي",
+    footer_desc:
+      "نمكن الشركات من خلال الاستشارات المبتكرة والاستراتيجية والحلول التكنولوجية. شاركنا لتسريع النمو وتحويل مؤسستك.",
+    footer_quick_links: "روابط سريعة",
+    footer_home1: "الرئيسية 1",
+    footer_home2: "الرئيسية 2",
+    footer_about_us: "معلومات عنا",
+    footer_services_link: "الخدمات",
+    footer_blog: "المدونة",
+    footer_contact_us_link: "اتصل بنا",
+    footer_services: "الخدمات",
+    footer_contact_us: "اتصل بنا",
+    footer_address: "123 الشارع الرئيسي، مدينة أبج",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    footer_copy: "© 2025 ستاكلي. جميع الحقوق محفوظة.",
+    follow: "تابعنا",
+    follow1: "فيسبوك",
+    follow2: "تويتر",
+    follow3: "انستغرام",
+     feature_list1: "تعاون في الوقت الفعلي",
+    feature_list2: "تكامل سهل",
+    feature_list3: "آمن وقابل للتوسع",
+    feature_list4: "أتمتة سلسة",
+    feature_list5: "دعم عبر الأنظمة الأساسية",
+    feature_list6: "تكنولوجيا جاهزة للمستقبل",
+    client1_name: "جيمس كارتر",
+    client1_title: "الرئيس التنفيذي، ",
+    client2_name: "ماريا لوبيز",
+    client2_title: "رئيسة العمليات، ",
+    client3_name: "ديفيد ويلسون",
+    client3_title: "المؤسس، ",
+  },
+  he: {
+    site_title: "סטאקלי ביזנס",
+    header_logo_alt: "לוגו סטאקלי",
+    nav_home_dropdown: "בית",
+    nav_home1: "בית 1",
+    nav_home2: "בית 2",
+    nav_about: "עלינו",
+    nav_blog: "בלוג",
+    nav_services_dropdown: "שירותים",
+    nav_all_services: "כל השירותים",
+
+    nav_service: "כל השירותים",
+    nav_service1: "חדשנות ושינוי",
+    nav_service2: "ממשל וציות",
+    nav_service3: "חווית לקוח ושירות",
+    nav_service4: "נתונים ובינה עסקית",
+    nav_service5: "קיימות ואסטרטגיית ESG",
+    nav_service6: "ייעוץ למיזוגים ושיתופי פעולה",
+    nav_contact: "צור קשר",
+    logout: "התנתק",
+    about_hero_title: "מי אנחנו",
+    about_hero_subtitle:
+      "בסטאקלי ביזנס אנחנו מונעים על ידי חדשנות ואסטרטגיה. המשימה שלנו היא להעצים ארגונים עם פתרונות מותאמים אישית כדי לסייע להם להצליח בעולם הדיגיטלי המתפתח במהירות.",
+    about_hero_cta1: "גלה שירותים",
+    about_hero_cta2: "הכירו את הצוות שלנו",
+    features_title: "תכונות ליבה שמבדילות אותנו מהמתחרים",
+    features_subtitle:
+      "גלה את התכונות הבולטות שלנו שנועדו לספק ביצועים יוצאי דופן וערך מוסף.",
+    feature1_title: "אנליטיקה בזמן אמת",
+    feature1_desc: "קבל תובנות מעשיות עם אנליטיקה בזמן אמת.",
+    feature2_title: "דוחות מותאמים אישית",
+    feature2_desc: "פשט את תהליכי העבודה עם דוחות אוטומטיים.",
+    feature3_title: "נגישות לנייד",
+    feature3_desc: "נהל את העבודה שלך תוך כדי תנועה עם הפלטפורמה הידידותית שלנו לנייד.",
+    feature4_title: "אבטחה משופרת",
+    feature4_desc: "הגן על הנתונים הרגישים שלך עם אמצעי אבטחה מתקדמים.",
+    video_section_title: "חוו חדשנות בפעולה",
+    video_section_desc:
+      "ראה כיצד הפלטפורמה שלנו הופכת רעיונות למציאות עם אינטראקציה בזמן אמת, אינטגרציה חלקה ועקרונות עיצוב מודרניים.",
+    video_section2_title: "העצם את העסק שלך דיגיטלית",
+    video_section2_desc:
+      "שנה את תהליכי העבודה שלך עם הכלים הדיגיטליים המתקדמים שלנו המבטיחים יעילות, גמישות וביצועים יוצאי דופן.",
+    team_title: "הכירו את הצוות שלנו",
+    team_subtitle:
+      "אנשי המקצוע המסורים שלנו מביאים מומחיות, יצירתיות ותשוקה כדי לספק פתרונות יוצאי דופן ללקוחותינו.",
+    reviews_title: "מה הלקוחות שלנו אומרים",
+    reviews_subtitle:
+      "שמע מהלקוחות שלנו כיצד הייעוץ והפתרונות העסקיים שלנו עשו שינוי בהצלחתם.",
+    cta_title: "מוכן לשנות את העסק שלך?",
+    cta_subtitle:
+      "הצטרף אלינו עוד היום וחווה פתרונות ייעוץ חדשניים שנועדו להוביל צמיחה והצלחה ברת קיימא.",
+    cta_btn1: "גלה שירותים",
+    cta_btn2: "צור קשר",
+    footer_logo_alt: "לוגו סטאקלי",
+    footer_desc:
+      "מעצימים עסקים עם ייעוץ חדשני, אסטרטגיה ופתרונות טכנולוגיים. שתף פעולה איתנו כדי להאיץ צמיחה ולשנות את הארגון שלך.",
+    footer_quick_links: "קישורים מהירים",
+    footer_home1: "בית 1",
+    footer_home2: "בית 2",
+    footer_about_us: "עלינו",
+    footer_services_link: "שירותים",
+    footer_blog: "בלוג",
+    footer_contact_us_link: "צור קשר",
+    footer_services: "שירותים",
+    footer_contact_us: "צור קשר",
+    footer_address: "רחוב ראשי 123, עיר אבג",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    footer_copy: "© 2025 סטאקלי. כל הזכויות שמורות.",
+    follow: "עקוב אחרינו",
+    follow1: "פייסבוק",
+    follow2: "טוויטר",
+    follow3: "אינסטגרם",
+    feature_list1: "שיתוף פעולה בזמן אמת",
+    feature_list2: "אינטגרציה קלה",
+    feature_list3: "מאובטח וניתן להרחבה",
+    feature_list4: "אוטומציה חלקה",
+    feature_list5: "תמיכה חוצת פלטפורמות",
+    feature_list6: "טכנולוגיה מוכנה לעתיד",
+     client1_name: "ג'יימס קרטר",
+    client1_title: "מנכ",
+    client2_name: "מריה לופז",
+    client2_title: "ראש תחום תפעול,",
+    client3_name: "דוד וילסון",
+    client3_title: "מייסד, ",
+  },
+};
+// js/lang_toggle.js
+document.addEventListener("DOMContentLoaded", () => {
+  const selector = document.getElementById("language-selector");
+
+  function applyTranslations(lang) {
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang] && translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+
+    // handle attributes (like alt, title, placeholder)
+    document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+      const attr = el.getAttribute("data-i18n-attr");
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang] && translations[lang][key]) {
+        el.setAttribute(attr, translations[lang][key]);
+      }
+    });
+
+    // RTL for Arabic & Hebrew
+    if (lang === "ar" || lang === "he") {
+      document.body.setAttribute("dir", "rtl");
+      document.body.classList.add("rtl-mode");
+    } else {
+      document.body.setAttribute("dir", "ltr");
+      document.body.classList.remove("rtl-mode");
+    }
+
+    localStorage.setItem("lang", lang);
+  }
+
+  // Load saved language or default
+  const savedLang = localStorage.getItem("lang") || "en";
+  selector.value = savedLang;
+  applyTranslations(savedLang);
+
+  // Change language on select
+  selector.addEventListener("change", (e) => {
+    applyTranslations(e.target.value);
+  });
+});
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

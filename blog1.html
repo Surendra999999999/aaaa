@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="site_title">Stackly Business</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+ <link rel="stylesheet" href="css/h_f.css" />
+ <link rel="stylesheet" href="css/blog1.css" />
+
+  <script src="js/header.js" defer></script>
+  <script src="js/dark_toogle.js" defer></script>
+
+</head>
+<body data-bs-theme="light">
+
+<!-- ===== Header ===== -->
+<header class="navbar navbar-expand-lg bg-light shadow-sm px-3 sticky-top">
+  <!-- Left: Logo -->
+  <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" alt="Logo" height="40"
+         data-i18n-attr="alt" data-i18n="header_logo_alt">
+  </a>
+
+  <!-- Center: nav links -->
+  <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+    <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_home_dropdown">
+          Home
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="index.html" data-i18n="nav_home1">Home 1</a></li>
+          <li><a class="dropdown-item" href="home2.html" data-i18n="nav_home2">Home 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="blog.html" data-i18n="nav_blog">Blog</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_services_dropdown">
+          Services
+        </a>
+        <ul class="dropdown-menu">
+          <li class="d-lg-none"><a class="dropdown-item" href="services.html" data-i18n="nav_all_services">All Services</a></li>
+                    <li><a class="dropdown-item" href="services.html" data-i18n="nav_service">All Services</a></li>
+
+          <li><a class="dropdown-item" href="service1.html" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a class="dropdown-item" href="service2.html" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a class="dropdown-item" href="service3.html" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a class="dropdown-item" href="service4.html" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a class="dropdown-item" href="service5.html" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a class="dropdown-item" href="service6.html" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Right: lang/profile/dark + hamburger -->
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <select id="language-selector" class="form-select form-select-sm w-auto">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="dropdown">
+      <button class="btn btn-outline-secondary rounded-circle" id="profile-dropdown-toggle" data-bs-toggle="dropdown">
+        <span id="profile-initials"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" id="profile-dropdown">
+        <li><a class="dropdown-item" href="#" id="logout-btn" data-i18n="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark" class="btn btn-outline-secondary btn-sm">🌙</button>
+
+    <!-- Hamburger LAST -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>
+
+
+<!-- ===== BLOG HERO SECTION ===== -->
+<section id="blog-hero" class="container py-5">
+  <!-- Title -->
+  <h1 class="fw-bold mb-3" data-i18n="title_business_blog">
+    Business Blog 
+  </h1>
+
+  <!-- Feature Image -->
+  <div class="mb-3">
+    <img src="images/Business1.jpeg" 
+         class="img-fluid rounded" 
+         alt="Business Blog" 
+         data-i18n-attr="alt:alt_business_blog">
+  </div>
+
+  <!-- Meta -->
+  <div class="d-flex align-items-center text-muted small mb-3">
+    <span data-i18n="author_blog1">Jamie Smith</span>
+    <span class="mx-2">•</span>
+    <span data-i18n="date_blog1">August 24, 2025</span>
+    <span class="mx-2">•</span>
+    <span data-i18n="readtime_blog1">6 min read</span>
+  </div>
+
+  <!-- Tags -->
+  <div class="mb-4">
+    <span class="badge bg-primary me-2" data-i18n="tag_business">Business</span>
+    <span class="badge bg-warning text-dark" data-i18n="tag_growth">Growth</span>
+  </div>
+
+  <!-- Intro -->
+  <p class="lead" data-i18n="text_business_blog">
+    Insights and tips for business growth...
+  </p>
+</section>
+<!-- ===== BLOG BODY SECTION ===== -->
+<section id="blog-body" class="container pb-5">
+  <!-- Intro paragraph -->
+  <p class="mb-4" data-i18n="intro_blog1">
+    In today’s digital age, having a strong online presence is essential for freelancers seeking
+    to grow their client base and establish credibility. This guide offers practical steps
+    to build your brand and effectively showcase your skills.
+  </p>
+
+  <!-- Optimize Portfolio -->
+  <h2 class="fw-bold text-primary mb-3" data-i18n="heading_optimize_portfolio">Optimize Your Portfolio</h2>
+  <p><strong data-i18n="label_showcase">Showcase Work:</strong> <span data-i18n="text_showcase">
+    Display your best projects and testimonials prominently.
+  </span></p>
+  <p><strong data-i18n="label_ux">User Experience:</strong> <span data-i18n="text_ux">
+    Ensure your website is easy to navigate and mobile-friendly.
+  </span></p>
+  <p><strong data-i18n="label_clear_msg">Clear Messaging:</strong> <span data-i18n="text_clear_msg">
+    Communicate your value proposition succinctly.
+  </span></p>
+
+  <!-- Engage on Social Media -->
+  <h2 class="fw-bold text-warning mb-3" data-i18n="heading_social">Engage on Social Media</h2>
+  <p data-i18n="text_social">
+    Be active on platforms relevant to your industry to connect with potential clients and peers.
+    Share insights, answer questions, and build a network around your expertise.
+  </p>
+
+  <!-- Build Client Relationships -->
+  <h2 class="fw-bold text-success mb-3" data-i18n="heading_client_rel">Build Client Relationships</h2>
+  <p><strong data-i18n="label_communication">Communication:</strong> <span data-i18n="text_communication">
+    Keep clients updated, respond promptly, and set clear expectations.
+  </span></p>
+  <p><strong data-i18n="label_followup">Follow-Ups:</strong> <span data-i18n="text_followup">
+    Send periodic updates and check-ins to maintain ongoing connections.
+  </span></p>
+  <p><strong data-i18n="label_feedback">Seek Feedback:</strong> <span data-i18n="text_feedback">
+    Ask for testimonials or reviews to strengthen your credibility.
+  </span></p>
+
+  <!-- Continuous Learning -->
+  <h2 class="fw-bold text-info mb-3" data-i18n="heading_learning">Commit to Continuous Learning</h2>
+  <p data-i18n="text_learning">
+    Stay ahead by taking new courses, attending webinars, and keeping up with industry trends.
+    Sharpening your skills ensures you remain competitive and relevant.
+  </p>
+</section>
+<!-- ===== INTERACTIVE TAKEAWAYS ===== -->
+<section id="blog-interactive" class="container py-5">
+  <h2 class="fw-bold text-danger mb-4" data-i18n="heading_takeaways">
+    Key Takeaways & Next Steps
+  </h2>
+  <p class="mb-3" data-i18n="text_takeaways_intro">
+    Explore the highlights below. Click a panel to reveal quick actions you can take today:
+  </p>
+
+  <!-- Bootstrap Accordion -->
+  <div class="accordion" id="takeawaysAccordion">
+    <!-- Item 1 -->
+   <!-- Item 1 -->
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingOne">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+      data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+      data-i18n="accordion1_title">
+      Build a Quick Portfolio
+    </button>
+  </h2>
+  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+    data-bs-parent="#takeawaysAccordion">
+    <div class="accordion-body" data-i18n="accordion1_body">
+      Upload 3 of your strongest projects, add testimonials, and link your portfolio on all profiles.
+    </div>
+  </div>
+</div>
+
+<!-- Item 2 -->
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingTwo">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+      data-i18n="accordion2_title">
+      Engage on One Social Platform
+    </button>
+  </h2>
+  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+    data-bs-parent="#takeawaysAccordion">
+    <div class="accordion-body" data-i18n="accordion2_body">
+      Pick LinkedIn, Instagram, or Twitter — post a short tip, answer a question, or comment on industry news.
+    </div>
+  </div>
+</div>
+
+<!-- Item 3 -->
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingThree">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+      data-i18n="accordion3_title">
+      Plan Your Next Skill Upgrade
+    </button>
+  </h2>
+  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+    data-bs-parent="#takeawaysAccordion">
+    <div class="accordion-body" data-i18n="accordion3_body">
+      Enroll in one short course this month that improves a skill clients value (SEO, design, copywriting).
+    </div>
+  </div>
+</div>
+  </div>
+
+  <!-- Call To Action -->
+  <div class="text-center mt-4">
+    <button class="btn btn-primary btn-lg" data-i18n="cta_subscribe">
+      📩 Subscribe for Weekly Tips
+    </button>
+  </div>
+</section>
+
+
+<footer class="shadow-sm mt-5 pt-4">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-md-3">
+        <a href="index.html" class="d-inline-block mb-3">
+          <img src="images/logo.png" alt="Stackly Logo" height="40"
+               data-i18n-attr="alt" data-i18n="footer_logo_alt">
+        </a>
+        <p class="small" data-i18n="footer_desc">
+          Empowering businesses with innovative consulting, strategy, and technology solutions.<br>
+  Partner with us to accelerate growth and transform your organization.
+        </p>
+        <div class="d-flex gap-3 fs-5">
+          <a href="https://www.facebook.com" class="text-dark"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.twitter.com" class="text-dark"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_quick_links">Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html" class="link-dark text-decoration-none" data-i18n="footer_home1">Home 1</a></li>
+          <li><a href="home2.html" class="link-dark text-decoration-none" data-i18n="footer_home2">Home 2</a></li>
+          <li><a href="about.html" class="link-dark text-decoration-none" data-i18n="footer_about_us">About Us</a></li>
+          <li><a href="services.html" class="link-dark text-decoration-none" data-i18n="footer_services_link">Services</a></li>
+          <li><a href="blog.html" class="link-dark text-decoration-none" data-i18n="footer_blog">Blog</a></li>
+          <li><a href="contact.html" class="link-dark text-decoration-none" data-i18n="footer_contact_us_link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_services">Services</h6>
+        <ul class="list-unstyled small">
+          <li><a href="service1.html" class="link-dark text-decoration-none" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a href="service2.html" class="link-dark text-decoration-none" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a href="service3.html" class="link-dark text-decoration-none" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a href="service4.html" class="link-dark text-decoration-none" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a href="service5.html" class="link-dark text-decoration-none" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a href="service6.html" class="link-dark text-decoration-none" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_contact_us">Contact Us</h6>
+        <p class="small mb-1" data-i18n="footer_address"><i class="fas fa-map-marker-alt me-2"></i>123 Main St, Abc City</p>
+        <p class="small mb-1" data-i18n="footer_phone"><i class="fas fa-phone me-2"></i>+1 234 567 890</p>
+        <p class="small mb-0" data-i18n="footer_email"><i class="fas fa-envelope me-2"></i>info@Business.com</p>
+        <div>
+            <h6 data-i18n="follow">Follow us</h6>
+            <a href="https://www.facebook.com" class="text-dark me-2"><i class="fab fa-facebook fa-lg" data-i18n="follow1">facebook</i></a>
+            <a href="https://www.twitter.com" class="text-dark me-2"><i class="fab fa-twitter fa-lg" data-i18n="follow2">twitter</i></a>
+            <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram fa-lg" data-i18n="follow3">instagram</i></a>
+        </div>
+      </div>
+      
+
+    </div>
+
+    <hr class="mt-4 mb-2">
+    <div class="text-center pb-3 small" data-i18n="footer_copy">© 2025 Business. All rights reserved.</div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+/* ---------- 1. Translation dictionary ---------- */
+
+const translations = {
+  en: {
+    site_title: "Stackly Business",
+
+    /* Header */
+    header_logo_alt: "Stackly Logo",
+    nav_home_dropdown: "Home",
+    nav_home1: "Home 1",
+    nav_home2: "Home 2",
+    nav_about: "About",
+    nav_blog: "Blog",
+    nav_services_dropdown: "Services",
+    nav_all_services: "All Services",
+    nav_service:"All Services",
+    nav_service1: "Innovation & Change",
+    nav_service2: "Governance & Compliance",
+    nav_service3: "Customer Experience & Service",
+    nav_service4: "Data & Business Intelligence",
+    nav_service5: "Sustainability & ESG Strategy",
+    nav_service6: "Acquisitions & Partnership Advisory",
+    nav_contact: "Contact",
+    logout: "Logout",
+
+    /* Blog Hero */
+    title_business_blog: "Business Blog",
+    alt_business_blog: "Business Blog",
+    author_blog1: "Jamie Smith",
+    date_blog1: "August 24, 2025",
+    readtime_blog1: "6 min read",
+    tag_business: "Business",
+    tag_growth: "Growth",
+    text_business_blog: "Insights and tips for business growth...",
+
+    /* Blog Body */
+    intro_blog1:
+      "In today’s digital age, having a strong online presence is essential for freelancers seeking to grow their client base and establish credibility. This guide offers practical steps to build your brand and effectively showcase your skills.",
+    heading_optimize_portfolio: "Optimize Your Portfolio",
+    label_showcase: "Showcase Work:",
+    text_showcase: "Display your best projects and testimonials prominently.",
+    label_ux: "User Experience:",
+    text_ux: "Ensure your website is easy to navigate and mobile-friendly.",
+    label_clear_msg: "Clear Messaging:",
+    text_clear_msg: "Communicate your value proposition succinctly.",
+    heading_social: "Engage on Social Media",
+    text_social:
+      "Be active on platforms relevant to your industry to connect with potential clients and peers. Share insights, answer questions, and build a network around your expertise.",
+    heading_client_rel: "Build Client Relationships",
+    label_communication: "Communication:",
+    text_communication:
+      "Keep clients updated, respond promptly, and set clear expectations.",
+    label_followup: "Follow-Ups:",
+    text_followup: "Send periodic updates and check-ins to maintain ongoing connections.",
+    label_feedback: "Seek Feedback:",
+    text_feedback: "Ask for testimonials or reviews to strengthen your credibility.",
+    heading_learning: "Commit to Continuous Learning",
+    text_learning:
+      "Stay ahead by taking new courses, attending webinars, and keeping up with industry trends. Sharpening your skills ensures you remain competitive and relevant.",
+
+    /* Interactive Section */
+    heading_takeaways: "Key Takeaways & Next Steps",
+    text_takeaways_intro:
+      "Explore the highlights below. Click a panel to reveal quick actions you can take today:",
+    cta_subscribe: "📩 Subscribe for Weekly Tips",
+
+    /* Footer */
+    footer_logo_alt: "Stackly Logo",
+    footer_desc:
+      "Empowering businesses with innovative consulting, strategy, and technology solutions.\nPartner with us to accelerate growth and transform your organization.",
+    footer_quick_links: "Quick Links",
+    footer_home1: "Home 1",
+    footer_home2: "Home 2",
+    footer_about_us: "About Us",
+    footer_services_link: "Services",
+    footer_blog: "Blog",
+    footer_contact_us_link: "Contact Us",
+    footer_services: "Services",
+    footer_contact_us: "Contact Us",
+    footer_address: "123 Main St, Abc City",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    follow: "Follow us",
+    follow1: "facebook",
+    follow2: "twitter",
+    follow3: "instagram",
+    footer_copy: "© 2025 Business. All rights reserved.",
+     accordion1_title: "Build a Quick Portfolio",
+    accordion1_body:
+      "Upload 3 of your strongest projects, add testimonials, and link your portfolio on all profiles.",
+    accordion2_title: "Engage on One Social Platform",
+    accordion2_body:
+      "Pick LinkedIn, Instagram, or Twitter — post a short tip, answer a question, or comment on industry news.",
+    accordion3_title: "Plan Your Next Skill Upgrade",
+    accordion3_body:
+      "Enroll in one short course this month that improves a skill clients value (SEO, design, copywriting)."
+  },
+
+  ar: {
+    site_title: "ستاكلي للأعمال",
+    header_logo_alt: "شعار ستاكلي",
+    nav_home_dropdown: "الرئيسية",
+    nav_home1: "الصفحة الرئيسية 1",
+    nav_home2: "الصفحة الرئيسية 2",
+    nav_about: "من نحن",
+    nav_blog: "المدونة",
+    nav_services_dropdown: "الخدمات",
+    nav_all_services: "جميع الخدمات",
+
+    nav_service: "جميع الخدمات",
+    nav_service1: "الابتكار والتغيير",
+    nav_service2: "الحوكمة والامتثال",
+    nav_service3: "تجربة وخدمة العملاء",
+    nav_service4: "البيانات وذكاء الأعمال",
+    nav_service5: "الاستدامة واستراتيجية ESG",
+    nav_service6: "الاستحواذ والشراكات",
+    nav_contact: "اتصل بنا",
+    logout: "تسجيل الخروج",
+
+    title_business_blog: "مدونة الأعمال",
+    alt_business_blog: "مدونة الأعمال",
+    author_blog1: "جيمي سميث",
+    date_blog1: "24 أغسطس 2025",
+    readtime_blog1: "6 دقائق قراءة",
+    tag_business: "أعمال",
+    tag_growth: "نمو",
+    text_business_blog: "رؤى ونصائح لنمو الأعمال...",
+
+    intro_blog1:
+      "في العصر الرقمي الحالي، أصبح التواجد القوي على الإنترنت أمرًا ضروريًا للمستقلين الذين يسعون إلى توسيع قاعدة عملائهم وتعزيز مصداقيتهم. يقدم هذا الدليل خطوات عملية لبناء علامتك التجارية وعرض مهاراتك بفعالية.",
+    heading_optimize_portfolio: "تحسين معرض أعمالك",
+    label_showcase: "عرض الأعمال:",
+    text_showcase: "اعرض أفضل مشاريعك والشهادات بشكل بارز.",
+    label_ux: "تجربة المستخدم:",
+    text_ux: "تأكد من أن موقعك سهل التصفح ومتوافق مع الأجهزة المحمولة.",
+    label_clear_msg: "رسالة واضحة:",
+    text_clear_msg: "انقل عرضك للقيمة بإيجاز.",
+    heading_social: "التفاعل على وسائل التواصل الاجتماعي",
+    text_social:
+      "كن نشطًا على المنصات المرتبطة بمجالك للتواصل مع العملاء المحتملين والزملاء. شارك الأفكار، أجب عن الأسئلة، وابنِ شبكة حول خبرتك.",
+    heading_client_rel: "بناء علاقات العملاء",
+    label_communication: "التواصل:",
+    text_communication: "أبقِ العملاء على اطلاع ورد بسرعة وحدد التوقعات بوضوح.",
+    label_followup: "متابعة:",
+    text_followup: "أرسل تحديثات دورية وتواصل للحفاظ على العلاقة.",
+    label_feedback: "طلب ملاحظات:",
+    text_feedback: "اطلب شهادات أو تقييمات لتعزيز مصداقيتك.",
+    heading_learning: "الالتزام بالتعلم المستمر",
+    text_learning:
+      "ابقَ في الصدارة من خلال أخذ دورات جديدة وحضور الندوات ومواكبة اتجاهات الصناعة. تطوير مهاراتك يجعلك تنافسياً وذو صلة.",
+
+    heading_takeaways: "أهم النقاط والخطوات التالية",
+    text_takeaways_intro:
+      "استكشف النقاط البارزة أدناه. انقر لعرض إجراءات سريعة يمكنك القيام بها اليوم:",
+    cta_subscribe: "📩 اشترك للحصول على نصائح أسبوعية",
+
+    footer_logo_alt: "شعار ستاكلي",
+    footer_desc:
+      "تمكين الأعمال من خلال الاستشارات المبتكرة والاستراتيجية والحلول التقنية.\nشاركنا لتسريع النمو وتحويل مؤسستك.",
+    footer_quick_links: "روابط سريعة",
+    footer_home1: "الصفحة الرئيسية 1",
+    footer_home2: "الصفحة الرئيسية 2",
+    footer_about_us: "من نحن",
+    footer_services_link: "الخدمات",
+    footer_blog: "المدونة",
+    footer_contact_us_link: "اتصل بنا",
+    footer_services: "الخدمات",
+    footer_contact_us: "اتصل بنا",
+    footer_address: "123 شارع رئيسي، مدينة أبك",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    follow: "تابعنا",
+    follow1: "فيسبوك",
+    follow2: "تويتر",
+    follow3: "إنستغرام",
+    footer_copy: "© 2025 الأعمال. جميع الحقوق محفوظة.",
+     accordion1_title: "أنشئ ملفًا شخصيًا سريعًا",
+    accordion1_body:
+      "حمّل ثلاثة من أقوى مشاريعك، أضف توصيات، وضع رابط ملفك الشخصي في جميع المنصات.",
+    accordion2_title: "انخرط في منصة اجتماعية واحدة",
+    accordion2_body:
+      "اختر لينكدإن أو إنستغرام أو تويتر — انشر نصيحة قصيرة، أجب على سؤال، أو علّق على أخبار المجال.",
+    accordion3_title: "خطط لتطوير مهارة جديدة",
+    accordion3_body:
+      "سجل في دورة قصيرة هذا الشهر تعزز مهارة يقدّرها العملاء (تحسين محركات البحث، التصميم، كتابة المحتوى)."
+  },
+
+  he: {
+    site_title: "סטאקלי ביזנס",
+    header_logo_alt: "לוגו סטאקלי",
+    nav_home_dropdown: "בית",
+    nav_home1: "דף בית 1",
+    nav_home2: "דף בית 2",
+    nav_about: "אודות",
+    nav_blog: "בלוג",
+    nav_services_dropdown: "שירותים",
+    nav_all_services: "כל השירותים",
+        nav_service: "כל השירותים",
+
+    nav_service1: "חדשנות ושינוי",
+    nav_service2: "ממשל וציות",
+    nav_service3: "חוויית ושירות לקוחות",
+    nav_service4: "נתונים ומודיעין עסקי",
+    nav_service5: "קיימות ואסטרטגיית ESG",
+    nav_service6: "מיזוגים וייעוץ שותפויות",
+    nav_contact: "צור קשר",
+    logout: "התנתק",
+
+    title_business_blog: "בלוג עסקים",
+    alt_business_blog: "בלוג עסקים",
+    author_blog1: "ג'יימי סמית'",
+    date_blog1: "24 באוגוסט 2025",
+    readtime_blog1: "6 דקות קריאה",
+    tag_business: "עסקים",
+    tag_growth: "צמיחה",
+    text_business_blog: "תובנות וטיפים לצמיחה עסקית...",
+
+    intro_blog1:
+      "בעידן הדיגיטלי של היום, נוכחות מקוונת חזקה חיונית לפרילנסרים המבקשים להרחיב את קהל הלקוחות שלהם ולבסס אמינות. מדריך זה מציע צעדים מעשיים לבניית המותג שלך והצגת הכישורים שלך ביעילות.",
+    heading_optimize_portfolio: "מטב את תיק העבודות שלך",
+    label_showcase: "הצגת עבודות:",
+    text_showcase: "הצג את הפרויקטים והעדויות הטובים ביותר שלך באופן בולט.",
+    label_ux: "חוויית משתמש:",
+    text_ux: "וודא שהאתר שלך קל לניווט ונוח לנייד.",
+    label_clear_msg: "מסר ברור:",
+    text_clear_msg: "תקשר את הצעת הערך שלך בתמציתיות.",
+    heading_social: "השתלב ברשתות חברתיות",
+    text_social:
+      "היה פעיל בפלטפורמות רלוונטיות לתחום שלך כדי להתחבר ללקוחות פוטנציאליים ולבני גילך. שתף תובנות, השב לשאלות ובנה רשת סביב המומחיות שלך.",
+    heading_client_rel: "בנה קשרי לקוחות",
+    label_communication: "תקשורת:",
+    text_communication: "עדכן לקוחות, הגב במהירות וקבע ציפיות ברורות.",
+    label_followup: "מעקב:",
+    text_followup: "שלח עדכונים תקופתיים והישאר בקשר.",
+    label_feedback: "בקשת משוב:",
+    text_feedback: "בקש המלצות או חוות דעת כדי לחזק את האמינות שלך.",
+    heading_learning: "מחויבות ללמידה מתמשכת",
+    text_learning:
+      "הישאר בקדמת הבמה על ידי קורסים חדשים, השתתפות בוובינרים ומעקב אחר מגמות בענף. חידוד הכישורים מבטיח שתישאר תחרותי ורלוונטי.",
+
+    heading_takeaways: "עיקרי הדברים והצעדים הבאים",
+    text_takeaways_intro:
+      "גלה את הנקודות המרכזיות להלן. לחץ כדי לחשוף פעולות מהירות שתוכל לבצע היום:",
+    cta_subscribe: "📩 הירשם לקבלת טיפים שבועיים",
+
+    footer_logo_alt: "לוגו סטאקלי",
+    footer_desc:
+      "מתן כוח לעסקים עם ייעוץ חדשני, אסטרטגיה ופתרונות טכנולוגיים.\nהצטרף אלינו להאצת הצמיחה ולהפיכת הארגון שלך.",
+    footer_quick_links: "קישורים מהירים",
+    footer_home1: "דף בית 1",
+    footer_home2: "דף בית 2",
+    footer_about_us: "אודותינו",
+    footer_services_link: "שירותים",
+    footer_blog: "בלוג",
+    footer_contact_us_link: "צור קשר",
+    footer_services: "שירותים",
+    footer_contact_us: "צור קשר",
+    footer_address: "רחוב ראשי 123, עיר אבק",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    follow: "עקוב אחרינו",
+    follow1: "פייסבוק",
+    follow2: "טוויטר",
+    follow3: "אינסטגרם",
+    footer_copy: "© 2025 עסקים. כל הזכויות שמורות.",
+    accordion1_title: "בנה תיק עבודות מהיר",
+    accordion1_body:
+      "העלה שלושה מהפרויקטים החזקים ביותר שלך, הוסף המלצות וקשר את התיק בכל הפרופילים.",
+    accordion2_title: "התחבר ברשת חברתית אחת",
+    accordion2_body:
+      "בחר בלינקדאין, אינסטגרם או טוויטר — פרסם טיפ קצר, ענה על שאלה או הגב על חדשות בתחום.",
+    accordion3_title: "תכנן את שדרוג המיומנות הבא",
+    accordion3_body:
+      "הירשם לקורס קצר החודש שמשפר מיומנות שהלקוחות מעריכים (קידום אתרים, עיצוב, כתיבה שיווקית)."
+  }
+};
+
+
+
+/* ---------- 2. Translator core ---------- */
+function applyTranslations(lang) {
+  const dict = translations[lang] || translations.en;
+
+  // All elements with data-i18n
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (dict[key]) el.textContent = dict[key];
+  });
+
+  // Elements with data-i18n-attr (may contain multiple attr mappings)
+  document.querySelectorAll("[data-i18n-attr]").forEach(el => {
+    // format: "attr" OR "attr:key" OR "attr1:key1;attr2:key2"
+    const mappings = el.getAttribute("data-i18n-attr").split(";");
+    mappings.forEach(map => {
+      const [attr, keyOverride] = map.split(":").map(s => s.trim());
+      const translationKey = keyOverride || el.getAttribute("data-i18n");
+      if (dict[translationKey]) el.setAttribute(attr, dict[translationKey]);
+    });
+  });
+
+  // Handle direction for RTL languages
+  document.documentElement.dir = (lang === "ar" || lang === "he") ? "rtl" : "ltr";
+}
+
+/* ---------- 3. Init & event ---------- */
+const langSelect = document.getElementById("language-selector");
+langSelect.addEventListener("change", e => applyTranslations(e.target.value));
+
+// Load saved language or default
+const initialLang = localStorage.getItem("lang") || "en";
+langSelect.value = initialLang;
+applyTranslations(initialLang);
+
+// Persist on change
+langSelect.addEventListener("change", () => {
+  localStorage.setItem("lang", langSelect.value);
+});
+</script>
+
+</body>
+</html>

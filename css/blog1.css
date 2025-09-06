@@ -1,0 +1,24 @@
+#blog-hero h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+#blog-hero img {
+  width: 100%;
+  border-radius: 0.75rem;
+  height:600px;
+}
+#blog-hero .badge {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.7rem;
+}
+#blog-body h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+#blog-body p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+#blog-body strong {
+  font-weight: 600;
+}

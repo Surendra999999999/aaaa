@@ -1,0 +1,318 @@
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .hero-section video {
+    object-fit: cover;
+    z-index: 1;
+  }
+  .hero-section .overlay {
+    z-index: 2;
+  }
+  .hero-section .container {
+    z-index: 3;
+  }
+  /* Floating animation for illustration */
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* ==== Home 2 Hero Section (Dark Mode) ==== */
+body.dark .hero-section {
+  color: #e4e4e4;
+}
+
+body.dark .hero-section .overlay {
+  background: rgba(0, 0, 0, 0.7); /* darker overlay */
+}
+
+body.dark .hero-section h1,
+body.dark .hero-section p {
+  color: #e4e4e4; /* light text */
+}
+
+/* Primary Button - Gradient */
+body.dark .hero-section .btn-primary {
+  background: linear-gradient(135deg, #6c5ce7, #00cec9);
+  border: none;
+}
+body.dark .hero-section .btn-primary:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Outline Button */
+body.dark .hero-section .btn-outline-light {
+  color: #e4e4e4;
+  border-color: #e4e4e4;
+}
+body.dark .hero-section .btn-outline-light:hover {
+  background: #e4e4e4;
+  color: #121212;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Floating illustration adapts */
+body.dark .hero-section img.animate-float {
+  filter: brightness(0.85) contrast(1.1);
+}
+
+.expertise-img {
+    border: 6px solid #fff;
+    box-shadow: 0 0 25px rgba(0, 123, 255, 0.6);
+    transition: transform 0.4s ease;
+  }
+  .expertise-img:hover {
+    transform: scale(1.05);
+  }
+  .progress-bar.bg-gradient {
+    background: linear-gradient(90deg, #007bff, #00c851, #ffbb33);
+  }
+
+
+  /* Dark Mode for Expertise Section */
+body.dark .bg-body {
+  background-color: #121212 !important; /* Dark background */
+}
+
+body.dark .text-secondary {
+  color: #cccccc !important; /* Softer gray for paragraph text */
+}
+
+body.dark h2.fw-bold,
+body.dark h5.fw-bold {
+  color: #e4e4e4 !important; /* Headings color */
+}
+
+body.dark .text-primary {
+  color: #6c5ce7 !important; /* Accent color for numbers/text */
+}
+
+body.dark .expertise-img {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7) !important; /* Darker image shadow */
+}
+
+body.dark .progress {
+  background-color: #2c2c2c !important; /* Dark progress track */
+}
+
+body.dark .progress-bar.bg-gradient {
+  background: linear-gradient(90deg, #6c5ce7, #00cec9) !important; /* Gradient bar */
+}
+
+/* Optional: improve text visibility inside progress bars */
+body.dark .progress-bar::after {
+  content: attr(aria-valuenow) '%';
+  position: absolute;
+  right: 5px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+
+/* Section Background */
+body.dark #our-impact {
+  background-color: #121212 !important;
+}
+
+/* Text Colors */
+body.dark #our-impact .text-secondary {
+  color: #cccccc !important;
+}
+
+body.dark #our-impact .text-primary {
+  color: #6c5ce7 !important;
+}
+
+/* Circle Icons */
+body.dark #our-impact .bg-primary {
+  background-color: #6c5ce7 !important;
+}
+
+/* Card icons */
+.service-card .service-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e74c3c, #ff8c42);
+  color: white;
+  transition: transform 0.3s;
+}
+
+.service-card .service-icon:hover {
+  transform: scale(1.1);
+}
+
+/* ===== Section Background ===== */
+body.dark #filter-services {
+  background-color: #121212 !important; /* dark background for section */
+  color: #e4e4e4;
+}
+
+/* ===== Section Titles & Description ===== */
+body.dark #filter-services h2,
+body.dark #filter-services p {
+  color: #e4e4e4;
+}
+
+/* ===== Filter Buttons ===== */
+body.dark #filter-services .filter-btn {
+  border-color: #6c5ce7;
+  color: #e4e4e4;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+body.dark #filter-services .filter-btn:hover {
+  background-color: #6c5ce7;
+  color: #fff;
+}
+
+body.dark #filter-services .filter-btn.active {
+  background-color: #6c5ce7;
+  color: #fff;
+}
+
+/* ===== Service Cards ===== */
+body.dark #filter-services .service-card {
+  background-color: #1e1e1e; /* dark card */
+  color: #e4e4e4;
+  border-color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark #filter-services .service-card:hover {
+  box-shadow: 0 8px 20px rgba(108, 92, 231, 0.5);
+  transform: translateY(-5px);
+}
+
+/* ===== Service Card Text ===== */
+body.dark #filter-services .service-card h5 {
+  color: #ffffff;
+}
+
+body.dark #filter-services .service-card p {
+  color: #cccccc;
+}
+
+/* ===== Service Icons ===== */
+body.dark #filter-services .service-card .service-icon {
+  background: linear-gradient(135deg, #6c5ce7, #00cec9);
+  color: #fff;
+}
+
+/* ===== Load More Button ===== */
+body.dark #load-more-btn {
+  background-color: #6c5ce7;
+  border-color: #6c5ce7;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+body.dark #load-more-btn:hover {
+  background-color: #5a4bcf;
+  border-color: #5a4bcf;
+  color: #fff;
+}
+
+/* ===== Responsive adjustments for dark text ===== */
+body.dark #filter-services .text-secondary {
+  color: #b0b0b0 !important;
+}
+
+/* Active filter button */
+.filter-btn.active {
+  background-color: #6c5ce7;
+  color: #fff;
+}
+
+/* ==== Global Dark Mode ==== */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Headings in dark */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6 {
+  color: #ffffff;
+}
+
+/* Paragraphs & secondary text */
+body.dark p,
+body.dark .text-secondary {
+  color: #bdbdbd !important;
+}
+
+/* Navbar */
+body.dark .navbar {
+  background-color: #1f1f1f !important;
+}
+body.dark .navbar .nav-link {
+  color: #e0e0e0 !important;
+}
+body.dark .navbar .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Buttons */
+body.dark .btn-outline-secondary {
+  color: #e0e0e0;
+  border-color: #555;
+}
+body.dark .btn-outline-secondary:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Footer */
+body.dark footer {
+  background-color: #1a1a1a;
+  color: #cccccc;
+}
+body.dark footer a {
+  color: #cccccc;
+}
+body.dark footer a:hover {
+  color: #ffffff;
+}
+
+/* ==== Specific: Process Section ==== */
+body.dark #process {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark #process h2,
+body.dark #process h5 {
+  color: #ffffff;
+}
+
+body.dark #process p {
+  color: #bdbdbd;
+}
+
+/* Step number circles */
+body.dark #process .rounded-circle {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+    

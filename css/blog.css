@@ -1,0 +1,250 @@
+.blog-hero {
+  min-height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('../images/bloghero.jpg') center/cover no-repeat;
+}
+.blog-hero h1,
+.blog-hero p {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+/* Blog Hero - Default (Light Mode) */
+.blog-hero {
+  min-height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('../images/bloghero.jpg') center/cover no-repeat;
+  color: #fff;
+}
+.blog-hero h1,
+.blog-hero p {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* Blog Hero - Dark Mode */
+body.dark .blog-hero {
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+              url('../images/bloghero.jpg') center/cover no-repeat;
+}
+
+body.dark .blog-hero h1,
+body.dark .blog-hero p {
+  color: #f8f9fa;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+body.dark .blog-hero .form-control {
+  background-color: #1e1e1e;
+  border-color: #333;
+  color: #f8f9fa;
+}
+
+body.dark .blog-hero .form-control::placeholder {
+  color: #aaa;
+}
+
+body.dark .blog-hero .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+.blog-card {
+    border-width: 2px !important;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Floating animation */
+  @keyframes floatUpDown {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .floating-card {
+    animation: floatUpDown 4s ease-in-out infinite;
+  }
+
+  /* Optional: Card text alignment */
+  .blog-card .card-body {
+    text-align: center;
+  }
+
+  /* Blog Section Dark Mode */
+body.dark #blog-section {
+  background-color: #121212!important;
+  color: #ffffff;
+}
+
+body.dark #blog-section .blog-card {
+  background-color: #1e1e1e;
+  border-width: 2px !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+body.dark #blog-section .blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.9);
+}
+
+body.dark #blog-section .card-title,
+body.dark #blog-section .card-text {
+  color: #ffffff;
+}
+
+body.dark #blog-section .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+body.dark #blog-section .btn-success {
+  background-color: #198754;
+  border-color: #198754;
+}
+
+body.dark #blog-section .btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #000;
+}
+
+/* Floating animation stays the same */
+body.dark #blog-section .floating-card {
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+/* Dark Mode for Search Results Section */
+body.dark #search-results {
+  background-color: #121212!important; /* dark background */
+  color: #ffffff; /* text color */
+}
+
+body.dark #search-results h2 {
+  color: #ffffff; /* headings white */
+}
+
+body.dark #search-results .card {
+  background-color: #1e1e1e; /* card background */
+  border: 2px solid #333; /* subtle border */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.7); /* shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+body.dark #search-results .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.9);
+}
+
+body.dark #search-results .card-title,
+body.dark #search-results .card-text {
+  color: #ffffff;
+}
+
+body.dark #search-results .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+body.dark #search-results .btn-success {
+  background-color: #198754;
+  border-color: #198754;
+}
+
+body.dark #search-results .btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #000;
+}
+
+/* Floating animation if any card has it */
+body.dark #search-results .floating-card {
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+.blog-img {
+  width: 100%;           /* Full width of the card */
+  height: 500px;         /* Adjust height as needed */
+  object-fit: cover;     /* Fill container without stretching */
+  object-position: top;  /* Keep the top of image visible */
+  border-radius: 10px 10px 0 0; /* Rounded top corners like the card */
+}
+
+
+
+/* Dark mode for the blog section */
+body.dark #interactive-blog {
+  background-color: #1a1a1a !important; /* Dark background */
+  color: #e0e0e0; /* Light text */
+}
+
+/* Optional: adjust card text inside section */
+body.dark #interactive-blog .card {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border: none;
+}
+
+body.dark #interactive-blog .card .card-title,
+body.dark #interactive-blog .card .card-text,
+body.dark #interactive-blog .card .text-muted {
+  color: #e0e0e0;
+}
+
+/* Optional: adjust badges */
+body.dark #interactive-blog .badge {
+  background-color: #0d6efd;
+  color: #fff;
+}
+/* Dark mode for the comments section */
+body.dark #comments {
+  background-color: #121212 !important;  /* force dark background */
+  color: #e0e0e0 !important;            /* light text */
+}
+
+/* Cards inside comments section */
+body.dark #comments .card {
+  background-color: #1e1e1e !important;
+  border: 1px solid #333 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Card titles and subtitles */
+body.dark #comments .card-title,
+body.dark #comments .card-subtitle,
+body.dark #comments label {
+  color: #e0e0e0 !important;
+}
+
+/* Form inputs */
+body.dark #comments .form-control {
+  background-color: #2a2a2a !important;
+  border: 1px solid #444 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark #comments .form-control::placeholder {
+  color: #aaa !important;
+}
+
+/* Buttons */
+body.dark #comments .btn-primary {
+  background-color: #4a90e2 !important;
+  border-color: #357ABD !important;
+  color: #fff !important;
+}
+
+body.dark #comments .btn-primary:hover {
+  background-color: #357ABD !important;
+  border-color: #2a5d9f !important;
+}
+
+/* Links inside comments section */
+body.dark #comments a {
+  color: #4a90e2 !important;
+}
+
+body.dark #comments a:hover {
+  color: #357ABD !important;
+  text-decoration: underline !important;
+}

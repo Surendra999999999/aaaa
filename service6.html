@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="site_title">Stackly Business</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+ <link rel="stylesheet" href="css/h_f.css" />
+ <link rel="stylesheet" href="css/service.css" />
+
+  <script src="js/header.js" defer></script>
+  <script src="js/dark_toogle.js" defer></script>
+ <script src="js/service.js" defer></script>
+</head>
+<body data-bs-theme="light">
+
+<!-- ===== Header ===== -->
+<header class="navbar navbar-expand-lg bg-light shadow-sm px-3 sticky-top">
+  <!-- Left: Logo -->
+  <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" alt="Logo" height="40"
+         data-i18n-attr="alt" data-i18n="header_logo_alt">
+  </a>
+
+  <!-- Center: nav links -->
+  <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+    <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_home_dropdown">
+          Home
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="index.html" data-i18n="nav_home1">Home 1</a></li>
+          <li><a class="dropdown-item" href="home2.html" data-i18n="nav_home2">Home 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="blog.html" data-i18n="nav_blog">Blog</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_services_dropdown">
+          Services
+        </a>
+        <ul class="dropdown-menu">
+          <li class="d-lg-none"><a class="dropdown-item" href="services.html" data-i18n="nav_all_services">All Services</a></li>
+                    <li><a class="dropdown-item" href="services.html" data-i18n="nav_service">All Services</a></li>
+
+          <li><a class="dropdown-item" href="service1.html" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a class="dropdown-item" href="service2.html" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a class="dropdown-item" href="service3.html" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a class="dropdown-item" href="service4.html" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a class="dropdown-item" href="service5.html" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a class="dropdown-item" href="service6.html" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Right: lang/profile/dark + hamburger -->
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <select id="language-selector" class="form-select form-select-sm w-auto">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="dropdown">
+      <button class="btn btn-outline-secondary rounded-circle" id="profile-dropdown-toggle" data-bs-toggle="dropdown">
+        <span id="profile-initials"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" id="profile-dropdown">
+        <li><a class="dropdown-item" href="#" id="logout-btn" data-i18n="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark" class="btn btn-outline-secondary btn-sm">🌙</button>
+
+    <!-- Hamburger LAST -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>
+
+
+<!-- ===== Hero Section with Video Background ===== -->
+<section class="hero-section position-relative text-white">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover">
+    <source src="videos/service3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark Overlay -->
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.55);"></div>
+
+  <!-- Content -->
+  <div class="container position-relative z-2 py-5">
+    <div class="row align-items-center text-center text-lg-start">
+      
+      <!-- Left: Text -->
+      <div class="col-lg-7 mx-auto mx-lg-0">
+        <h1 class="display-4 fw-bold mb-3" data-i18n="service6_hero_title">
+          Acquisition & Partnership Advisory
+        </h1>
+        <p class="lead mb-4" data-i18n="service6_hero_subtitle">
+          Unlock growth opportunities through strategic acquisitions, partnerships, and alliances tailored to your business goals.
+        </p>
+        <a href="#overview" class="btn btn-primary btn-lg me-2" data-i18n="service6_hero_cta1">
+          Explore Solutions
+        </a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg" data-i18n="service6_hero_cta2">
+          Start Consulting
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Overview Section ===== -->
+<section id="overview" class="py-5 position-relative">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+
+      <!-- Left: Image with Flip Effect -->
+      <div class="col-lg-6 fade-in">
+        <div class="flip-card glass-box rounded-4 shadow" role="button" tabindex="0" aria-pressed="false">
+          <div class="flip-card-inner">
+            
+            <!-- Front Side (Image) -->
+            <div class="flip-card-front">
+              <img src="images/support.jpeg" 
+                   alt="Acquisition & Partnership Advisory Overview" 
+                   class="img-fluid rounded-3"
+                   data-i18n-attr="alt" 
+                   data-i18n="service6_overview_img_alt">
+            </div>
+            
+            <!-- Back Side (Text) -->
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h4 class="fw-bold mb-2" data-i18n="service6_flip_title">Accelerate Growth</h4>
+              <p class="small" data-i18n="service6_flip_text">
+                Build stronger businesses through strategic acquisitions, partnerships, and alliances.
+              </p>
+              <a href="contact.html" class="btn btn-light btn-sm mt-2" data-i18n="service6_flip_cta">
+                Get Advisory
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Text -->
+      <div class="col-lg-6 fade-in">
+        <div class="glass-box p-4 rounded-4 shadow">
+          <h2 class="fw-bold mb-3" data-i18n="service6_overview_title">
+            Driving Growth with Acquisition & Partnership Advisory
+          </h2>
+          <p class="lead mb-3" data-i18n="service6_overview_text1">
+            In an evolving business world, strategic collaborations are key to unlocking sustainable growth. From acquisitions to alliances, the right partnerships can strengthen your competitive edge.
+          </p>
+          <p data-i18n="service6_overview_text2">
+            Our advisory services guide organizations in identifying opportunities, structuring deals, and building long-term partnerships that create value, accelerate expansion, and maximize returns.
+          </p>
+          <a href="contact.html" class="btn btn-primary mt-3" data-i18n="service6_overview_cta">
+            Talk to Our Advisors
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Service Flip Section ===== -->
+<!-- ===== Service Flip Section ===== -->
+<section id="service-flip" class="py-5 position-relative">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5" data-i18n="services.title">Our Acquisition &amp; Partnership Advisory Solutions</h2>
+
+    <div class="flip-section-wrapper">
+      <!-- Service 1 -->
+      <div class="flip-section-card active">
+        <div class="flip-section-front">
+          <img src="images/strategy1.jpeg" alt="M&A Strategy Development" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.ma_strategy.title">M&amp;A Strategy Development</h3>
+            <p data-i18n="services.ma_strategy.desc">
+              Define clear acquisition and partnership strategies aligned with business objectives.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.ma_strategy.point1">✅ Market and sector analysis</li>
+              <li data-i18n="services.ma_strategy.point2">✅ Strategic opportunity mapping</li>
+              <li data-i18n="services.ma_strategy.point3">✅ Long-term growth alignment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/business3.jpeg" alt="Target Identification & Screening" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.target_screening.title">Target Identification &amp; Screening</h3>
+            <p data-i18n="services.target_screening.desc">
+              Identify and evaluate potential acquisition or partnership opportunities with precision.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.target_screening.point1">✅ Comprehensive market scans</li>
+              <li data-i18n="services.target_screening.point2">✅ Financial and operational fit</li>
+              <li data-i18n="services.target_screening.point3">✅ Cultural and strategic alignment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/fin1.jpeg" alt="Due Diligence Advisory" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.due_diligence.title">Due Diligence Advisory</h3>
+            <p data-i18n="services.due_diligence.desc">
+              Assess risks, opportunities, and synergies before sealing the deal.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.due_diligence.point1">✅ Financial and legal assessments</li>
+              <li data-i18n="services.due_diligence.point2">✅ Risk and compliance checks</li>
+              <li data-i18n="services.due_diligence.point3">✅ Value realization analysis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/business3.jpeg" alt="Deal Structuring & Negotiation" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.deal_structuring.title">Deal Structuring &amp; Negotiation</h3>
+            <p data-i18n="services.deal_structuring.desc">
+              Craft win-win agreements that balance risk, reward, and strategic value.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.deal_structuring.point1">✅ Transaction structuring</li>
+              <li data-i18n="services.deal_structuring.point2">✅ Negotiation support</li>
+              <li data-i18n="services.deal_structuring.point3">✅ Stakeholder alignment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/strategy3.jpeg" alt="Post-Merger Integration" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.integration.title">Post-Merger Integration</h3>
+            <p data-i18n="services.integration.desc">
+              Ensure smooth transitions to maximize value and operational efficiency.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.integration.point1">✅ Cultural integration</li>
+              <li data-i18n="services.integration.point2">✅ Operational and system alignment</li>
+              <li data-i18n="services.integration.point3">✅ Synergy realization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="flip-section-card">
+        <div class="flip-section-front">
+          <img src="images/fin2.jpeg" alt="Strategic Partnerships & Alliances" class="img-fluid rounded">
+          <div class="text-overlay">
+            <h3 data-i18n="services.partnerships.title">Strategic Partnerships &amp; Alliances</h3>
+            <p data-i18n="services.partnerships.desc">
+              Unlock growth through collaborations, alliances, and joint ventures.
+            </p>
+            <ul class="list-unstyled text-start mt-3">
+              <li data-i18n="services.partnerships.point1">✅ Partnership opportunity analysis</li>
+              <li data-i18n="services.partnerships.point2">✅ Joint venture frameworks</li>
+              <li data-i18n="services.partnerships.point3">✅ Long-term value creation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="strategy-highlights" class="py-5 position-relative overflow-hidden">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4" data-i18n="strategy.title">Partnerships &amp; Growth in Action</h2>
+    <p class="text-muted mb-5" data-i18n="strategy.subtitle">
+      Core pillars of building successful acquisitions, partnerships, and strategic alliances
+    </p>
+
+    <!-- Circles (different left % so they look scattered) -->
+    <div class="emoji-circle" style="left:15%;" data-delay="0">
+      <span class="emoji">🤝</span>
+      <p data-i18n="strategy.point1">Collaborative Partnerships</p>
+    </div>
+
+    <div class="emoji-circle" style="left:35%;" data-delay="200">
+      <span class="emoji">📊</span>
+      <p data-i18n="strategy.point2">Strategic Growth Planning</p>
+    </div>
+
+    <div class="emoji-circle" style="left:55%;" data-delay="400">
+      <span class="emoji">🔍</span>
+      <p data-i18n="strategy.point3">Informed Due Diligence</p>
+    </div>
+
+    <div class="emoji-circle" style="left:75%;" data-delay="600">
+      <span class="emoji">🍥</span>
+      <p data-i18n="strategy.point4">Sustainable Expansion</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== What Our Clients Say ===== -->
+<section id="client-testimonials" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4" data-i18n="testimonials.title">
+      What Our Clients Say
+    </h2>
+    <p class="text-muted text-center mb-5" data-i18n="testimonials.subtitle">
+      Trusted by organizations for acquisition strategies, partnerships, and advisory excellence
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="testimonial-card p-4 h-100 shadow-sm">
+          <p class="mb-3" data-i18n="testimonials.client1.quote">
+            “Their advisory team guided us through a complex acquisition with confidence and clarity.”
+          </p>
+          <h6 class="fw-semibold mb-0" data-i18n="testimonials.client1.name">
+            Michael Turner
+          </h6>
+          <small class="text-muted" data-i18n="testimonials.client1.role">
+            CEO, Horizon Tech
+          </small>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial-card p-4 h-100 shadow-sm">
+          <p class="mb-3" data-i18n="testimonials.client2.quote">
+            “Their partnership advisory helped us secure a joint venture that accelerated our market expansion.”
+          </p>
+          <h6 class="fw-semibold mb-0" data-i18n="testimonials.client2.name">
+            Aisha Khan
+          </h6>
+          <small class="text-muted" data-i18n="testimonials.client2.role">
+            Managing Director, Global Ventures
+          </small>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial-card p-4 h-100 shadow-sm">
+          <p class="mb-3" data-i18n="testimonials.client3.quote">
+            “With their due diligence support, we minimized risks and maximized the value of our acquisition.”
+          </p>
+          <h6 class="fw-semibold mb-0" data-i18n="testimonials.client3.name">
+            Robert Silva
+          </h6>
+          <small class="text-muted" data-i18n="testimonials.client3.role">
+            CFO, Meridian Group
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== Final Call-to-Action Section ===== -->
+<section id="final-cta" class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-3" data-i18n="cta.title">Accelerate Your Growth Journey</h2>
+    <p class="text-muted mb-4" data-i18n="cta.subtitle">
+      Unlock new opportunities through strategic acquisitions, partnerships, and alliances. Let’s shape your business success together.
+    </p>
+    <a href="contact.html" class="btn btn-primary px-4" data-i18n="cta.button">
+      🤝 Get Advisory Support
+    </a>
+  </div>
+</section>
+
+
+
+<footer class="shadow-sm mt-5 pt-4">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-md-3">
+        <a href="index.html" class="d-inline-block mb-3">
+          <img src="images/logo.png" alt="Stackly Logo" height="40"
+               data-i18n-attr="alt" data-i18n="footer_logo_alt">
+        </a>
+        <p class="small" data-i18n="footer_desc">
+          Empowering businesses with innovative consulting, strategy, and technology solutions.<br>
+  Partner with us to accelerate growth and transform your organization.
+        </p>
+        <div class="d-flex gap-3 fs-5">
+          <a href="https://www.facebook.com" class="text-dark"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.twitter.com" class="text-dark"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_quick_links">Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html" class="link-dark text-decoration-none" data-i18n="footer_home1">Home 1</a></li>
+          <li><a href="home2.html" class="link-dark text-decoration-none" data-i18n="footer_home2">Home 2</a></li>
+          <li><a href="about.html" class="link-dark text-decoration-none" data-i18n="footer_about_us">About Us</a></li>
+          <li><a href="services.html" class="link-dark text-decoration-none" data-i18n="footer_services_link">Services</a></li>
+          <li><a href="blog.html" class="link-dark text-decoration-none" data-i18n="footer_blog">Blog</a></li>
+          <li><a href="contact.html" class="link-dark text-decoration-none" data-i18n="footer_contact_us_link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_services">Services</h6>
+        <ul class="list-unstyled small">
+          <li><a href="service1.html" class="link-dark text-decoration-none" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a href="service2.html" class="link-dark text-decoration-none" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a href="service3.html" class="link-dark text-decoration-none" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a href="service4.html" class="link-dark text-decoration-none" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a href="service5.html" class="link-dark text-decoration-none" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a href="service6.html" class="link-dark text-decoration-none" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_contact_us">Contact Us</h6>
+        <p class="small mb-1" data-i18n="footer_address"><i class="fas fa-map-marker-alt me-2"></i>123 Main St, Abc City</p>
+        <p class="small mb-1" data-i18n="footer_phone"><i class="fas fa-phone me-2"></i>+1 234 567 890</p>
+        <p class="small mb-0" data-i18n="footer_email"><i class="fas fa-envelope me-2"></i>info@Business.com</p>
+        <div>
+            <h6 data-i18n="follow">Follow us</h6>
+            <a href="https://www.facebook.com" class="text-dark me-2"><i class="fab fa-facebook fa-lg" data-i18n="follow1">facebook</i></a>
+            <a href="https://www.twitter.com" class="text-dark me-2"><i class="fab fa-twitter fa-lg" data-i18n="follow2">twitter</i></a>
+            <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram fa-lg" data-i18n="follow3">instagram</i></a>
+        </div>
+      </div>
+      
+
+    </div>
+
+    <hr class="mt-4 mb-2">
+    <div class="text-center pb-3 small" data-i18n="footer_copy">© 2025 Business. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+// 🌍 Dictionary for translations
+const translations = {
+  en: {
+    // Header / Nav
+    "header_logo_alt": "Business Advisory Logo",
+    "nav_home_dropdown": "Home",
+    "nav_home1": "Home 1",
+    "nav_home2": "Home 2",
+    "nav_about": "About",
+    "nav_blog": "Blog",
+    "nav_services_dropdown": "Services",
+    "nav_all_services": "All Services",
+    "nav_service": "All Services",
+    "nav_service1": "Innovation & Change",
+    "nav_service2": "Governance & Compliance",
+    "nav_service3": "Customer Experience & Service",
+    "nav_service4": "Data & Business Intelligence",
+    "nav_service5": "Sustainability & ESG Strategy",
+    "nav_service6": "Acquisitions & Partnership Advisory",
+    "nav_contact": "Contact",
+    "logout": "Logout",
+
+    // Hero
+    "service6_hero_title": "Acquisition & Partnership Advisory",
+    "service6_hero_subtitle": "Unlock growth opportunities through strategic acquisitions, partnerships, and alliances tailored to your business goals.",
+    "service6_hero_cta1": "Explore Solutions",
+    "service6_hero_cta2": "Start Consulting",
+
+    // Overview
+    "service6_overview_img_alt": "Acquisition & Partnership Advisory Overview",
+    "service6_flip_title": "Accelerate Growth",
+    "service6_flip_text": "Build stronger businesses through strategic acquisitions, partnerships, and alliances.",
+    "service6_flip_cta": "Get Advisory",
+    "service6_overview_title": "Driving Growth with Acquisition & Partnership Advisory",
+    "service6_overview_text1": "In an evolving business world, strategic collaborations are key to unlocking sustainable growth. From acquisitions to alliances, the right partnerships can strengthen your competitive edge.",
+    "service6_overview_text2": "Our advisory services guide organizations in identifying opportunities, structuring deals, and building long-term partnerships that create value, accelerate expansion, and maximize returns.",
+    "service6_overview_cta": "Talk to Our Advisors",
+
+    // Services
+    "services.title": "Our Acquisition & Partnership Advisory Solutions",
+
+    "services.ma_strategy.title": "M&A Strategy Development",
+    "services.ma_strategy.desc": "Define clear acquisition and partnership strategies aligned with business objectives.",
+    "services.ma_strategy.point1": "✅ Market and sector analysis",
+    "services.ma_strategy.point2": "✅ Strategic opportunity mapping",
+    "services.ma_strategy.point3": "✅ Long-term growth alignment",
+
+    "services.target_screening.title": "Target Identification & Screening",
+    "services.target_screening.desc": "Identify and evaluate potential acquisition or partnership opportunities with precision.",
+    "services.target_screening.point1": "✅ Comprehensive market scans",
+    "services.target_screening.point2": "✅ Financial and operational fit",
+    "services.target_screening.point3": "✅ Cultural and strategic alignment",
+
+    "services.due_diligence.title": "Due Diligence Advisory",
+    "services.due_diligence.desc": "Assess risks, opportunities, and synergies before sealing the deal.",
+    "services.due_diligence.point1": "✅ Financial and legal assessments",
+    "services.due_diligence.point2": "✅ Risk and compliance checks",
+    "services.due_diligence.point3": "✅ Value realization analysis",
+
+    "services.deal_structuring.title": "Deal Structuring & Negotiation",
+    "services.deal_structuring.desc": "Craft win-win agreements that balance risk, reward, and strategic value.",
+    "services.deal_structuring.point1": "✅ Transaction structuring",
+    "services.deal_structuring.point2": "✅ Negotiation support",
+    "services.deal_structuring.point3": "✅ Stakeholder alignment",
+
+    "services.integration.title": "Post-Merger Integration",
+    "services.integration.desc": "Ensure smooth transitions to maximize value and operational efficiency.",
+    "services.integration.point1": "✅ Cultural integration",
+    "services.integration.point2": "✅ Operational and system alignment",
+    "services.integration.point3": "✅ Synergy realization",
+
+    "services.partnerships.title": "Strategic Partnerships & Alliances",
+    "services.partnerships.desc": "Unlock growth through collaborations, alliances, and joint ventures.",
+    "services.partnerships.point1": "✅ Partnership opportunity analysis",
+    "services.partnerships.point2": "✅ Joint venture frameworks",
+    "services.partnerships.point3": "✅ Long-term value creation",
+
+    // Strategy highlights
+    "strategy.title": "Partnerships & Growth in Action",
+    "strategy.subtitle": "Core pillars of building successful acquisitions, partnerships, and strategic alliances",
+    "strategy.point1": "Collaborative Partnerships",
+    "strategy.point2": "Strategic Growth Planning",
+    "strategy.point3": "Informed Due Diligence",
+    "strategy.point4": "Sustainable Expansion",
+
+    // Testimonials
+    "testimonials.title": "What Our Clients Say",
+    "testimonials.subtitle": "Trusted by organizations for acquisition strategies, partnerships, and advisory excellence",
+    "testimonials.client1.quote": "Their advisory team guided us through a complex acquisition with confidence and clarity.",
+    "testimonials.client1.name": "Michael Turner",
+    "testimonials.client1.role": "CEO, Horizon Tech",
+    "testimonials.client2.quote": "Their partnership advisory helped us secure a joint venture that accelerated our market expansion.",
+    "testimonials.client2.name": "Aisha Khan",
+    "testimonials.client2.role": "Managing Director, Global Ventures",
+    "testimonials.client3.quote": "With their due diligence support, we minimized risks and maximized the value of our acquisition.",
+    "testimonials.client3.name": "Robert Silva",
+    "testimonials.client3.role": "CFO, Meridian Group",
+
+    // Final CTA
+    "cta.title": "Accelerate Your Growth Journey",
+    "cta.subtitle": "Unlock new opportunities through strategic acquisitions, partnerships, and alliances. Let’s shape your business success together.",
+    "cta.button": "🤝 Get Advisory Support",
+
+    // Footer
+    "footer_logo_alt": "Business Advisory Logo",
+    "footer_desc": "Empowering businesses with innovative consulting, strategy, and technology solutions.\nPartner with us to accelerate growth and transform your organization.",
+    "footer_quick_links": "Quick Links",
+    "footer_home1": "Home 1",
+    "footer_home2": "Home 2",
+    "footer_about_us": "About Us",
+    "footer_services_link": "Services",
+    "footer_blog": "Blog",
+    "footer_contact_us_link": "Contact Us",
+
+    "footer_services": "Services",
+    "footer_contact_us": "Contact Us",
+    "footer_address": "123 Main St, Abc City",
+    "footer_phone": "+1 234 567 890",
+    "footer_email": "info@Business.com",
+
+    "follow": "Follow us",
+    "follow1": "facebook",
+    "follow2": "twitter",
+    "follow3": "instagram",
+
+    "footer_copy": "© 2025 Business. All rights reserved."
+  },
+
+  ar: {
+    "header_logo_alt": "شعار الاستشارات التجارية",
+    "nav_home_dropdown": "الرئيسية",
+    "nav_home1": "الرئيسية 1",
+    "nav_home2": "الرئيسية 2",
+    "nav_about": "من نحن",
+    "nav_blog": "المدونة",
+    "nav_services_dropdown": "الخدمات",
+    "nav_all_services": "جميع الخدمات",
+    "nav_service": "الخدمات",
+    "nav_service1": "الابتكار والتغيير",
+    "nav_service2": "الحوكمة والامتثال",
+    "nav_service3": "تجربة العملاء والخدمة",
+    "nav_service4": "البيانات وذكاء الأعمال",
+    "nav_service5": "الاستدامة واستراتيجية ESG",
+    "nav_service6": "الاستحواذات والشراكات",
+    "nav_contact": "اتصل بنا",
+    "logout": "تسجيل خروج",
+
+    "service6_hero_title": "الاستحواذ والشراكات",
+    "service6_hero_subtitle": "افتح آفاق النمو من خلال الاستحواذات والشراكات والتحالفات الاستراتيجية المصممة خصيصًا لأهدافك.",
+    "service6_hero_cta1": "استكشف الحلول",
+    "service6_hero_cta2": "ابدأ الاستشارة",
+
+    "service6_overview_img_alt": "نظرة عامة على الاستحواذ والشراكات",
+    "service6_flip_title": "تسريع النمو",
+    "service6_flip_text": "بناء أعمال أقوى من خلال الاستحواذات والشراكات الاستراتيجية.",
+    "service6_flip_cta": "اطلب استشارة",
+    "service6_overview_title": "تحقيق النمو من خلال الاستحواذ والشراكات",
+    "service6_overview_text1": "في عالم الأعمال المتغير، تعد الشراكات الاستراتيجية مفتاحًا للنمو المستدام.",
+    "service6_overview_text2": "نوجه المؤسسات في تحديد الفرص وبناء شراكات طويلة الأمد تحقق قيمة وتوسع أسرع.",
+    "service6_overview_cta": "تحدث مع مستشارينا",
+
+    "services.title": "حلول الاستحواذ والشراكات",
+
+    "services.ma_strategy.title": "تطوير استراتيجية الدمج والاستحواذ",
+    "services.ma_strategy.desc": "حدد استراتيجيات واضحة للاستحواذ والشراكة تتماشى مع أهداف العمل.",
+    "services.ma_strategy.point1": "✅ تحليل السوق والقطاعات",
+    "services.ma_strategy.point2": "✅ تحديد الفرص الاستراتيجية",
+    "services.ma_strategy.point3": "✅ توافق مع النمو طويل الأمد",
+
+    "services.target_screening.title": "تحديد وفحص الأهداف",
+    "services.target_screening.desc": "تحديد وتقييم فرص الاستحواذ أو الشراكة المحتملة بدقة.",
+    "services.target_screening.point1": "✅ مسح شامل للسوق",
+    "services.target_screening.point2": "✅ الملاءمة المالية والتشغيلية",
+    "services.target_screening.point3": "✅ التوافق الثقافي والاستراتيجي",
+
+    "services.due_diligence.title": "الاستشارات في العناية الواجبة",
+    "services.due_diligence.desc": "تقييم المخاطر والفرص قبل إتمام الصفقة.",
+    "services.due_diligence.point1": "✅ التقييمات المالية والقانونية",
+    "services.due_diligence.point2": "✅ فحوصات المخاطر والامتثال",
+    "services.due_diligence.point3": "✅ تحليل تحقيق القيمة",
+
+    "services.deal_structuring.title": "هيكلة الصفقات والتفاوض",
+    "services.deal_structuring.desc": "صياغة اتفاقيات تحقق التوازن بين المخاطر والعوائد والقيمة الاستراتيجية.",
+    "services.deal_structuring.point1": "✅ هيكلة المعاملات",
+    "services.deal_structuring.point2": "✅ دعم التفاوض",
+    "services.deal_structuring.point3": "✅ توافق أصحاب المصلحة",
+
+    "services.integration.title": "الاندماج بعد الاستحواذ",
+    "services.integration.desc": "ضمان انتقال سلس لتعظيم القيمة والكفاءة التشغيلية.",
+    "services.integration.point1": "✅ دمج الثقافات",
+    "services.integration.point2": "✅ مواءمة الأنظمة والعمليات",
+    "services.integration.point3": "✅ تحقيق التآزر",
+
+    "services.partnerships.title": "الشراكات والتحالفات الاستراتيجية",
+    "services.partnerships.desc": "تحقيق النمو من خلال التعاون والتحالفات والمشاريع المشتركة.",
+    "services.partnerships.point1": "✅ تحليل فرص الشراكة",
+    "services.partnerships.point2": "✅ أطر المشاريع المشتركة",
+    "services.partnerships.point3": "✅ خلق قيمة طويلة الأجل",
+
+    "strategy.title": "الشراكات والنمو في الممارسة",
+    "strategy.subtitle": "مرتكزات أساسية لبناء الاستحواذات والشراكات الناجحة",
+    "strategy.point1": "شراكات تعاونية",
+    "strategy.point2": "تخطيط نمو استراتيجي",
+    "strategy.point3": "عناية واجبة مدروسة",
+    "strategy.point4": "توسع مستدام",
+
+    "testimonials.title": "آراء عملائنا",
+    "testimonials.subtitle": "موثوق بهم في استراتيجيات الاستحواذ والشراكات",
+    "testimonials.client1.quote": "أرشدونا خلال استحواذ معقد بثقة ووضوح.",
+    "testimonials.client1.name": "مايكل تيرنر",
+    "testimonials.client1.role": "الرئيس التنفيذي، Horizon Tech",
+    "testimonials.client2.quote": "ساعدونا في إبرام مشروع مشترك سرّع توسعنا في السوق.",
+    "testimonials.client2.name": "عائشة خان",
+    "testimonials.client2.role": "المدير التنفيذي، Global Ventures",
+    "testimonials.client3.quote": "بدعمهم في العناية الواجبة، قللنا المخاطر وزدنا القيمة.",
+    "testimonials.client3.name": "روبرت سيلفا",
+    "testimonials.client3.role": "المدير المالي، Meridian Group",
+
+    "cta.title": "سرّع رحلة نموك",
+    "cta.subtitle": "افتح آفاقًا جديدة عبر الاستحواذات والشراكات. دعنا نصنع نجاحك معًا.",
+    "cta.button": "🤝 احصل على الدعم الاستشاري",
+
+    "footer_logo_alt": "شعار الاستشارات التجارية",
+    "footer_desc": "تمكين الشركات بالاستشارات المبتكرة والاستراتيجية والتكنولوجيا.\nشراكة للنمو والتحول.",
+    "footer_quick_links": "روابط سريعة",
+    "footer_home1": "الرئيسية 1",
+    "footer_home2": "الرئيسية 2",
+    "footer_about_us": "من نحن",
+    "footer_services_link": "الخدمات",
+    "footer_blog": "المدونة",
+    "footer_contact_us_link": "اتصل بنا",
+
+    "footer_services": "الخدمات",
+    "footer_contact_us": "اتصل بنا",
+    "footer_address": "123 شارع رئيسي، مدينة Abc",
+    "footer_phone": "+1 234 567 890",
+    "footer_email": "info@Business.com",
+
+    "follow": "تابعنا",
+    "follow1": "فيسبوك",
+    "follow2": "تويتر",
+    "follow3": "إنستغرام",
+
+    "footer_copy": "© 2025 الاستشارات التجارية. جميع الحقوق محفوظة."
+  },
+
+  he: {
+    "header_logo_alt": "לוגו ייעוץ עסקי",
+    "nav_home_dropdown": "בית",
+    "nav_home1": "בית 1",
+    "nav_home2": "בית 2",
+    "nav_about": "אודות",
+    "nav_blog": "בלוג",
+    "nav_services_dropdown": "שירותים",
+    "nav_all_services": "כל השירותים",
+    "nav_service": "שירותים",
+    "nav_service1": "חדשנות ושינוי",
+    "nav_service2": "ממשל וציות",
+    "nav_service3": "חווית לקוח ושירות",
+    "nav_service4": "נתונים ובינה עסקית",
+    "nav_service5": "קיימות ואסטרטגיית ESG",
+    "nav_service6": "רכישות ושותפויות",
+    "nav_contact": "צור קשר",
+    "logout": "התנתקות",
+
+    "service6_hero_title": "ייעוץ ברכישות ושותפויות",
+    "service6_hero_subtitle": "פתח אפשרויות צמיחה דרך רכישות, שותפויות ובריתות אסטרטגיות המותאמות למטרות העסק שלך.",
+    "service6_hero_cta1": "גלה פתרונות",
+    "service6_hero_cta2": "התחל ייעוץ",
+
+    "service6_overview_img_alt": "סקירת רכישות ושותפויות",
+    "service6_flip_title": "האץ צמיחה",
+    "service6_flip_text": "בנה עסקים חזקים יותר באמצעות רכישות ושותפויות אסטרטגיות.",
+    "service6_flip_cta": "קבל ייעוץ",
+    "service6_overview_title": "קידום צמיחה באמצעות רכישות ושותפויות",
+    "service6_overview_text1": "בעולם עסקי משתנה, שיתופי פעולה אסטרטגיים הם מפתח לצמיחה בת קיימא.",
+    "service6_overview_text2": "שירותי הייעוץ שלנו מסייעים בזיהוי הזדמנויות, בניית עסקאות ושותפויות ארוכות טווח.",
+    "service6_overview_cta": "דבר עם היועצים שלנו",
+
+    "services.title": "פתרונות ייעוץ ברכישות ושותפויות",
+
+    "services.ma_strategy.title": "פיתוח אסטרטגיית מיזוגים ורכישות",
+    "services.ma_strategy.desc": "הגדר אסטרטגיות ברורות לרכישות ושותפויות בהתאם ליעדי העסק.",
+    "services.ma_strategy.point1": "✅ ניתוח שוק ומגזרים",
+    "services.ma_strategy.point2": "✅ מיפוי הזדמנויות אסטרטגיות",
+    "services.ma_strategy.point3": "✅ התאמה לצמיחה ארוכת טווח",
+
+    "services.target_screening.title": "זיהוי ובחינת יעדים",
+    "services.target_screening.desc": "זהה והערך הזדמנויות לרכישה או שותפות בדיוק.",
+    "services.target_screening.point1": "✅ סריקות שוק מקיפות",
+    "services.target_screening.point2": "✅ התאמה פיננסית ותפעולית",
+    "services.target_screening.point3": "✅ התאמה תרבותית ואסטרטגית",
+
+    "services.due_diligence.title": "ייעוץ בבדיקת נאותות",
+    "services.due_diligence.desc": "הערכת סיכונים, הזדמנויות וסינרגיות לפני סגירת העסקה.",
+    "services.due_diligence.point1": "✅ הערכות פיננסיות ומשפטיות",
+    "services.due_diligence.point2": "✅ בדיקות סיכונים וציות",
+    "services.due_diligence.point3": "✅ ניתוח מימוש ערך",
+
+    "services.deal_structuring.title": "מבנה עסקאות ומשא ומתן",
+    "services.deal_structuring.desc": "גיבוש הסכמים מנצחים המאזנים בין סיכון, תגמול וערך אסטרטגי.",
+    "services.deal_structuring.point1": "✅ מבנה עסקאות",
+    "services.deal_structuring.point2": "✅ תמיכה במשא ומתן",
+    "services.deal_structuring.point3": "✅ יישור בעלי עניין",
+
+    "services.integration.title": "אינטגרציה לאחר רכישה",
+    "services.integration.desc": "הבטחת מעבר חלק למקסום ערך ויעילות תפעולית.",
+    "services.integration.point1": "✅ אינטגרציה תרבותית",
+    "services.integration.point2": "✅ יישור מערכות ותהליכים",
+    "services.integration.point3": "✅ מימוש סינרגיות",
+
+    "services.partnerships.title": "שותפויות אסטרטגיות",
+    "services.partnerships.desc": "פתח צמיחה באמצעות שיתופי פעולה, בריתות ומיזמים משותפים.",
+    "services.partnerships.point1": "✅ ניתוח הזדמנויות לשותפות",
+    "services.partnerships.point2": "✅ מסגרות למיזמים משותפים",
+    "services.partnerships.point3": "✅ יצירת ערך לטווח ארוך",
+
+    "strategy.title": "שותפויות וצמיחה בפעולה",
+    "strategy.subtitle": "עמודי יסוד להצלחת רכישות ושותפויות",
+    "strategy.point1": "שותפויות שיתופיות",
+    "strategy.point2": "תכנון צמיחה אסטרטגי",
+    "strategy.point3": "בדיקת נאותות מבוססת מידע",
+    "strategy.point4": "התרחבות בת קיימא",
+
+    "testimonials.title": "מה הלקוחות שלנו אומרים",
+    "testimonials.subtitle": "נאמנים על ארגונים לייעוץ ברכישות ושותפויות",
+    "testimonials.client1.quote": "צוות הייעוץ ליווה אותנו ברכישה מורכבת בביטחון ובהירות.",
+    "testimonials.client1.name": "מייקל טרנר",
+    "testimonials.client1.role": "מנכ\"ל, Horizon Tech",
+    "testimonials.client2.quote": "ייעוץ השותפויות עזר לנו להשיג מיזם משותף שהאיץ את ההתרחבות שלנו.",
+    "testimonials.client2.name": "עאישה חאן",
+    "testimonials.client2.role": "מנכ\"לית, Global Ventures",
+    "testimonials.client3.quote": "בעזרת בדיקת הנאותות שלהם, צמצמנו סיכונים ומקסמנו ערך.",
+    "testimonials.client3.name": "רוברט סילבה",
+    "testimonials.client3.role": "סמנכ\"ל כספים, Meridian Group",
+
+    "cta.title": "האץ את מסע הצמיחה שלך",
+    "cta.subtitle": "פתח הזדמנויות חדשות דרך רכישות ושותפויות. בואו נעצב יחד את הצלחת העסק שלך.",
+    "cta.button": "🤝 קבל תמיכה ייעוצית",
+
+    "footer_logo_alt": "לוגו ייעוץ עסקי",
+    "footer_desc": "העצמת עסקים באמצעות ייעוץ, אסטרטגיה וטכנולוגיה חדשניים.\nשיתוף פעולה לצמיחה והצלחה.",
+    "footer_quick_links": "קישורים מהירים",
+    "footer_home1": "בית 1",
+    "footer_home2": "בית 2",
+    "footer_about_us": "אודותינו",
+    "footer_services_link": "שירותים",
+    "footer_blog": "בלוג",
+    "footer_contact_us_link": "צור קשר",
+
+    "footer_services": "שירותים",
+    "footer_contact_us": "צור קשר",
+    "footer_address": "רחוב ראשי 123, עיר Abc",
+    "footer_phone": "+1 234 567 890",
+    "footer_email": "info@Business.com",
+
+    "follow": "עקוב אחרינו",
+    "follow1": "פייסבוק",
+    "follow2": "טוויטר",
+    "follow3": "אינסטגרם",
+
+    "footer_copy": "© 2025 ייעוץ עסקי. כל הזכויות שמורות."
+  }
+};
+
+// 🔄 Apply translations
+function applyTranslations(lang) {
+  document.documentElement.lang = lang;
+
+  // Switch direction for RTL langs
+  document.documentElement.dir = (lang === "ar" || lang === "he") ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+    const attr = el.getAttribute("data-i18n-attr");
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.setAttribute(attr, translations[lang][key]);
+    }
+  });
+}
+
+// 🌐 Language selector listener
+document.addEventListener("DOMContentLoaded", () => {
+  const selector = document.getElementById("language-selector");
+
+  selector.addEventListener("change", (e) => {
+    const lang = e.target.value;
+    applyTranslations(lang);
+    localStorage.setItem("lang", lang); // Save preference
+  });
+
+  // Load saved language or default
+  const savedLang = localStorage.getItem("lang") || "en";
+  selector.value = savedLang;
+  applyTranslations(savedLang);
+});
+</script>
+
+</body>
+</html>

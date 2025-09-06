@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="site_title">Stackly Business</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+ <link rel="stylesheet" href="css/h_f.css" />
+ <link rel="stylesheet" href="css/contact.css" />
+
+  <script src="js/header.js" defer></script>
+  <script src="js/dark_toogle.js" defer></script>
+ <script src="js/contact.js" defer></script>
+</head>
+<body data-bs-theme="light">
+
+<!-- ===== Header ===== -->
+<header class="navbar navbar-expand-lg bg-light shadow-sm px-3 sticky-top">
+  <!-- Left: Logo -->
+  <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" alt="Logo" height="40"
+         data-i18n-attr="alt" data-i18n="header_logo_alt">
+  </a>
+
+  <!-- Center: nav links -->
+  <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+    <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_home_dropdown">
+          Home
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="index.html" data-i18n="nav_home1">Home 1</a></li>
+          <li><a class="dropdown-item" href="home2.html" data-i18n="nav_home2">Home 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="blog.html" data-i18n="nav_blog">Blog</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_services_dropdown">
+          Services
+        </a>
+        <ul class="dropdown-menu">
+          <li class="d-lg-none"><a class="dropdown-item" href="services.html" data-i18n="nav_all_services">All Services</a></li>
+          <li><a class="dropdown-item" href="services.html" data-i18n="nav_service">All Services</a></li>
+          <li><a class="dropdown-item" href="service1.html" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a class="dropdown-item" href="service2.html" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a class="dropdown-item" href="service3.html" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a class="dropdown-item" href="service4.html" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a class="dropdown-item" href="service5.html" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a class="dropdown-item" href="service6.html" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Right: lang/profile/dark + hamburger -->
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <select id="language-selector" class="form-select form-select-sm w-auto">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="dropdown">
+      <button class="btn btn-outline-secondary rounded-circle" id="profile-dropdown-toggle" data-bs-toggle="dropdown">
+        <span id="profile-initials"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" id="profile-dropdown">
+        <li><a class="dropdown-item" href="#" id="logout-btn" data-i18n="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark" class="btn btn-outline-secondary btn-sm">🌙</button>
+
+    <!-- Hamburger LAST -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>
+
+
+<!-- ===== Contact Hero Section with Video Background ===== -->
+<section class="hero-section position-relative text-white">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover">
+    <source src="videos/contact.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark Overlay -->
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.55);"></div>
+
+  <!-- Content -->
+  <div class="container position-relative z-2 py-5">
+    <div class="row align-items-center text-center text-lg-start">
+      
+      <!-- Centered Text -->
+      <div class="col-lg-7 mx-auto mx-lg-0">
+        <h1 class="display-4 fw-bold mb-3" data-i18n="contact_title">
+          Get in Touch With Us
+        </h1>
+        <p class="lead mb-4" data-i18n="contact_subtitle">
+          We’d love to hear from you. Whether you have a question, feedback, or a project in mind, 
+          our team is ready to help. Reach out today and let’s build something great together.
+        </p>
+        <a href="#contact-form" class="btn btn-primary btn-lg me-2" data-i18n="contact_cta1">
+          📧 Send a Message
+        </a>
+        <a href="tel:+1234567890" class="btn btn-outline-light btn-lg" data-i18n="contact_cta2">
+          📞 Call Us
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Impact Stats Section ===== -->
+<section id="impact" class="py-5 bg-body-secondary position-relative overflow-hidden">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4" data-i18n="impact_title">Our Impact in Numbers</h2>
+    <p class="text-muted mb-5" data-i18n="impact_subtitle">
+      Real results from our years of experience
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-3 col-6">
+        <div class="stat-box" data-count="250">
+          <h3 class="display-5 fw-bold text-primary count">0</h3>
+          <p class="mb-0" data-i18n="impact_clients">Happy Clients</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-box" data-count="500">
+          <h3 class="display-5 fw-bold text-primary count">0</h3>
+          <p class="mb-0" data-i18n="impact_projects">Projects Completed</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-box" data-count="120">
+          <h3 class="display-5 fw-bold text-primary count">0</h3>
+          <p class="mb-0" data-i18n="impact_partners">Trusted Partners</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-box" data-count="15">
+          <h3 class="display-5 fw-bold text-primary count">0</h3>
+          <p class="mb-0" data-i18n="impact_years">Years of Excellence</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== Contact Form Section ===== -->
+<section id="contact-section" class="py-5 bg-light">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" data-i18n="contact_title">Get In Touch</h2>
+      <p class="text-muted" data-i18n="contact_subtitle">
+        Send us a message and we’ll respond within 24 hours.
+      </p>
+    </div>
+
+    <!-- Form -->
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <form id="contactForm" class="p-4 border rounded bg-white shadow-sm">
+          <div class="mb-3">
+            <label for="name" class="form-label fw-semibold" data-i18n="contact_name">Name</label>
+            <input type="text" class="form-control" id="name" required placeholder="Your full name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label fw-semibold" data-i18n="contact_email">Email</label>
+            <input type="email" class="form-control" id="email" required placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label fw-semibold" data-i18n="contact_message">Message</label>
+            <textarea class="form-control" id="message" rows="4" required placeholder="How can we help?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100" data-i18n="contact_send">Send Message</button>
+        </form>
+
+        <!-- Feedback Message -->
+        <div id="formFeedback" class="alert mt-4 d-none"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== Contact + Map Section ===== -->
+<section id="contact-map" class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Left: Map -->
+      <div class="col-lg-6">
+        <div class="p-4 bg-white shadow-sm rounded h-100 animate-on-scroll">
+          <h3 class="fw-bold mb-3" data-i18n="map_title">Find Us</h3>
+          <div class="ratio ratio-4x3 rounded overflow-hidden">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.843821384282!2d144.95373631531677!3d-37.81627927975159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzA4LjYiUyAxNDTCsDU3JzE0LjQiRQ!5e0!3m2!1sen!2sus!4v1616111132314!5m2!1sen!2sus"
+              style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Contact Details -->
+      <div class="col-lg-6">
+        <div class="p-4 bg-white shadow-sm rounded h-100 animate-on-scroll">
+          <h3 class="fw-bold mb-3" data-i18n="contact_details">Contact Details</h3>
+          <p class="text-muted mb-4" data-i18n="contact_details_sub">
+            We are here to help—reach out with any questions.
+          </p>
+
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="contact-card">
+                <div class="icon text-primary fs-4"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <strong data-i18n="address">Address</strong>
+                  <p class="mb-0 small">221B Baker Street, London, UK</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="contact-card copyable" data-copy="+44 20 7946 0958">
+                <div class="icon text-primary fs-4"><i class="fas fa-phone"></i></div>
+                <div>
+                  <strong data-i18n="phone">Mobile</strong>
+                  <p class="mb-0 small">+44 20 7946 0958</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="contact-card copyable" data-copy="support@forstackly.com">
+                <div class="icon text-primary fs-4"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <strong data-i18n="email">Email</strong>
+                  <p class="mb-0 small">support@forstackly.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="contact-card">
+                <div class="icon text-primary fs-4"><i class="fas fa-clock"></i></div>
+                <div>
+                  <strong data-i18n="availability">Availability</strong>
+                  <p id="openStatus" class="mb-0 small">Loading...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="mt-4">
+            <h6 class="fw-semibold" data-i18n="follow">Follow Us</h6>
+            <div class="d-flex gap-3 fs-4">
+              <a href="https://www.facebook.com" class="text-dark"><i class="fab fa-facebook">Facebook</i></a>
+              <a href="https://www.twitter.com" class="text-dark"><i class="fab fa-twitter">Twitter</i></a>
+              <a href="https://www.linkedin.com" class="text-dark"><i class="fab fa-linkedin">linkedin</i></a>
+              <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram">Instagram</i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ Section ===== -->
+<section id="faq" class="py-5 bg-body-secondary">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" data-i18n="faq_title">Frequently Asked Questions</h2>
+      <p class="text-muted" data-i18n="faq_subtitle">
+        Find answers or ask your own question below.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Left: FAQ List -->
+      <div class="col-lg-7">
+        <div class="accordion" id="faqAccordion">
+          <!-- Example FAQ -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" data-i18n="faq_q1">
+                What services do you offer?
+              </button>
+            </h2>
+            <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body" data-i18n="faq_a1">
+                We provide consulting, strategy, and technology solutions tailored to your business.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" data-i18n="faq_q2">
+                How quickly do you respond to inquiries?
+              </button>
+            </h2>
+            <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body" data-i18n="faq_a2">
+                Typically, we respond within 24 hours on business days.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Ask a Question -->
+      <div class="col-lg-5">
+        <div class="p-4 bg-white rounded shadow-sm">
+          <h5 class="fw-semibold mb-3" data-i18n="faq_form_title">Ask Your Question</h5>
+          <form id="faqForm">
+            <div class="mb-3">
+              <input type="text" id="faqQuestion" class="form-control" placeholder="Type your question..." required data-i18n-placeholder="faq_form_placeholder">
+            </div>
+            <button type="submit" class="btn btn-primary w-100" data-i18n="faq_form_button">Submit Question</button>
+          </form>
+
+          <!-- Feedback -->
+          <div id="faqFeedback" class="alert alert-success mt-3 d-none" data-i18n="faq_feedback">
+            ✅ Your question has been added!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== CTA Section ===== -->
+<section id="cta" class="py-5 text-center bg-primary text-white">
+  <div class="container">
+    <h2 class="fw-bold mb-3" data-i18n="cta_title">Ready to Get Started?</h2>
+    <p class="lead mb-4" data-i18n="cta_subtitle">
+      Let’s work together to create something amazing. Contact us today!
+    </p>
+    <a href="#contact-map" class="btn btn-light btn-lg px-4 py-2 fw-semibold" data-i18n="cta_button">
+      Contact Us
+    </a>
+  </div>
+</section>
+
+
+
+<footer class="shadow-sm mt-5 pt-4">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-md-3">
+        <a href="index.html" class="d-inline-block mb-3">
+          <img src="images/logo.png" alt="Stackly Logo" height="40"
+               data-i18n-attr="alt" data-i18n="footer_logo_alt">
+        </a>
+        <p class="small" data-i18n="footer_desc">
+          Empowering businesses with innovative consulting, strategy, and technology solutions.<br>
+  Partner with us to accelerate growth and transform your organization.
+        </p>
+        <div class="d-flex gap-3 fs-5">
+          <a href="https://www.facebook.com" class="text-dark"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.twitter.com" class="text-dark"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_quick_links">Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html" class="link-dark text-decoration-none" data-i18n="footer_home1">Home 1</a></li>
+          <li><a href="home2.html" class="link-dark text-decoration-none" data-i18n="footer_home2">Home 2</a></li>
+          <li><a href="about.html" class="link-dark text-decoration-none" data-i18n="footer_about_us">About Us</a></li>
+          <li><a href="services.html" class="link-dark text-decoration-none" data-i18n="footer_services_link">Services</a></li>
+          <li><a href="blog.html" class="link-dark text-decoration-none" data-i18n="footer_blog">Blog</a></li>
+          <li><a href="contact.html" class="link-dark text-decoration-none" data-i18n="footer_contact_us_link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_services">Services</h6>
+        <ul class="list-unstyled small">
+          <li><a href="service1.html" class="link-dark text-decoration-none" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a href="service2.html" class="link-dark text-decoration-none" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a href="service3.html" class="link-dark text-decoration-none" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a href="service4.html" class="link-dark text-decoration-none" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a href="service5.html" class="link-dark text-decoration-none" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a href="service6.html" class="link-dark text-decoration-none" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3" data-i18n="footer_contact_us">Contact Us</h6>
+        <p class="small mb-1" data-i18n="footer_address"><i class="fas fa-map-marker-alt me-2"></i>123 Main St, Abc City</p>
+        <p class="small mb-1" data-i18n="footer_phone"><i class="fas fa-phone me-2"></i>+1 234 567 890</p>
+        <p class="small mb-0" data-i18n="footer_email"><i class="fas fa-envelope me-2"></i>info@Business.com</p>
+        <div>
+            <h6 data-i18n="follow">Follow us</h6>
+            <a href="https://www.facebook.com" class="text-dark me-2"><i class="fab fa-facebook fa-lg" data-i18n="follow1">facebook</i></a>
+            <a href="https://www.twitter.com" class="text-dark me-2"><i class="fab fa-twitter fa-lg" data-i18n="follow2">twitter</i></a>
+            <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram fa-lg" data-i18n="follow3">instagram</i></a>
+        </div>
+      </div>
+      
+
+    </div>
+
+    <hr class="mt-4 mb-2">
+    <div class="text-center pb-3 small" data-i18n="footer_copy">© 2025 Business. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+// 🌍 Dictionary for translations
+
+const translations = {
+  en: {
+    site_title: "Stackly Business",
+
+    // Header
+    header_logo_alt: "Stackly Logo",
+    nav_home_dropdown: "Home",
+    nav_home1: "Home 1",
+    nav_home2: "Home 2",
+    nav_about: "About",
+    nav_blog: "Blog",
+    nav_services_dropdown: "Services",
+    nav_all_services: "All Services",
+    nav_service:"All Services",
+    nav_service1: "Innovation & Change",
+    nav_service2: "Governance & Compliance",
+    nav_service3: "Customer Experience & Service",
+    nav_service4: "Data & Business Intelligence",
+    nav_service5: "Sustainability & ESG Strategy",
+    nav_service6: "Acquisitions & Partnership Advisory",
+    nav_contact: "Contact",
+    logout: "Logout",
+
+    // Hero
+    contact_title: "Get in Touch With Us",
+    contact_subtitle: "We’d love to hear from you. Whether you have a question, feedback, or a project in mind, our team is ready to help. Reach out today and let’s build something great together.",
+    contact_cta1: "📧 Send a Message",
+    contact_cta2: "📞 Call Us",
+
+    // Impact
+    impact_title: "Our Impact in Numbers",
+    impact_subtitle: "Real results from our years of experience",
+    impact_clients: "Happy Clients",
+    impact_projects: "Projects Completed",
+    impact_partners: "Trusted Partners",
+    impact_years: "Years of Excellence",
+
+    // Contact Form
+    contact_name: "Name",
+    contact_email: "Email",
+    contact_message: "Message",
+    contact_send: "Send Message",
+
+    // Map + Contact
+    map_title: "Find Us",
+    contact_details: "Contact Details",
+    contact_details_sub: "We are here to help—reach out with any questions.",
+    address: "Address",
+    phone: "Mobile",
+    email: "Email",
+    availability: "Availability",
+    follow: "Follow Us",
+
+    // FAQ
+    faq_title: "Frequently Asked Questions",
+    faq_subtitle: "Find answers or ask your own question below.",
+    faq_q1: "What services do you offer?",
+    faq_a1: "We provide consulting, strategy, and technology solutions tailored to your business.",
+    faq_q2: "How quickly do you respond to inquiries?",
+    faq_a2: "Typically, we respond within 24 hours on business days.",
+    faq_form_title: "Ask Your Question",
+    faq_form_placeholder: "Type your question...",
+    faq_form_button: "Submit Question",
+    faq_feedback: "✅ Your question has been added!",
+
+    // CTA
+    cta_title: "Ready to Get Started?",
+    cta_subtitle: "Let’s work together to create something amazing. Contact us today!",
+    cta_button: "Contact Us",
+
+    // Footer
+    footer_logo_alt: "Stackly Logo",
+    footer_desc: "Empowering businesses with innovative consulting, strategy, and technology solutions. Partner with us to accelerate growth and transform your organization.",
+    footer_quick_links: "Quick Links",
+    footer_services: "Services",
+    footer_contact_us: "Contact Us",
+    footer_home1: "Home 1",
+    footer_home2: "Home 2",
+    footer_about_us: "About Us",
+    footer_services_link: "Services",
+    footer_blog: "Blog",
+    footer_contact_us_link: "Contact Us",
+    footer_address: "123 Main St, Abc City",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    footer_copy: "© 2025 Business. All rights reserved.",
+    follow1: "Facebook",
+    follow2: "Twitter",
+    follow3: "Instagram",
+  },
+
+  ar: {
+    site_title: "ستاكلي للأعمال",
+
+    // Header
+    header_logo_alt: "شعار ستاكلي",
+    nav_home_dropdown: "الرئيسية",
+    nav_home1: "الصفحة الرئيسية 1",
+    nav_home2: "الصفحة الرئيسية 2",
+    nav_about: "من نحن",
+    nav_blog: "المدونة",
+    nav_services_dropdown: "الخدمات",
+    nav_all_services: "جميع الخدمات",
+    nav_service: "جميع الخدمات",
+    nav_service1: "الابتكار والتغيير",
+    nav_service2: "الحوكمة والامتثال",
+    nav_service3: "تجربة العملاء والخدمة",
+    nav_service4: "البيانات وذكاء الأعمال",
+    nav_service5: "الاستدامة واستراتيجية ESG",
+    nav_service6: "الاستحواذ والشراكات",
+    nav_contact: "اتصل بنا",
+    logout: "تسجيل الخروج",
+
+    // Hero
+    contact_title: "تواصل معنا",
+    contact_subtitle: "يسعدنا سماعك. سواء كان لديك سؤال، ملاحظات، أو مشروع في ذهنك، فريقنا جاهز للمساعدة. تواصل معنا اليوم ولنُنشئ شيئاً رائعاً معاً.",
+    contact_cta1: "📧 أرسل رسالة",
+    contact_cta2: "📞 اتصل بنا",
+
+    // Impact
+    impact_title: "أثرنا بالأرقام",
+    impact_subtitle: "نتائج حقيقية من سنوات خبرتنا",
+    impact_clients: "عملاء سعداء",
+    impact_projects: "مشاريع مكتملة",
+    impact_partners: "شركاء موثوقون",
+    impact_years: "سنوات من التميز",
+
+    // Contact Form
+    contact_name: "الاسم",
+    contact_email: "البريد الإلكتروني",
+    contact_message: "الرسالة",
+    contact_send: "إرسال الرسالة",
+
+    // Map + Contact
+    map_title: "موقعنا",
+    contact_details: "تفاصيل الاتصال",
+    contact_details_sub: "نحن هنا لمساعدتك—تواصل معنا لأي استفسار.",
+    address: "العنوان",
+    phone: "الهاتف",
+    email: "البريد الإلكتروني",
+    availability: "التوفر",
+    follow: "تابعنا",
+
+    // FAQ
+    faq_title: "الأسئلة الشائعة",
+    faq_subtitle: "ابحث عن الإجابات أو اطرح سؤالك هنا.",
+    faq_q1: "ما هي الخدمات التي تقدمونها؟",
+    faq_a1: "نحن نقدم الاستشارات، الاستراتيجيات، والحلول التقنية المصممة خصيصاً لعملك.",
+    faq_q2: "كم يستغرق الرد على الاستفسارات؟",
+    faq_a2: "عادةً نرد خلال 24 ساعة في أيام العمل.",
+    faq_form_title: "اطرح سؤالك",
+    faq_form_placeholder: "اكتب سؤالك هنا...",
+    faq_form_button: "إرسال السؤال",
+    faq_feedback: "✅ تم إضافة سؤالك!",
+
+    // CTA
+    cta_title: "هل أنت مستعد للبدء؟",
+    cta_subtitle: "دعنا نعمل معًا لخلق شيء رائع. تواصل معنا اليوم!",
+    cta_button: "اتصل بنا",
+
+    // Footer
+    footer_logo_alt: "شعار ستاكلي",
+    footer_desc: "نُمكّن الأعمال من خلال الاستشارات المبتكرة، الاستراتيجيات، والحلول التقنية. شاركنا لتسريع النمو وتحويل مؤسستك.",
+    footer_quick_links: "روابط سريعة",
+    footer_services: "الخدمات",
+    footer_contact_us: "اتصل بنا",
+    footer_home1: "الرئيسية 1",
+    footer_home2: "الرئيسية 2",
+    footer_about_us: "من نحن",
+    footer_services_link: "الخدمات",
+    footer_blog: "المدونة",
+    footer_contact_us_link: "اتصل بنا",
+    footer_address: "123 شارع رئيسي، مدينة أبك",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    footer_copy: "© 2025 ستاكلي. جميع الحقوق محفوظة.",
+    follow1: "فيسبوك",
+    follow2: "تويتر",
+    follow3: "إنستغرام",
+  },
+
+  he: {
+    site_title: "סטאקלי עסקים",
+
+    // Header
+    header_logo_alt: "לוגו סטאקלי",
+    nav_home_dropdown: "בית",
+    nav_home1: "דף בית 1",
+    nav_home2: "דף בית 2",
+    nav_about: "אודות",
+    nav_blog: "בלוג",
+    nav_services_dropdown: "שירותים",
+    nav_all_services: "כל השירותים",
+        nav_service: "כל השירותים",
+
+    nav_service1: "חדשנות ושינוי",
+    nav_service2: "ממשל ותאימות",
+    nav_service3: "חווית לקוח ושירות",
+    nav_service4: "נתונים ובינה עסקית",
+    nav_service5: "קיימות ואסטרטגיית ESG",
+    nav_service6: "ייעוץ רכישות ושיתופי פעולה",
+    nav_contact: "צור קשר",
+    logout: "התנתק",
+
+    // Hero
+    contact_title: "צור קשר איתנו",
+    contact_subtitle: "נשמח לשמוע ממך. אם יש לך שאלה, משוב או רעיון לפרויקט, הצוות שלנו כאן בשבילך.",
+    contact_cta1: "📧 שלח הודעה",
+    contact_cta2: "📞 התקשר אלינו",
+
+    // Impact
+    impact_title: "ההשפעה שלנו במספרים",
+    impact_subtitle: "תוצאות אמיתיות משנות הניסיון שלנו",
+    impact_clients: "לקוחות מרוצים",
+    impact_projects: "פרויקטים שהושלמו",
+    impact_partners: "שותפים אמינים",
+    impact_years: "שנות מצוינות",
+
+    // Contact Form
+    contact_name: "שם",
+    contact_email: "אימייל",
+    contact_message: "הודעה",
+    contact_send: "שלח הודעה",
+
+    // Map + Contact
+    map_title: "מצא אותנו",
+    contact_details: "פרטי קשר",
+    contact_details_sub: "אנחנו כאן לעזור—פנה אלינו בכל שאלה.",
+    address: "כתובת",
+    phone: "טלפון",
+    email: "אימייל",
+    availability: "זמינות",
+    follow: "עקוב אחרינו",
+
+    // FAQ
+    faq_title: "שאלות נפוצות",
+    faq_subtitle: "מצא תשובות או שאל שאלה משלך.",
+    faq_q1: "איזה שירותים אתם מציעים?",
+    faq_a1: "אנחנו מספקים ייעוץ, אסטרטגיה ופתרונות טכנולוגיים מותאמים אישית לעסק שלך.",
+    faq_q2: "כמה זמן לוקח לקבל תשובה?",
+    faq_a2: "בדרך כלל אנחנו חוזרים תוך 24 שעות בימי עסקים.",
+    faq_form_title: "שאל את שאלתך",
+    faq_form_placeholder: "כתוב את השאלה שלך...",
+    faq_form_button: "שלח שאלה",
+    faq_feedback: "✅ השאלה שלך נוספה!",
+
+    // CTA
+    cta_title: "מוכן להתחיל?",
+    cta_subtitle: "בוא נעבוד יחד וניצור משהו מדהים. צור קשר עוד היום!",
+    cta_button: "צור קשר",
+
+    // Footer
+    footer_logo_alt: "לוגו סטאקלי",
+    footer_desc: "מעניקים לעסקים כוח עם ייעוץ, אסטרטגיה ופתרונות טכנולוגיים חדשניים. שתף איתנו פעולה להאצת הצמיחה ושינוי הארגון שלך.",
+    footer_quick_links: "קישורים מהירים",
+    footer_services: "שירותים",
+    footer_contact_us: "צור קשר",
+    footer_home1: "דף בית 1",
+    footer_home2: "דף בית 2",
+    footer_about_us: "אודות",
+    footer_services_link: "שירותים",
+    footer_blog: "בלוג",
+    footer_contact_us_link: "צור קשר",
+    footer_address: "123 רחוב ראשי, עיר אבק",
+    footer_phone: "+1 234 567 890",
+    footer_email: "info@Business.com",
+    footer_copy: "© 2025 סטאקלי. כל הזכויות שמורות.",
+    follow1: "פייסבוק",
+    follow2: "טוויטר",
+    follow3: "אינסטגרם",
+  }
+};
+// 🔄 Apply translations
+function applyTranslations(lang) {
+  document.documentElement.lang = lang;
+
+  // Switch direction for RTL langs
+  document.documentElement.dir = (lang === "ar" || lang === "he") ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+    const attr = el.getAttribute("data-i18n-attr");
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.setAttribute(attr, translations[lang][key]);
+    }
+  });
+}
+
+// 🌐 Language selector listener
+document.addEventListener("DOMContentLoaded", () => {
+  const selector = document.getElementById("language-selector");
+
+  selector.addEventListener("change", (e) => {
+    const lang = e.target.value;
+    applyTranslations(lang);
+    localStorage.setItem("lang", lang); // Save preference
+  });
+
+  // Load saved language or default
+  const savedLang = localStorage.getItem("lang") || "en";
+  selector.value = savedLang;
+  applyTranslations(savedLang);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Dashboard – Foodie</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Keep your existing scripts -->
+  <script src="js/header.js" defer></script>
+  <script src="js/dark_toogle.js" defer></script>
+
+  <style>
+    /* ===== Dashboard Dark Mode ===== */
+    body.dark {
+      background: linear-gradient(135deg, #121212, #1e1e1e);
+      color: #f8f9fa;
+    }
+
+    /* Cards, navbar, and table backgrounds */
+    body.dark .card,
+    body.dark .table,
+    body.dark .dropdown-menu,
+    body.dark .navbar {
+      background-color: #1f1f1f !important;
+      color: #f8f9fa;
+      border-color: #2c2c2c;
+    }
+
+    /* Navbar specific */
+    body.dark .navbar.nav-light.bg-light { background-color: #1f1f1f !important; }
+    body.dark .navbar .nav-link,
+    body.dark .navbar-brand { color: #f8f9fa !important; }
+    body.dark .navbar .dropdown-menu { background-color: #2a2a2a; }
+    body.dark .navbar .dropdown-item { color: #f8f9fa; }
+    body.dark .navbar .dropdown-item:hover { background-color: #343434; }
+
+    /* Table */
+    body.dark .table-striped > tbody > tr:nth-of-type(odd) { background-color: rgba(255, 255, 255, 0.05); }
+    body.dark thead th { color: #e0e0e0; }
+    body.dark tbody td { color: #f8f9fa; }
+
+    /* Buttons & form controls */
+    body.dark .btn-outline-secondary { border-color: #555; color: #f8f9fa; }
+    body.dark .btn-outline-secondary:hover { background-color: #444; }
+    body.dark .form-select { background-color: #1f1f1f; color: #f8f9fa; border-color: #444; }
+
+    /* Charts canvas background (transparent on dark) */
+    body.dark canvas { background-color: transparent; }
+
+    /* Table row hover */
+    body.dark tbody tr:hover { background-color: rgba(25, 24, 24, 0.08); }
+    body.dark table.table { background-color: transparent; color: #f8f9fa; }
+
+    /* Headings */
+    body.dark thead th {
+      background-color: #2a2a2a;
+      color: #f8f9fa;
+      border-color: #3a3a3a;
+    }
+
+    /* Body rows */
+    body.dark tbody tr { background-color: #1f1f1f; }
+    body.dark tbody tr:nth-of-type(odd) { background-color: #242424; }
+    body.dark tbody tr:hover { background-color: #2e2e2e; }
+
+    /* Borders */
+    body.dark table td,
+    body.dark table th { border-color: #3a3a3a; }
+
+    /* Buttons look better against dark */
+    body.dark .btn-danger { color: #fff; }
+
+    /* Scope ONLY when body has .dark (Bootstrap CSS vars) */
+    body.dark .table {
+      --bs-table-color:         #f8f9fa;
+      --bs-table-bg:            #1e1e1e;
+      --bs-table-striped-bg:    #2a2a2a;
+      --bs-table-striped-color: #f8f9fa;
+      --bs-table-hover-bg:      #333333;
+      --bs-table-hover-color:   #ffffff;
+      --bs-table-border-color:  #444;
+    }
+    body.dark .table thead {
+      --bs-table-color: #ffffff;
+      --bs-table-bg:    #2c2c2c;
+    }
+
+    /* ===== RTL helpers (applied when [dir="rtl"]) ===== */
+    [dir="rtl"] .navbar-nav { flex-direction: row-reverse; }
+    [dir="rtl"] .dropdown-menu { text-align: right; }
+    [dir="rtl"] .dropdown-menu-end { right: auto; left: 0; }
+    [dir="rtl"] .table { text-align: right; }
+    [dir="rtl"] .card h6, [dir="rtl"] .card h3 { text-align: right; }
+    /* Fix Bootstrap logical margins for utilities */
+    [dir="rtl"] .ms-auto { margin-left: 0 !important; margin-right: auto !important; }
+  </style>
+</head>
+<body>
+
+<header class="navbar navbar-expand-lg nav-light bg-light shadow-sm px-3 sticky-top">
+  <!-- Left: Logo -->
+  <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" alt="Logo" height="40"
+         data-i18n-attr="alt" data-i18n="header_logo_alt">
+  </a>
+
+  <!-- Center: nav links -->
+  <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+    <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_home_dropdown">
+          Home
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="index.html" data-i18n="nav_home1">Home 1</a></li>
+          <li><a class="dropdown-item" href="home2.html" data-i18n="nav_home2">Home 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="blog.html" data-i18n="nav_blog">Blog</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_services_dropdown">
+          Services
+        </a>
+        <ul class="dropdown-menu">
+          <li class="d-lg-none"><a class="dropdown-item" href="services.html" data-i18n="nav_all_services">All Services</a></li>
+          <li><a class="dropdown-item" href="service1.html" data-i18n="nav_service1">Innovation & Change</a></li>
+          <li><a class="dropdown-item" href="service2.html" data-i18n="nav_service2">Governance & Compliance</a></li>
+          <li><a class="dropdown-item" href="service3.html" data-i18n="nav_service3">Customer Experience & Service</a></li>
+          <li><a class="dropdown-item" href="service4.html" data-i18n="nav_service4">Data & Business Intelligence</a></li>
+          <li><a class="dropdown-item" href="service5.html" data-i18n="nav_service5">Sustainability & ESG Strategy</a></li>
+          <li><a class="dropdown-item" href="service6.html" data-i18n="nav_service6">Acquisitions & Partnership Advisory</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Right: lang/profile/dark + hamburger -->
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <select id="language-selector" class="form-select form-select-sm w-auto">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="dropdown">
+      <button class="btn btn-outline-secondary rounded-circle" id="profile-dropdown-toggle" data-bs-toggle="dropdown">
+        <span id="profile-initials"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" id="profile-dropdown">
+        <li><a class="dropdown-item" href="#" id="logout-btn" data-i18n="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark" class="btn btn-outline-secondary btn-sm">🌙</button>
+
+    <!-- Hamburger LAST -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>
+
+
+<div class="container-fluid py-4">
+
+  <!-- Stats -->
+  <div class="row g-3 mb-4">
+    <div class="col-sm-6 col-md-3">
+      <div class="card text-center p-3">
+        <h6 data-i18n="total_users">Total Users</h6>
+        <h3 id="totalUsers">0</h3>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="card text-center p-3">
+        <h6 data-i18n="today_signups">Today Signups</h6>
+        <h3 id="todaySignups">0</h3>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="card text-center p-3">
+        <h6 data-i18n="weekly_signups">Weekly Signups</h6>
+        <h3 id="weeklySignups">0</h3>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="card text-center p-3">
+        <h6 data-i18n="highest_day">Highest Day</h6>
+        <h3 id="highestDay">–</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div class="card mb-4">
+    <div class="card-header fw-semibold" data-i18n="registered_users">Registered Users</div>
+    <div class="card-body table-responsive">
+      <table class="table table-striped align-middle">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th data-i18n="full_name">Full Name</th>
+            <th data-i18n="email">Email</th>
+            <th data-i18n="signup_date">Signup Date/Time</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="userTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Charts -->
+  <div class="row g-4">
+    <div class="col-lg-6">
+      <div class="card p-3">
+        <h6 class="mb-3" data-i18n="weekly_chart">Weekly Signups</h6>
+        <canvas id="weeklyChart" height="150"></canvas>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card p-3">
+        <h6 class="mb-3" data-i18n="day_chart">Signups by Day</h6>
+        <canvas id="dayChart" height="150"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- More Graphs -->
+<div class="row g-4 mt-4 px-3">
+  <!-- Total Users Growth -->
+  <div class="col-lg-6">
+    <div class="card p-3">
+      <h6 class="mb-3" data-i18n="growth_chart">Total Users Growth</h6>
+      <canvas id="growthChart" height="150"></canvas>
+    </div>
+  </div>
+
+  <!-- Users by Month -->
+  <div class="col-lg-6">
+    <div class="card p-3">
+      <h6 class="mb-3" data-i18n="monthly_chart">Users by Month</h6>
+      <canvas id="monthlyChart" height="150"></canvas>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+/* ===== Simple i18n (dictionary) ===== */
+const translations = {
+  en: {
+    nav_home_dropdown: "Home",
+    nav_home1: "Home 1",
+    nav_home2: "Home 2",
+    nav_about: "About",
+    nav_blog: "Blog",
+    nav_services_dropdown: "Services",
+    nav_all_services: "All Services",
+    nav_service1: "Innovation & Change",
+    nav_service2: "Governance & Compliance",
+    nav_service3: "Customer Experience & Service",
+    nav_service4: "Data & Business Intelligence",
+    nav_service5: "Sustainability & ESG Strategy",
+    nav_service6: "Acquisitions & Partnership Advisory",
+    nav_contact: "Contact",
+    header_logo_alt: "Foodie Logo",
+    logout: "Logout",
+
+    total_users: "Total Users",
+    today_signups: "Today Signups",
+    weekly_signups: "Weekly Signups",
+    highest_day: "Highest Day",
+    registered_users: "Registered Users",
+
+    full_name: "Full Name",
+    email: "Email",
+    signup_date: "Signup Date/Time",
+    delete: "Delete",
+
+    weekly_chart: "Weekly Signups",
+    day_chart: "Signups by Day",
+    growth_chart: "Total Users Growth",
+    monthly_chart: "Users by Month",
+
+    signups_label: "Signups",
+    users_label: "Users",
+    total_users_label: "Total Users"
+  },
+  ar: {
+    nav_home_dropdown: "الرئيسية",
+    nav_home1: "الصفحة 1",
+    nav_home2: "الصفحة 2",
+    nav_about: "معلومات عنا",
+    nav_blog: "مدونة",
+    nav_services_dropdown: "الخدمات",
+    nav_all_services: "كل الخدمات",
+    nav_service1: "الابتكار والتغيير",
+    nav_service2: "الحوكمة والامتثال",
+    nav_service3: "تجربة وخدمة العملاء",
+    nav_service4: "البيانات وذكاء الأعمال",
+    nav_service5: "الاستدامة واستراتيجية ESG",
+    nav_service6: "الاستحواذ والشراكات",
+    nav_contact: "اتصل بنا",
+    header_logo_alt: "شعار فودي",
+    logout: "تسجيل الخروج",
+
+    total_users: "إجمالي المستخدمين",
+    today_signups: "تسجيلات اليوم",
+    weekly_signups: "تسجيلات الأسبوع",
+    highest_day: "أعلى يوم",
+    registered_users: "المستخدمون المسجلون",
+
+    full_name: "الاسم الكامل",
+    email: "البريد الإلكتروني",
+    signup_date: "تاريخ/وقت التسجيل",
+    delete: "حذف",
+
+    weekly_chart: "تسجيلات أسبوعية",
+    day_chart: "التسجيلات حسب اليوم",
+    growth_chart: "نمو المستخدمين",
+    monthly_chart: "المستخدمون حسب الشهر",
+
+    signups_label: "التسجيلات",
+    users_label: "المستخدمون",
+    total_users_label: "إجمالي المستخدمين"
+  },
+  he: {
+    nav_home_dropdown: "בית",
+    nav_home1: "בית 1",
+    nav_home2: "בית 2",
+    nav_about: "אודות",
+    nav_blog: "בלוג",
+    nav_services_dropdown: "שירותים",
+    nav_all_services: "כל השירותים",
+    nav_service1: "חדשנות ושינוי",
+    nav_service2: "ממשל וציות",
+    nav_service3: "חוויית ושירות לקוחות",
+    nav_service4: "נתונים ומודיעין עסקי",
+    nav_service5: "קיימות ואסטרטגיית ESG",
+    nav_service6: "מיזוגים ושיתופי פעולה",
+    nav_contact: "צור קשר",
+    header_logo_alt: "לוגו פודי",
+    logout: "התנתק",
+
+    total_users: "סה\"כ משתמשים",
+    today_signups: "הרשמות היום",
+    weekly_signups: "הרשמות שבועיות",
+    highest_day: "היום החזק",
+    registered_users: "משתמשים רשומים",
+
+    full_name: "שם מלא",
+    email: "אימייל",
+    signup_date: "תאריך/שעת הרשמה",
+    delete: "מחק",
+
+    weekly_chart: "הרשמות שבועיות",
+    day_chart: "הרשמות לפי יום",
+    growth_chart: "צמיחת משתמשים",
+    monthly_chart: "משתמשים לפי חודש",
+
+    signups_label: "הרשמות",
+    users_label: "משתמשים",
+    total_users_label: "סה\"כ משתמשים"
+  }
+};
+
+const localeMap = { en: "en", ar: "ar", he: "he" };
+
+function getCurrentLang() {
+  const selector = document.getElementById("language-selector");
+  return selector?.value || "en";
+}
+function getDict(lang = getCurrentLang()) {
+  return translations[lang] || translations.en;
+}
+
+/* Apply text translations and RTL/LTR */
+function applyTranslations(lang) {
+  const dict = getDict(lang);
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (dict[key]) el.textContent = dict[key];
+  });
+  document.querySelectorAll("[data-i18n-attr]").forEach(el => {
+    const attr = el.getAttribute("data-i18n-attr");
+    const key = el.getAttribute("data-i18n");
+    if (dict[key]) el.setAttribute(attr, dict[key]);
+  });
+
+  // Direction + lang on <html> and <body>
+  const isRTL = (lang === "ar" || lang === "he");
+  document.documentElement.setAttribute("lang", lang);
+  document.documentElement.setAttribute("dir", isRTL ? "rtl" : "ltr");
+  document.body.setAttribute("dir", isRTL ? "rtl" : "ltr");
+}
+
+/* ---------- PAGE LOGIC (unchanged, just i18n-aware where needed) ---------- */
+document.addEventListener("DOMContentLoaded", () => {
+  const tbody = document.getElementById("userTableBody");
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+
+  // Restore saved language
+  const langSel = document.getElementById("language-selector");
+  const savedLang = localStorage.getItem("lang");
+  if (savedLang && translations[savedLang]) {
+    langSel.value = savedLang;
+  }
+  applyTranslations(langSel.value);
+
+  // --- Patch old users (give them a signUpDate if missing)
+  users = users.map(u => ({
+    ...u,
+    fullName: u.fullName || (u.firstName + " " + u.lastName),
+    signUpDate: u.signUpDate || new Date().toISOString()
+  }));
+  localStorage.setItem("users", JSON.stringify(users));
+
+  // ---------- Table ----------
+  function renderTable() {
+    const dict = getDict();
+    tbody.innerHTML = "";
+    users.forEach((u, i) => {
+      const dateText = (u.signUpDate && !isNaN(Date.parse(u.signUpDate)))
+        ? new Date(u.signUpDate).toLocaleString(localeMap[getCurrentLang()])
+        : "N/A";
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${i + 1}</td>
+        <td>${u.fullName}</td>
+        <td>${u.email}</td>
+        <td>${dateText}</td>
+        <td>
+          <button class="btn btn-sm btn-danger" data-index="${i}" data-i18n="delete">
+            ${dict.delete}
+          </button>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  tbody.addEventListener("click", e => {
+    if (e.target.matches(".btn-danger")) {
+      const idx = e.target.dataset.index;
+      users.splice(idx, 1);
+      localStorage.setItem("users", JSON.stringify(users));
+      renderTable();
+      updateStatsAndCharts();
+    }
+  });
+
+  // ---------- Stats + Charts ----------
+  function updateStatsAndCharts() {
+    const lang = getCurrentLang();
+    const locale = localeMap[lang] || "en";
+
+    const today = new Date().toISOString().slice(0, 10); // yyyy-mm-dd
+    const weekAgo = new Date(); weekAgo.setDate(weekAgo.getDate() - 7);
+
+    let todayCount = 0, weekCount = 0;
+    const dayMap = {};
+
+    users.forEach(u => {
+      const d = new Date(u.signUpDate);
+      if (isNaN(d)) return; // skip invalid
+      const key = d.toISOString().slice(0,10);
+      if (key === today) todayCount++;
+      if (d >= weekAgo) weekCount++;
+      const weekday = d.toLocaleDateString(locale, { weekday: 'long' });
+      dayMap[weekday] = (dayMap[weekday] || 0) + 1;
+    });
+
+    const highestDay = Object.entries(dayMap).sort((a,b) => b[1] - a[1])[0]?.[0] || "–";
+
+    document.getElementById("totalUsers").textContent = users.length;
+    document.getElementById("todaySignups").textContent = todayCount;
+    document.getElementById("weeklySignups").textContent = weekCount;
+    document.getElementById("highestDay").textContent = highestDay;
+
+    drawCharts(dayMap, lang);
+  }
+
+  let weeklyChart, dayChart, growthChart, monthlyChart;
+  function drawCharts(dayMap, lang) {
+    const dict = getDict(lang);
+    const locale = localeMap[lang] || "en";
+
+    // weekly line
+    if (weeklyChart) weeklyChart.destroy();
+    const ctx1 = document.getElementById("weeklyChart").getContext("2d");
+    const weekdayMap = {Mon:0,Tue:0,Wed:0,Thu:0,Fri:0,Sat:0,Sun:0};
+    users.forEach(u => {
+      const wd = new Date(u.signUpDate).toLocaleDateString(locale,{weekday:'short'});
+      if (weekdayMap.hasOwnProperty(wd)) weekdayMap[wd]++;
+    });
+    weeklyChart = new Chart(ctx1, {
+      type: "line",
+      data: {
+        labels: ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(d =>
+          new Date('2020-01-0' + (['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(d)+1))
+            .toLocaleDateString(locale,{weekday:'short'})
+        ),
+        datasets: [{
+          data: Object.values(weekdayMap),
+          label: dict.signups_label,
+          borderColor: "#0d6efd",
+          backgroundColor: "rgba(13,110,253,0.1)",
+          tension: .4,
+          fill: true
+        }]
+      },
+      options: { plugins:{legend:{display:false}}, responsive:true }
+    });
+
+    // day distribution
+    if (dayChart) dayChart.destroy();
+    const ctx2 = document.getElementById("dayChart").getContext("2d");
+    dayChart = new Chart(ctx2, {
+      type: "bar",
+      data: {
+        labels: Object.keys(dayMap),
+        datasets: [{ data: Object.values(dayMap), backgroundColor: "#198754", label: dict.signups_label }]
+      },
+      options: { plugins:{legend:{display:false}}, responsive:true }
+    });
+
+    // Total Users Growth (cumulative over time)
+    if (growthChart) growthChart.destroy();
+    const ctx3 = document.getElementById("growthChart").getContext("2d");
+    const sorted = users.slice().sort((a,b) => new Date(a.signUpDate) - new Date(b.signUpDate));
+    const growthLabels = sorted.map(u => new Date(u.signUpDate).toLocaleDateString(locale));
+    const growthValues = sorted.map((_, i) => i + 1);
+    growthChart = new Chart(ctx3, {
+      type: "line",
+      data: {
+        labels: growthLabels,
+        datasets: [{
+          label: dict.total_users_label,
+          data: growthValues,
+          borderColor: "#ffc107",
+          backgroundColor: "rgba(255,193,7,0.1)",
+          tension: .3,
+          fill: true
+        }]
+      },
+      options: { plugins:{legend:{display:false}}, responsive:true }
+    });
+
+    // Users by Month
+    if (monthlyChart) monthlyChart.destroy();
+    const ctx4 = document.getElementById("monthlyChart").getContext("2d");
+    const monthMap = {};
+    users.forEach(u => {
+      const d = new Date(u.signUpDate);
+      if (isNaN(d)) return;
+      const label = d.toLocaleString(locale, { month: "short", year: "numeric" });
+      monthMap[label] = (monthMap[label] || 0) + 1;
+    });
+    const months = Object.keys(monthMap);
+    const monthCounts = Object.values(monthMap);
+    monthlyChart = new Chart(ctx4, {
+      type: "bar",
+      data: {
+        labels: months,
+        datasets: [{
+          label: dict.users_label,
+          data: monthCounts,
+          backgroundColor: "#20c997"
+        }]
+      },
+      options: { plugins:{legend:{display:false}}, responsive:true }
+    });
+  }
+
+  // Initial render
+  renderTable();
+  updateStatsAndCharts();
+  applyTranslations(getCurrentLang()); // ensure any dynamic nodes get text
+  // Re-translate already-rendered dynamic content like Delete buttons
+  // (applyTranslations covers [data-i18n] we added to the buttons)
+
+  // Language switching
+  langSel.addEventListener("change", e => {
+    const lang = e.target.value;
+    localStorage.setItem("lang", lang);
+    applyTranslations(lang);
+    renderTable();           // so new rows get correct button label/date locale
+    updateStatsAndCharts();  // recompute day labels and redraw charts in locale
+  });
+});
+</script>
+</body>
+</html>
