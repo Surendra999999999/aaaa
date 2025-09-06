@@ -1,80 +1,69 @@
-/* ======== DARK MODE HEADER & FOOTER ======== */
-body.dark {
-  background-color: #121212;
-  color: #f8f9fa;
+/* ===== FOOTER FIX (No !important) ===== */
+/* Dark mode footer */
+/* Dark mode footer background */
+body[data-bs-theme="dark"] .footer {
+  background-color: #1a1a1a;
+  color: #ccc;
 }
 
-/* ---------- Navbar (Header) ---------- */
-body.dark .navbar {
-  background-color: #1f1f1f !important;   /* dark background */
+/* Override .link-dark and .text-dark inside footer */
+body[data-bs-theme="dark"] .footer .list-unstyled li a {
+  color: white!important; /* default link color */
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-body.dark .navbar .nav-link {
-  color: #f8f9fa !important;             /* light links */
-}
-
-body.dark .navbar .nav-link:hover {
-  color: #adb5bd !important;
-}
-
-/* Hamburger lines white on dark */
-body.dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28 255,255,255, 0.9 %29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-/* ---------- Footer ---------- */
-body.dark footer {
-  background-color: #1f1f1f !important;  /* dark footer */
-  color: #f8f9fa !important;
-}
-
-/* Footer links */
-body.dark footer a {
-  color: #f8f9fa;
-}
-
-body.dark footer a:hover {
-  color: #adb5bd;
-}
-
-/* Keep HR line subtle in dark */
-body.dark footer hr {
-  border-color: #333;
-}
-
-/* Optional form elements + buttons if needed */
-body.dark .form-select,
-body.dark .form-control {
-  background-color: #2b2b2b;
-  color: #f8f9fa;
-  border-color: #444;
-}
-
-body.dark .btn-outline-secondary {
-  color: #f8f9fa;
-  border-color: #f8f9fa;
-}
-body.dark .btn-outline-secondary:hover {
-  background-color: #f8f9fa;
-  color: #121212;
-}
-/* Dark mode footer link override */
-body.dark footer a,
-body.dark footer .link-dark,
-body.dark footer .text-dark {
-  color: #f8f9fa !important;      /* light gray/white links */
-}
-
-body.dark footer a:hover {
-  color: #9ecbff !important;      /* subtle blue on hover */
-}
-
-/* Dark mode footer headings */
-body.dark footer h6 {
+body[data-bs-theme="dark"] .footer a:hover {
   color: #ffffff;
 }
 
-/* Optional: dim the small copy slightly less than pure white */
-body.dark footer .small {
-  color: #dddddd;
+/* Headings */
+body[data-bs-theme="dark"] .footer h6 {
+  color: #fff;
+}
+
+/* Social icons */
+body[data-bs-theme="dark"] .footer .fab {
+  color: #bfbfbf;
+}
+body[data-bs-theme="dark"] .footer .fab:hover {
+  color: #fff;
+}
+
+/* 🌙 Dark Mode Theme */
+body[data-bs-theme="dark"] {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* ===== HEADER ===== */
+body[data-bs-theme="dark"] .navbar {
+  background-color: #1c1c1c !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+body[data-bs-theme="dark"] .navbar .nav-link {
+  color: #ddd;
+}
+body[data-bs-theme="dark"] .navbar .nav-link:hover {
+  color: #fff;
+}
+body[data-bs-theme="dark"] .dropdown-menu {
+  background-color: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+body[data-bs-theme="dark"] .dropdown-item {
+  color: #ddd;
+}
+body[data-bs-theme="dark"] .dropdown-item:hover {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+body[data-bs-theme="dark"] .btn-outline-secondary {
+  color: #ccc;
+  border-color: #555;
+}
+body[data-bs-theme="dark"] .btn-outline-secondary:hover {
+  background-color: #444;
+  color: #fff;
+  border-color: #777;
 }

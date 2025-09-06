@@ -46,7 +46,7 @@ body.dark .blog-hero .btn-primary {
   border-color: #0d6efd;
 }
 .blog-card {
-    border-width: 2px !important;
+    border-width: 2px ;
     transition: transform 0.3s, box-shadow 0.3s;
     border-radius: 15px;
     overflow: hidden;
@@ -74,13 +74,13 @@ body.dark .blog-hero .btn-primary {
 
   /* Blog Section Dark Mode */
 body.dark #blog-section {
-  background-color: #121212!important;
+  background-color: #121212;
   color: #ffffff;
 }
 
 body.dark #blog-section .blog-card {
   background-color: #1e1e1e;
-  border-width: 2px !important;
+  border-width: 2px ;
   box-shadow: 0 10px 20px rgba(0,0,0,0.7);
   transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
@@ -117,7 +117,7 @@ body.dark #blog-section .floating-card {
 }
 /* Dark Mode for Search Results Section */
 body.dark #search-results {
-  background-color: #121212!important; /* dark background */
+  background-color: #121212; /* dark background */
   color: #ffffff; /* text color */
 }
 
@@ -174,7 +174,7 @@ body.dark #search-results .floating-card {
 
 /* Dark mode for the blog section */
 body.dark #interactive-blog {
-  background-color: #1a1a1a !important; /* Dark background */
+  background-color: #1a1a1a ; /* Dark background */
   color: #e0e0e0; /* Light text */
 }
 
@@ -198,53 +198,53 @@ body.dark #interactive-blog .badge {
 }
 /* Dark mode for the comments section */
 body.dark #comments {
-  background-color: #121212 !important;  /* force dark background */
-  color: #e0e0e0 !important;            /* light text */
+  background-color: #121212 ;  /* force dark background */
+  color: #e0e0e0 ;            /* light text */
 }
 
 /* Cards inside comments section */
 body.dark #comments .card {
-  background-color: #1e1e1e !important;
-  border: 1px solid #333 !important;
-  color: #e0e0e0 !important;
+  background-color: #1e1e1e;
+  border: 1px solid #333 ;
+  color: #e0e0e0 ;
 }
 
 /* Card titles and subtitles */
 body.dark #comments .card-title,
 body.dark #comments .card-subtitle,
 body.dark #comments label {
-  color: #e0e0e0 !important;
+  color: #e0e0e0 ;
 }
 
 /* Form inputs */
 body.dark #comments .form-control {
-  background-color: #2a2a2a !important;
-  border: 1px solid #444 !important;
-  color: #e0e0e0 !important;
+  background-color: #2a2a2a ;
+  border: 1px solid #444 ;
+  color: #e0e0e0 ;
 }
 
 body.dark #comments .form-control::placeholder {
-  color: #aaa !important;
+  color: #aaa;
 }
 
 /* Buttons */
 body.dark #comments .btn-primary {
-  background-color: #4a90e2 !important;
-  border-color: #357ABD !important;
-  color: #fff !important;
+  background-color: #4a90e2 ;
+  border-color: #357ABD ;
+  color: #fff ;
 }
 
 body.dark #comments .btn-primary:hover {
-  background-color: #357ABD !important;
-  border-color: #2a5d9f !important;
+  background-color: #357ABD ;
+  border-color: #2a5d9f ;
 }
 
 /* Links inside comments section */
 body.dark #comments a {
-  color: #4a90e2 !important;
+  color: #4a90e2 ;
 }
 
 body.dark #comments a:hover {
-  color: #357ABD !important;
-  text-decoration: underline !important;
+  color: #357ABD ;
+  text-decoration: underline ;
 }

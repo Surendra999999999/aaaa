@@ -200,7 +200,7 @@ body.dark .hero-section .btn-outline-light:hover {
 /* Dark mode */
 body.dark .feature-card {
   background: #161b22;
-  color: #f0f6fc!important;
+  color: #f0f6fc;
   border: 1px solid rgba(0,183,255,0.2);
 }
 body.dark .feature-card:hover {
@@ -217,7 +217,7 @@ body.dark .feature-card {
 /* Make muted text readable in dark mode */
 body.dark .feature-card p,
 body.dark .feature-card .text-muted {
-  color: #9fb3c8 !important; /* softer light gray-blue */
+  color: #9fb3c8; /* softer light gray-blue */
 }
 
 /* Headings inside cards */
@@ -256,10 +256,10 @@ body.dark .feature-card h5 {
   filter: invert(1) grayscale(100);
 }
 .services-list{
-   background: linear-gradient(135deg, #0d1117, #111827, #1f2937)!important;
+   background: linear-gradient(135deg, #0d1117, #111827, #1f2937);
 }
 .services-list .service-item p{
-  color: white!important;
+  color: white;
 }
 
   .services-list .service-item {

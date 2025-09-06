@@ -57,7 +57,7 @@ border: 1px solid var(--glass-border);
 
 /* Accessibility / Reduced motion */
 @media (prefers-reduced-motion: reduce){
-.flip-card-inner, .fade-in{ transition: none !important; }
+.flip-card-inner, .fade-in{ transition: none ; }
 }
 
 
@@ -188,7 +188,7 @@ body.dark #strategy-highlights .emoji-circle .emoji {
 
 /* dark mode overrides (ties into your body.dark JS) */
 body.dark #client-testimonials {
-  background: #121212!important;
+  background: #121212;
 }
 body.dark #client-testimonials h2 {
   color: #f9f9f9;
@@ -213,7 +213,7 @@ body.dark .testimonial-card {
 
 /* Dark mode */
 body.dark #final-cta {
-  background: #121212!important;
+  background: #121212;
 }
 body.dark #final-cta h2 {
   color: #f9f9f9;

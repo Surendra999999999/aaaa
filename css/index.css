@@ -2,164 +2,7 @@
   background-color: #121212;
   color: #f8f9fa;
 }
-.hero-section {
-    min-height: 100vh; /* Full screen */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .hero-section video {
-    object-fit: cover;
-    z-index: 1;
-  }
-  .hero-section .overlay {
-    z-index: 2;
-  }
-  .hero-section .container {
-    z-index: 3;
-  }
 
-  /* ===== Dark Mode ===== */
-body.dark .hero-section {
-  color: #e4e4e4; /* softer white text */
-}
-
-body.dark .hero-section .overlay {
-  background: rgba(0, 0, 0, 0.75); /* slightly darker for better contrast */
-}
-
-body.dark .hero-section .btn-primary {
-  background: linear-gradient(135deg, #6c5ce7, #00cec9); /* accent gradient */
-  border: none;
-}
-
-body.dark .hero-section .btn-outline-light {
-  border-color: #e4e4e4;
-  color: #e4e4e4;
-}
-
-body.dark .hero-section .btn-outline-light:hover {
-  background: rgba(228, 228, 228, 0.1);
-}
-
-
-.feature-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 12px;
-    background: var(--bs-body-bg); /* adapts to light/dark mode */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  }
-
-  .feature-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  }
-
-  .feature-card i {
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-
-  .feature-card:hover i {
-    color: var(--bs-primary);
-    transform: rotate(-5deg) scale(1.2);
-  }
-
-  * Features Section */
-body.dark .feature-card {
-  background-color: #1e1e1e;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #e4e4e4;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-body.dark .feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-}
-
-body.dark .feature-card .card-title {
-  color: #ffffff;
-}
-
-body.dark .feature-card .card-text {
-  color: #bbbbbb;
-}
-
-body.dark .feature-card i {
-  color: #0d6efd; /* keep Bootstrap primary blue for icons */
-}
-
-/* Section background */
-body.dark section.bg-body {
-  background-color: #121212 !important;
-}
-/* 🌙 Dark Mode (Services Section) */
-body.dark section.bg-body-secondary {
-  background-color: #1a1a1a !important; /* darker background */
-  color: #e4e4e4;
-}
-
-body.dark .service-card {
-  background-color: #1e1e1e;  /* dark card background */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #e4e4e4;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-body.dark .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-}
-
-body.dark .service-card .fw-semibold {
-  color: #ffffff; /* card title */
-}
-
-body.dark .service-card .card-text,
-body.dark .service-card p {
-  color: #bbbbbb; /* softer description text */
-}
-
-body.dark .service-card i {
-  color: #0d6efd; /* keep Bootstrap primary blue */
-}
-
-
-/* ===== Testimonials Section Dark Mode ===== */
-body.dark .bg-body {
-  background-color: #121212 !important;
-  color: #e4e4e4 !important;
-}
-
-body.dark .text-secondary {
-  color: #bbbbbb !important;
-}
-
-body.dark .card {
-  background-color: #1e1e1e !important;
-  color: #e4e4e4 !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-body.dark .card p {
-  color: #d0d0d0 !important;
-}
-
-body.dark .card small {
-  color: #aaaaaa !important;
-}
-
-/* Carousel controls in dark mode */
-body.dark .carousel-control-prev-icon,
-body.dark .carousel-control-next-icon {
-  filter: invert(1) grayscale(100%) brightness(200%);
-}
-
-body.dark .carousel-control-prev-icon.bg-dark,
-body.dark .carousel-control-next-icon.bg-dark {
-  background-color: #e4e4e4 !important;
-}
 .cta-gradient {
   background: linear-gradient(135deg, #2c2c2c, #6c757d); /* Dark Gray → Bootstrap Gray */
   opacity: 0.95;
@@ -168,101 +11,77 @@ body.dark .carousel-control-next-icon.bg-dark {
 
 /* Button Hover Effects */
 .cta-gradient + .container .btn-light:hover {
-  background-color: #f8f9fa !important;
-  color: #2c2c2c !important; /* Dark Gray */
+  background-color: #f8f9fa;
+  color: #2c2c2c; /* Dark Gray */
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
 }
 
 .cta-gradient + .container .btn-outline-light:hover {
-  background-color: #ffffff !important;
-  color: #6c757d !important; /* Medium Gray */
+  background-color: #ffffff;
+  color: #6c757d; /* Medium Gray */
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
 }
-/* === Dark Mode CTA Section === */
-body.dark .cta-gradient {
-  background: linear-gradient(135deg, #2c2c2c, #1a1a1a); /* dark gray gradient */
-  color: #e4e4e4; /* light text */
+/* 🌙 Dark Mode Theme */
+body[data-bs-theme="dark"] {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
-body.dark .cta-gradient h2,
-body.dark .cta-gradient p {
-  color: #e4e4e4; /* ensure text stays readable */
+
+
+/* ===== HERO SECTION ===== */
+body[data-bs-theme="dark"] .hero-section {
+  color: #f8f9fa;
+}
+body[data-bs-theme="dark"] .hero-section .btn-outline-light {
+  border-color: #bbb;
+  color: #eee;
+}
+body[data-bs-theme="dark"] .hero-section .btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
 }
 
-/* Buttons inside CTA */
-body.dark .cta-gradient .btn-light {
-  background: #e4e4e4 !important;
-  color: #121212 !important;
-  border: none !important;
-  transition: all 0.3s ease-in-out;
+/* ===== FEATURES & SERVICES ===== */
+body[data-bs-theme="dark"] .bg-body,
+body[data-bs-theme="dark"] .bg-body-secondary {
+  background-color: #1b1b1b !important;
+}
+body[data-bs-theme="dark"] .card {
+  background-color: #222;
+  color: #ddd;
+}
+body[data-bs-theme="dark"] .card .text-secondary {
+  color: #aaa !important;
 }
 
-body.dark .cta-gradient .btn-light:hover {
-  background: #f1f1f1 !important;
-  color: #6c5ce7 !important; /* accent color */
-  transform: scale(1.05);
+/* ===== TESTIMONIALS ===== */
+body[data-bs-theme="dark"] .carousel .card {
+  background-color: #222;
+  color: #ddd;
+}
+body[data-bs-theme="dark"] .carousel-control-prev-icon,
+body[data-bs-theme="dark"] .carousel-control-next-icon {
+  filter: invert(1);
 }
 
-/* Outline Light Button */
-body.dark .cta-gradient .btn-outline-light {
-  border: 1px solid #e4e4e4 !important;
-  color: #e4e4e4 !important;
-  transition: all 0.3s ease-in-out;
+/* ===== CTA SECTION ===== */
+body[data-bs-theme="dark"] .cta-gradient {
+  background: linear-gradient(135deg, #222 0%, #000 100%);
+}
+body[data-bs-theme="dark"] .btn-light {
+  background-color: #fff;
+  color: #000;
+}
+body[data-bs-theme="dark"] .btn-outline-light {
+  color: #eee;
+  border-color: #bbb;
+}
+body[data-bs-theme="dark"] .btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
 }
 
-body.dark .cta-gradient .btn-outline-light:hover {
-  background: linear-gradient(135deg, #6c5ce7, #00cec9) !important; /* accent gradient */
-  color: #fff !important;
-  transform: scale(1.05);
-}
- .impact-section {
-    background: var(--bs-light-bg-subtle);
-  }
-  .impact-section h2 {
-    font-size: 2.2rem;
-    background: linear-gradient(90deg, #e74c3c, #ff8c42);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .impact-section ul li {
-    font-size: 1.05rem;
-  }
 
-  /* === Dark Mode Impact Section === */
-body.dark .impact-section {
-  background: #121212; /* dark background */
-  color: #e4e4e4;      /* light text */
-}
-
-body.dark .impact-section h2 {
-  background: linear-gradient(90deg, #6c5ce7, #00cec9); /* accent gradient */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-body.dark .impact-section p,
-body.dark .impact-section ul li {
-  color: #ccc; /* softer gray for readability */
-}
-
-body.dark .impact-section ul li i {
-  color: #00cec9; /* accent check icons */
-}
-
-body.dark .impact-section .impact-img {
-  box-shadow: 0 0 20px rgba(108, 92, 231, 0.4); /* subtle glowing shadow */
-  border-radius: 12px;
-}
-
-/* Button in dark mode follows global accent rule */
-body.dark .impact-section .btn-primary {
-  background: linear-gradient(135deg, #6c5ce7, #00cec9) !important;
-  border: none !important;
-}
-body.dark .impact-section .btn-primary:hover {
-  opacity: 0.9;
-  transform: scale(1.05);
-  transition: all 0.3s ease-in-out;
-}

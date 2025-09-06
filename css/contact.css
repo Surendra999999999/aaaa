@@ -5,35 +5,35 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 body.dark #impact {
-  background: #121212!important;
+  background: #121212;
 }
 body.dark .stat-box {
   background: #1f1f1f;
 }
 body.dark .stat-box p,
 body.dark #impact h2 {
-  color: #f8f9fa!important;
+  color: #f8f9fa;
 }
 /* Dark mode for Contact Section */
 body.dark #contact-section {
-  background: #121212 !important;
+  background: #121212;
 }
 
 body.dark #contact-section h2,
 body.dark #contact-section p,
 body.dark #contact-section .form-label {
-  color: #f8f9fa !important;
+  color: #f8f9fa;
 }
 
 body.dark #contact-section .form-control {
-  background: #1f1f1f !important;
-  border: 1px solid #333 !important;
-  color: #f8f9fa !important;
+  background: #1f1f1f;
+  border: 1px solid #333;
+  color: #f8f9fa;
 }
 
 /* Make placeholder text visible in dark mode */
 body.dark #contact-section .form-control::placeholder {
-  color: #b0b0b0 !important;
+  color: #b0b0b0;
   opacity: 1;
 }
 
@@ -46,13 +46,13 @@ body.dark #formFeedback {
 
 /* Button style in dark mode */
 body.dark #contact-section .btn-primary {
-  background-color: #0d6efd !important; /* Bootstrap primary blue */
-  color: #ffffff !important;
+  background-color: #0d6efd; /* Bootstrap primary blue */
+  color: #ffffff;
   border: none;
 }
 
 body.dark #contact-section .btn-primary:hover {
-  background-color: #0b5ed7 !important;
+  background-color: #0b5ed7 ;
 }
 .contact-card {
   background: var(--bs-body-bg);
@@ -74,12 +74,12 @@ body.dark #contact-section .btn-primary:hover {
 
 /* 🌙 Dark Mode Styles for Contact + Map Section */
 body.dark #contact-map {
-  background-color: #121212!important; /* Dark page background */
-  color: #f1f1f1!important;
+  background-color: #121212; /* Dark page background */
+  color: #f1f1f1;
 }
 
 body.dark #contact-map .bg-white {
-  background-color: #1e1e1e !important; /* Dark cards */
+  background-color: #1e1e1e; /* Dark cards */
   color: #f1f1f1;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -106,11 +106,11 @@ body.dark #contact-map .contact-card:hover {
 }
 
 body.dark #contact-map .icon {
-  color: #4dabf7 !important; /* Keep accent icons visible */
+  color: #4dabf7; /* Keep accent icons visible */
 }
 
 body.dark #contact-map a {
-  color: #bbbbbb!important;
+  color: #bbbbbb;
 }
 body.dark #contact-map a:hover {
   color: #4dabf7;
@@ -137,8 +137,8 @@ body.dark #contact-map iframe {
 
 /* 🌙 Dark Mode Styles for FAQ Section */
 body.dark #faq {
-  background-color: #121212!important; /* Dark background */
-  color: #f1f1f1!important;
+  background-color: #121212; /* Dark background */
+  color: #f1f1f1;
 }
 
 body.dark #faq h2,
@@ -175,7 +175,7 @@ body.dark #faq .accordion-body {
 
 /* Ask form card */
 body.dark #faq .bg-white {
-  background-color: #1e1e1e !important;
+  background-color: #1e1e1e;
   color: #f1f1f1;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -209,8 +209,8 @@ body.dark #faq .alert-success {
 }
 /* Dark Mode CTA */
 body.dark #cta {
-  background-color: #1e1e1e !important;
-  color: #f1f1f1 !important;
+  background-color: #1e1e1e ;
+  color: #f1f1f1 ;
 }
 
 body.dark #cta h2,
