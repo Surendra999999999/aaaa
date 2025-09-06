@@ -40,11 +40,7 @@
   object-fit: contain;
   display: block;
 }
-/* Color variations */
-.feature-blue .icon { background: linear-gradient(135deg, #007bff, #00c6ff); }
-.feature-purple .icon { background: linear-gradient(135deg, #6f42c1, #b25fff); }
-.feature-teal .icon { background: linear-gradient(135deg, #20c997, #00d4ff); }
-.feature-orange .icon { background: linear-gradient(135deg, #fd7e14, #ffb347); }
+
 
 
 /* Video wrapper */

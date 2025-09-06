@@ -76,7 +76,7 @@ body.dark .hero-section img.animate-float {
     transform: scale(1.05);
   }
   .progress-bar.bg-gradient {
-    background: linear-gradient(90deg, #007bff, #00c851, #ffbb33);
+  background: linear-gradient(135deg, #6c5ce7, #00cec9); /* accent gradient */
   }
 
 
@@ -107,7 +107,7 @@ body.dark .progress {
 }
 
 body.dark .progress-bar.bg-gradient {
-  background: linear-gradient(90deg, #6c5ce7, #00cec9); /* Gradient bar */
+  background: linear-gradient(135deg, #6c5ce7, #00cec9); /* accent gradient */
 }
 
 /* Optional: improve text visibility inside progress bars */
@@ -149,7 +149,7 @@ body.dark #our-impact .bg-primary {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(135deg, #e74c3c, #ff8c42);
+  background: linear-gradient(135deg, #6c5ce7, #00cec9); /* accent gradient */
   color: white;
   transition: transform 0.3s;
 }
